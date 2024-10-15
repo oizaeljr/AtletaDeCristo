@@ -9,6 +9,10 @@ button {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* INÍCIO HEADER */
 
 .container1 {
@@ -61,8 +65,10 @@ nav button{
 
 /* FIM HEADER */
 
+
 /* INÍCIO MAIN */
 
+/* INÍCIO SESSÃO 1*/
 main .container1{
     width: 100%;
     height: 80vh;
@@ -73,7 +79,7 @@ main .container1{
 main .detalhe1 {
     width: 100%;
     height: 14%;
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: end;
 }
@@ -90,7 +96,7 @@ main .container2 {
     flex-direction: column;
     width: 50%;
     height: auto;
-    position: fixed;
+    position: absolute;
     margin: 7% 0 0 9%;
 }
 
@@ -127,8 +133,8 @@ main .container2 button {
 main .detalhe2 {
     width: 100%;
     height: 20%;
-    position: fixed;
-    margin: 31.8% 0 0 0;
+    position: absolute;
+    margin: 32.1% 0 0 0;
 }
 
 main .detalhe2 .detalhe2_1 {
@@ -138,8 +144,163 @@ main .detalhe2 .detalhe2_1 {
     border-radius: 0px 200px 0px 200px;
 }
 
-main img {
+main .container1 img {
     margin: 8% 0 0 53%;
 }
+/* FIM SESSÃO 1*/
+
+/* INÍCIO SESSÃO 2*/
+
+main .container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 0 0 0;
+    height: auto;
+}
+
+main .container3 .container3_1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .container3 .container3_1 span {
+    font-size: 25px;
+    font-weight: bold;
+    color: #001F3F;
+}
+
+main .container3 .container3_2 {
+    width: 70%;
+    margin: 2% 0 0 0;
+}
+
+main .container3 .container3_4 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    margin: 4% 0 0 0;
+}
+
+main .container3 .containerJgr {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .container3 .containerJgr span {
+    font-size: 15px;
+    font-weight: bold;
+    color: #001F3F;
+}
+
+main .container3 .container3_4 .container3_lucas {
+    width: 100%;
+    height: 60vh;
+    border-radius: 10px;
+    background-image: url(../imagens/lucas2.jfif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main .container3 .container3_4 .container3_kaka {
+    width: 100%;
+    height: 60vh;
+    border-radius: 10px;
+    background-image: url(../imagens/kaka1.jfif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main .container3 .container3_4 .container3_pedro {
+    width: 100%;
+    height: 60vh;
+    border-radius: 10px;
+    background-image: url(../imagens/pedro2.jfif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main .container3 .container3_6 {
+    width: 50%;
+}
+
+main .container3 .container3_7 {
+    height: 15%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+main .container3 .container3_7 .container3_8 {
+    width: 50px;
+    height: 50px;
+    margin: 0 0 0 5%;
+    background-image: url(../imagens/aspas1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main .container3 .container3_9 {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .container3 .container3_9 span {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 0 0 0 15%;
+    color: #001F3F;
+}
+
+main .container3 .container3_10 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+main .container3 .container3_10 img {
+    width: 50px;
+    margin: 0 0 0 0;
+}
+
+main .container3 .container3_10 a {
+    margin: 0 1% 0 0;
+}
+
+main .container3 .container3_10 span {
+    font-size: 15px;
+    color: #001F3F;
+    font-weight: bold;
+}
+
+main .container3 .container3_11 {
+    width: 50px;
+    height: 50px;
+    margin: 0 5% 0 40%;
+    background-image: url(../imagens/aspas2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main .container3 .aspasKaka {
+    margin: 0 0 0 55%;
+}
+
+main .container3 .aspasPedro {
+    margin: 0 0 0 40%;
+}
+
+/* FIM SESSÃO 2*/
 
 /* FIM MAIN */
