@@ -94,7 +94,7 @@ main .detalhe1_1 {
 main .container2 {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 55%;
     height: auto;
     position: absolute;
     margin: 7% 0 0 9%;
@@ -201,30 +201,45 @@ main .container3 .container3_4 .container3_lucas {
     width: 100%;
     height: 60vh;
     border-radius: 10px;
-    background-image: url(../imagens/lucas2.jfif);
+    background-image: url('../imagens/lucas1.jfif');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: 0.5s ease;
+}
+
+main .container3 .container3_4 .container3_lucas:hover {
+    background-image: url('../imagens/lucas2.jfif');
 }
 
 main .container3 .container3_4 .container3_kaka {
     width: 100%;
     height: 60vh;
     border-radius: 10px;
-    background-image: url(../imagens/kaka1.jfif);
+    background-image: url('../imagens/kaka1.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: 0.5s ease;
+}
+
+main .container3 .container3_4 .container3_kaka:hover {
+    background-image: url('../imagens/kaka2.png');
 }
 
 main .container3 .container3_4 .container3_pedro {
     width: 100%;
     height: 60vh;
     border-radius: 10px;
-    background-image: url(../imagens/pedro2.jfif);
+    background-image: url('../imagens/pedro1.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: 0.5s ease;
+}
+
+main .container3 .container3_4 .container3_pedro:hover {
+    background-image: url('../imagens/pedro2.jfif');
 }
 
 main .container3 .container3_6 {
