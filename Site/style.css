@@ -318,4 +318,117 @@ main .container3 .aspasPedro {
 
 /* FIM SESSÃO 2*/
 
+/* INÍCIO SESSÃO 3*/
+
+main .container4 {
+    height: 70vh;
+    margin: 10% 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #ADD8E6, #FFFFFF);
+}
+
+main .container4 .container4_2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 2% 0;
+}
+
+main .container4 .container4_2 span {
+    font-size: 25px;
+    font-weight: bold;
+    color: #001F3F;
+}
+
+main .container4 .container4_3 {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+main .container4 .container4_3 div{
+    width: 110vh;
+    height: 50px;
+    background-color: #001F3F;
+    border-radius: 0 20px 20px 0;
+    margin: 0 1% 0 1%;
+}
+
+main .container4 span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+main .container4 .container4_4 {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 0.6% 6.3% 0 0;
+}
+
+main .container4 .container4_4 div{
+    width: 100vh;
+    height: 50px;
+    background-color: #001F3F;
+    border-radius: 0 20px 20px 0;
+    margin: 0 1% 0 1%;
+}
+
+main .container4 .container4_5 {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 0.6% 9.6% 0 0;
+}
+
+main .container4 .container4_5 div{
+    width: 95vh;
+    height: 50px;
+    background-color: #001F3F;
+    border-radius: 0 20px 20px 0;
+    margin: 0 1% 0 1%;
+}
+
+main .container4 .container4_6 {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 0.6% 10.5% 0 0;
+}
+
+main .container4 .container4_6 div{
+    width: 92vh;
+    height: 50px;
+    background-color: #001F3F;
+    border-radius: 0 20px 20px 0;
+    margin: 0 1% 0 1%;
+}
+
+main .container4 .container4_7 {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 0.6% 14.7% 0 0;
+}
+
+main .container4 .container4_7 div{
+    width: 82vh;
+    height: 50px;
+    background-color: #001F3F;
+    border-radius: 0 20px 20px 0;
+    margin: 0 1% 0 1%;
+}
+
+
+
+/* FIM SESSÃO 3*/
+
 /* FIM MAIN */
