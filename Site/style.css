@@ -427,8 +427,71 @@ main .container4 .container4_7 div{
     margin: 0 1% 0 1%;
 }
 
+/* FIM SESSÃO 3 */
 
+/* INÍCIO SESSÃO 4 */
 
-/* FIM SESSÃO 3*/
+main .container5 {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #FFFFFF, #ADD8E6);
+}
+
+main .container5 .container5_1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: -10% 0 0 0;
+}
+
+main .container5 .container5_1 span {
+    font-size: 25px;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px 0px #ADD8E6;
+    color: #001F3F;
+}
+
+main .container5 .container5_2 {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+main .container5 .container5_3 {
+    display: flex;
+    flex-direction: column;
+}
+
+main .container5 .container5_4 {
+    display: flex;
+    flex-direction: column;
+}
+
+main .container5 .container5_5 {
+    display: flex;
+    flex-direction: column;
+}
+
+main .container5 .container5_6 {
+    display: flex;
+    flex-direction: column;
+}
+
+main .container5 .statsTxt {
+    font-size: 24px;
+    font-weight: 600;
+    color: #001F3F;
+}
+
+main .container5 .statsNum {
+    font-size: 64px;
+    font-weight: bold;
+    color: #001F3F;
+}
+
+/* FIM SESSÃO 4 */
 
 /* FIM MAIN */
