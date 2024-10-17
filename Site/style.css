@@ -13,6 +13,8 @@ a {
     text-decoration: none;
 }
 
+/* INÍCIO TELA HOME */
+
 /* INÍCIO HEADER */
 
 .container1 {
@@ -333,7 +335,6 @@ main .container4 {
     justify-content: center;
     align-items: center;
     background: linear-gradient(to top, #ADD8E6, #FFFFFF);
-    margin-bottom: 1px;
 }
 
 main .container4 .container4_2 {
@@ -1005,3 +1006,150 @@ footer .container5 span {
 /* FIM FOOTER */
 
 /* FIM MAIN */
+
+/* FIM TELA HOME */
+
+
+/* INÍCIO TELA CADASTRO */
+
+.telaCadastro {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #ADD8E6, white);
+    display: flex;
+    align-items: center;
+}
+
+.telaCadastro .container1 {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.telaCadastro .container2 {
+    width: 60%;
+    height: 100%;
+    border-radius: 60px;
+    background-color: #ADD8E6;
+    box-shadow: 1px 4px 4px 0;
+}
+
+.telaCadastro .container3 {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    background-color: white;
+}
+
+.telaCadastro .container4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    margin: -10% 0 5% 0;
+}
+
+.telaCadastro .container5 {
+    width: 70%;
+    margin: 0 0 0 5%;
+}
+
+.telaCadastro .container5 span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.telaCadastro .container6 {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 6%;
+}
+
+.telaCadastro .container6 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.telaCadastro .container7 {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.telaCadastro .container7 button{
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #0047AB;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 1px 2px 4px 0 black;
+}
+
+.telaCadastro .container8 {
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+.telaCadastro .container9 {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.telaCadastro .container10 span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.telaCadastro .container11 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    height: 60%;
+}
+
+.telaCadastro .container11 input {
+    width: 100%;
+    height: 20%;
+    border-radius: 10px;
+    border: none;
+    background-color: #F0F0F0;
+    text-align: center;
+}
+
+.telaCadastro .container12 {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.telaCadastro .container12 button {
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #0047AB;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 1px 2px 4px 0 black;
+}
+
+
+/* FIM TELA CADASTRO */
