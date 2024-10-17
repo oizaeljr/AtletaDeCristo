@@ -1073,7 +1073,7 @@ footer .container5 span {
     margin: 0 0 0 6%;
 }
 
-.telaCadastro .container6 {
+.telaCadastro .container6 span{
     font-size: 16px;
     font-weight: bold;
 }
@@ -1151,5 +1151,154 @@ footer .container5 span {
     box-shadow: 1px 2px 4px 0 black;
 }
 
-
 /* FIM TELA CADASTRO */
+
+/* INÍCIO TELA LOGIN */
+
+.telaLogin {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #ADD8E6, white);
+    display: flex;
+    align-items: center;
+}
+
+.telaLogin .container1 {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.telaLogin .container2 {
+    width: 60%;
+    height: 100%;
+    border-radius: 60px;
+    background-color: #ADD8E6;
+    box-shadow: 1px 4px 4px 0;
+}
+
+.telaLogin .container3 {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    background-color: white;
+}
+
+.telaLogin .container4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    margin: -10% 0 5% 0;
+}
+
+.telaLogin .container5 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.telaLogin .container5 span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.telaLogin .container6 {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 0 9%;
+}
+
+.telaLogin .container6 span{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.telaLogin .container7 {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.telaLogin .container7 button{
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #0047AB;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 1px 2px 4px 0 black;
+}
+
+.telaLogin .container8 {
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+
+.telaLogin .container9 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.telaLogin .esqueceu a{
+    font-weight: bold;
+    color: black;
+}
+
+.telaLogin .container10 span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.telaLogin .container11 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    height: 40%;
+}
+
+.telaLogin .container11 input {
+    width: 100%;
+    height: 45%;
+    border-radius: 10px;
+    border: none;
+    background-color: #F0F0F0;
+    text-align: center;
+}
+
+.telaLogin .container12 {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.telaLogin .container12 button {
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #0047AB;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 1px 2px 4px 0 black;
+}
+
+/* FIM TELA LOGIN*/
