@@ -1044,6 +1044,7 @@ footer .container5 span {
     align-items: center;
     border-radius: 60px;
     background-color: white;
+    box-shadow: 1px 4px 4px 0;
 }
 
 .telaCadastro .container4 {
@@ -1187,6 +1188,7 @@ footer .container5 span {
     align-items: center;
     border-radius: 60px;
     background-color: white;
+    box-shadow: 1px 4px 4px 0;
 }
 
 .telaLogin .container4 {
