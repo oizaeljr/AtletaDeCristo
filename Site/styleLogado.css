@@ -172,19 +172,17 @@ main .container7 span {
 }
 
 main .container8 {
-    border: 1px solid red;
     width: 90%;
     display: flex;
     justify-content: center;
 }
 
 main .container9 {
-    border: 1px solid green;
     width: 90%;
+    display: flex;
 }
 
 main .container10 {
-    border: 1px solid red;
     width: 50%;
     height: 100%;
     display: flex;
@@ -235,6 +233,99 @@ main .container10 .salvar {
     font-weight: bold;
     color: white;
 }
+
+main .containerFoto {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .containerP1 {
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main .containerP2 {
+    display: flex;
+    justify-content: center;
+}
+main .containerP2 img {
+    border: 1px solid;
+    width: 50%;
+    height: 30vh;
+    border-radius: 150px;
+}
+
+main .containerP3 {
+    display: flex;
+    justify-content: center;
+}
+
+main .containerP4 {
+    display: flex;
+    justify-content: center;
+}
+
+main .containerFoto span{
+    font-weight: bold;
+}
+
+main .containerP5 {
+    width: 75%;
+    height: 7vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+main .containerP6 {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .containerP6 input {
+    width: 55%;
+    height: 90%;
+    background-color: #D3D3D3;
+    border-radius: 10px;
+    border-style: none;
+}
+
+main .containerP7 {
+    width: 82%;
+    height: 5vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+main .containerP8 {
+    width: 77.5%;
+    display: flex;
+    justify-content: center;
+}
+
+main .containerP9 {
+    width: 69.8%;
+    display: flex;
+    justify-content: center;
+}
+
+main .containerP10 {
+    width: 89%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
 
 /* INÍCIO FOOTER */
 
