@@ -13,7 +13,7 @@ a {
     text-decoration: none;
 }
 
-/* INÍCIO TELA HOME */
+/* INÍCIO TELA PERFIL */
 
 /* INÍCIO HEADER */
 
@@ -326,6 +326,7 @@ main .containerP10 {
     align-items: end;
 }
 
+/* FIM MAIN */
 
 /* INÍCIO FOOTER */
 
@@ -394,6 +395,64 @@ footer .container5 span {
 
 /* FIM FOOTER */
 
-/* FIM MAIN */
-
 /* FIM TELA PERFIL */
+
+
+/* INÍCIO TELA TROCAR SENHA */
+.telaTrocarSenha .container8 {
+    width: 90%;
+}
+
+.telaTrocarSenha .container9 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    height: 50%;
+}
+
+.telaTrocarSenha .container9 span {
+    color: #001F3F;
+    font-weight: bold;
+}
+
+.telaTrocarSenha .container9 input {
+    width: 40%;
+    height: 4vh;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #D3D3D3;
+}
+
+.telaTrocarSenha .container10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.telaTrocarSenha .container10 span {
+    font-size: 25px;
+}
+
+.telaTrocarSenha .container9 div {
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.telaTrocarSenha .botoes {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.telaTrocarSenha .botoes button {
+    width: 45%;
+    height: 100%;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #0047AB;
+    font-weight: bold;
+    color: white;
+} 
+/* FIM TELA TROCAR SENHA */
