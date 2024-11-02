@@ -485,6 +485,7 @@ footer .container5 span {
 
 /* INÍCIO TELA ANOTAÇÕES */
 
+/* INÍCIO ADICIONAR OBJETIVO */
 .telaAnotacoes .containerA9 {
     width: 80%;
     height: auto;
@@ -511,7 +512,7 @@ footer .container5 span {
 }
 
 .telaAnotacoes .containerA11 {
-    width: 17%;
+    width: 18%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -522,7 +523,8 @@ footer .container5 span {
 }
 
 .telaAnotacoes .containerA11 button {
-    width: 13%;
+    width: 2vw;
+    height: 3vh;
     background-color: #ADD8E6;
     border: none;
     border-radius: 10px;
@@ -575,7 +577,8 @@ footer .container5 span {
 }
 
 .telaAnotacoes .containerA14 button {
-    width: 13%;
+    width: 2vw;
+    height: 3vh;
     background-color: #ADD8E6;
     border: none;
     border-radius: 10px;
@@ -602,5 +605,179 @@ footer .container5 span {
     font-weight: bold;
     color: white;
 }
+/* FIM ADICIONAR OBJETIVO */
+
+/*INÍCIO EM ANDAMENTO*/
+.telaAnotacoes .containerA16 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.telaAnotacoes .containerA17 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+}
+
+.telaAnotacoes .containerA17 span {
+    font-size: 15px;
+}
+
+.telaAnotacoes .containerA18 {
+    border: 1px solid;
+    border-radius: 10px;
+    width: 76%;
+}
+
+.telaAnotacoes .containerA19 {
+    display: flex;
+    align-items: center;
+    height: 5vh;
+}
+
+.telaAnotacoes .containerA20 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+}
+
+.telaAnotacoes .containerA20 img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.telaAnotacoes .containerA21 {
+    width: 50%;
+}
+
+.telaAnotacoes .containerA22 {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.telaAnotacoes .containerA23 {
+    width: 85%;
+    height: 4vh;
+    border-radius: 10px;
+    background: linear-gradient(to right, #6FD480 15%, #D3D3D3 1%);
+}
+
+.telaAnotacoes .containerA24 {
+    width: 7.5vw;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.telaAnotacoes .containerA24 img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.telaAnotacoes .containerA25 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 3px;
+    width: 2vw;
+    height: 3vh;
+    cursor: pointer;
+}
+
+.telaAnotacoes .containerA27 {
+    display: flex;
+}
+
+.telaAnotacoes .containerA27 table{
+    width: 98%;
+}
+
+.telaAnotacoes .containerA27 tr {
+    display: flex;
+    flex-direction: column;
+}
+
+.telaAnotacoes .containerA27 td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+}
+
+.telaAnotacoes .containerA27 td input {
+    background-color: #D3D3D3;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 81.5%;
+    height: 5vh;
+    margin: 0 0 1% 0;
+    border-style: none;
+}
+
+.telaAnotacoes .containerA27 td img {
+    width: 20px;
+    height: 22px;
+}
+
+.telaAnotacoes .containerA {
+    width: 1vw;
+}
+
+.telaAnotacoes .containerA28 {
+    width: 7vw;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.telaAnotacoes .containerA29 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 3px;
+    width: 2vw;
+    height: 3vh;
+    cursor: pointer;
+}
+
+.telaAnotacoes .containerA31 {
+    width: 40%;
+    margin: 0 0 2% 0;
+    display: flex;
+}
+
+.telaAnotacoes .containerA32 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 55%;
+}
+
+.telaAnotacoes .containerA32 button {
+    width: 2vw;
+    height: 3vh;
+    background-color: #ADD8E6;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.telaAnotacoes .containerA32 span {
+    cursor: pointer;
+}
+
+/*FIM EM ANDAMENTO*/
 
 /* FIM TELA ANOTAÇÕES */

@@ -30,7 +30,7 @@
             </div>
             <div class="container3">
                 <span>Izael Junior</span>
-                <img src="" id="fotoUsuario">
+                <img id="fotoUsuario">
             </div>
         </nav>
     </header>
@@ -71,7 +71,7 @@
                         </div>
 
                         <!-- INÍCIO TELA ADICIONAR OBJETIVO -->
-                        <div class="containerA12" id="adicionarObjetivo">
+                        <div class="containerA12" id="telaObjetivo">
                             <table>
                                 <tbody id="tableCampo">
                                     <tr>
@@ -94,12 +94,55 @@
                         <!-- FIM TELA ADICIONAR OBJETIVO -->
 
                         <!-- INÍCIO TELA EM ANDAMENTO -->
-                         <div class="containerA16">
-                            <div>
+                         <div class="containerA16" id="telaAndamento" style="display: none;">
+                            <div class="containerA17">
                                 <span>14 objetivos em andamento</span>
                             </div>
-                            <div>
-                                
+                            <div class="containerA18">
+                                <div class="containerA19">
+                                    <div class="containerA20">
+                                        <img src="../imagens/setaDireita.png">
+                                        <span>Título</span>
+                                    </div>
+                                    <div class="containerA21"></div>
+                                    <div class="containerA22">
+                                        <div class="containerA23"></div>
+                                        <span>15%</span>
+                                    </div>
+                                    <div class="containerA24">
+                                        <div class="containerA25">
+                                            <img src="../imagens/check.png">
+                                        </div>
+                                        <img src="../imagens/lixeira.png">
+                                    </div>
+                                </div>
+                                <div class="containerA26">
+                                    <div class="containerA27">
+                                        <div class="containerA"></div>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" placeholder="Tarefa">
+                                                        <div class="containerA28">
+                                                            <div class="containerA29">
+                                                                <img src="../imagens/check.png">
+                                                            </div>
+                                                            <img src="../imagens/lixeira.png">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="containerA31">
+                                        <div class="containerA"></div>
+                                        <div class="containerA32">
+                                            <button>+</button>
+                                            <span>Adicionar tarefa</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                          </div>
                         <!-- FIM TELA EM ANDAMENTO -->
@@ -140,14 +183,16 @@
 
 <script>
     function andamento(){
-        adicionarObjetivo.style.display = 'none';
+        telaAndamento.style.display = 'block'
+        telaObjetivo.style.display = 'none';
         span_objetivo.style.borderBottom = 'none'
         span_concluido.style.borderBottom = 'none'
         span_lixeira.style.borderBottom = 'none'
         span_andamento.style.borderBottom = '1px solid';
     }
     function objetivo() {
-        adicionarObjetivo.style.display = 'block';
+        telaObjetivo.style.display = 'block';
+        telaAndamento.style.display = 'none'
         span_objetivo.style.borderBottom = '1px solid'
         span_concluido.style.borderBottom = 'none'
         span_lixeira.style.borderBottom = 'none'
