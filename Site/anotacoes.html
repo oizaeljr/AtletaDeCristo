@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iJr</title>
+    <link rel="icon" href="../imagens/cerebro.png" type="image/png">
+    <link rel="stylesheet" href="./styleLogado.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container1">
+                <a href="home.html">
+                    <img src="../imagens/iJr.1.png">
+                </a>
+            </div>
+            <div class="container2">
+                <a href="">Sobre mim</a>
+                <a href="">Esportes</a>
+                <a href="">Mindset</a>
+                <a href="">Quiz</a>
+            </div>
+            <div class="container3">
+                <span>Izael Junior</span>
+                <img src="" id="fotoUsuario">
+            </div>
+        </nav>
+    </header>
+    <main class="telaAnotacoes">
+        <div class="container1">
+            <div class="container2">
+                <span>Foco, força e fé</span>
+            </div>
+            <div class="container3">
+                <div class="container4">
+                    <div class="container5">
+                        <ul>
+                            <li><a id="perfil" href="">Perfil</a></li>
+                            <li><a id="anotacoes" href="">Anotações</a></li>
+                            <li><a id="conhecimento" href="">Conhecimento</a></li>
+                            <li><a id="motivacao" href="">Motivação</a></li>
+                            <li><a id="biblia" href="">Bíblia</a></li>
+                            <li><a id="quiz" href="">Quiz</a></li>
+                        </ul>
+                    </div>
+                    <div class="container6">
+                        <div class="container7">
+                            <img src="../imagens/logout.png">
+                            <span>Sair</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container8">
+                    <div class="containerA9">
+                        <div class="containerA10">
+                            <div class="containerA11">
+                                <button>+</button>
+                                <span onclick="objetivo()" id="span_objetivo">Adicionar Objetivo</span>
+                            </div>
+                            <span onclick="andamento()" id="span_andamento">Em Andamento</span>
+                            <span id="span_concluido">Concluído</span>
+                            <span id="span_lixeira">Lixeira</span>
+                        </div>
+
+                        <!-- INÍCIO TELA ADICIONAR OBJETIVO -->
+                        <div class="containerA12" id="adicionarObjetivo">
+                            <table>
+                                <tbody id="tableCampo">
+                                    <tr>
+                                        <td><input type="text" placeholder="Título" id="titulo"></td>
+                                        <td><input type="text" placeholder="Tarefa"><img src="../imagens/lixeira.png"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="containerA13">
+                                <div class="containerA14">
+                                    <button>+</button>
+                                    <span>Adicionar Tarefa</span>
+                                </div>
+                            </div>
+                            <div class="containerA15">
+                                <button>Salvar</button>
+                                <button>Cancelar</button>
+                            </div>
+                        </div>
+                        <!-- FIM TELA ADICIONAR OBJETIVO -->
+
+                        <!-- INÍCIO TELA EM ANDAMENTO -->
+                         <div class="containerA16">
+                            <div>
+                                <span>14 objetivos em andamento</span>
+                            </div>
+                            <div>
+                                
+                            </div>
+                         </div>
+                        <!-- FIM TELA EM ANDAMENTO -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container1">
+            <div class="container1_1">
+                <div class="container2">
+                    <img src="../imagens/iJr.2.png">
+                </div>
+                <div class="container3">
+                    <span>Um jovem sonhador que acredita</span>
+                    <span>que não há limites para fazer o</span>
+                    <span>que é certo.</span>
+                </div>
+                <div class="container4">
+                    <a href="https://www.instagram.com/oizaeljunior" target="_blank"><img
+                            src="../imagens/instagram.png"></a>
+                    <a href="https://wa.me/5511966090323" target="_blank"><img src="../imagens/whatsapp.png"></a>
+                    <a href="https://github.com/oizaeljr" target="_blank"><img src="../imagens/github.png"></a>
+                    <a href="https://www.linkedin.com/in/oizaeljunior/" target="_blank"><img
+                            src="../imagens/linkedin.png"></a>
+                </div>
+            </div>
+            <div class="linha"></div>
+            <div class="container5">
+                <span>© Copyright 2024, All Rights Reserved by Izael Junior</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    function andamento(){
+        adicionarObjetivo.style.display = 'none';
+        span_objetivo.style.borderBottom = 'none'
+        span_concluido.style.borderBottom = 'none'
+        span_lixeira.style.borderBottom = 'none'
+        span_andamento.style.borderBottom = '1px solid';
+    }
+    function objetivo() {
+        adicionarObjetivo.style.display = 'block';
+        span_objetivo.style.borderBottom = '1px solid'
+        span_concluido.style.borderBottom = 'none'
+        span_lixeira.style.borderBottom = 'none'
+        span_andamento.style.borderBottom = 'none';
+    }
+</script>

@@ -30,7 +30,7 @@
             </div>
             <div class="container3">
                 <span>Izael Junior</span>
-                <img src="" id="fotoUsuario">
+                <img id="fotoUsuario">
             </div>
         </nav>
     </header>
@@ -132,13 +132,16 @@
                         <div class="containerFoto">
                             <div class="containerP1">
                                 <div class="containerP2">
-                                    <img src="">
+                                    <img id="fotoPerfil">
                                 </div>
                                 <div class="containerP3">
                                     <span>Foto de perfil</span>
                                 </div>
                                 <div class="containerP4">
-                                    <input type="file">
+                                    <label>
+                                        <span>Escolher arquivo</span>
+                                        <input type="file" accept="image/*" onchange="VisualizarFoto(event)">
+                                    </label>
                                 </div>
                                 <div class="containerP5">
                                     <span>Frase Motivacional:</span>
@@ -194,3 +197,15 @@
 </body>
 
 </html>
+<script>
+    function VisualizarFoto(event) {
+        var foto = document.getElementById('fotoPerfil')
+        var arquivo = event.target.files[0];
+
+        if (arquivo && arquivo.type.startsWith('image/')) {
+            foto.src = `${URL.createObjectURL(arquivo)}`
+        } else {
+            foto.src = ``
+        }
+    }
+</script>

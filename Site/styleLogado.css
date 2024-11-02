@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
 button {
@@ -45,7 +46,7 @@ nav .container2 a {
     font-size: 22px;
 }
 
-nav button{
+nav button {
     width: 150px;
     height: 50px;
     border-radius: 30px;
@@ -60,7 +61,7 @@ nav button{
     color: #0047AB;
 }
 
-#btn_cadastrar{
+#btn_cadastrar {
     background-color: #0047AB;
     color: white;
 }
@@ -253,11 +254,15 @@ main .containerP2 {
     display: flex;
     justify-content: center;
 }
+
 main .containerP2 img {
     border: 1px solid;
     width: 50%;
     height: 30vh;
     border-radius: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main .containerP3 {
@@ -270,7 +275,26 @@ main .containerP4 {
     justify-content: center;
 }
 
-main .containerFoto span{
+main .containerP4 input {
+    display: none;
+}
+
+main .containerP4 span {
+    cursor: pointer;
+    background-color: #D3D3D3;
+    border-radius: 10px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+main .containerP4 label {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+main .containerFoto span {
     font-weight: bold;
 }
 
@@ -454,5 +478,129 @@ footer .container5 span {
     background-color: #0047AB;
     font-weight: bold;
     color: white;
-} 
+}
+
 /* FIM TELA TROCAR SENHA */
+
+
+/* INÍCIO TELA ANOTAÇÕES */
+
+.telaAnotacoes .containerA9 {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.telaAnotacoes .containerA9 span {
+    color: #001F3F;
+    font-weight: bold;
+}
+
+.telaAnotacoes .containerA10 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    height: 10%;
+    width: 100%;
+}
+
+.telaAnotacoes .containerA10 span {
+    cursor: pointer;
+}
+
+.telaAnotacoes .containerA11 {
+    width: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.telaAnotacoes .containerA11 span {
+    border-bottom: 1px solid;
+}
+
+.telaAnotacoes .containerA11 button {
+    width: 13%;
+    background-color: #ADD8E6;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.telaAnotacoes .containerA12 {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5% 0 0 0;
+}
+
+.telaAnotacoes .containerA12 table {
+    width: 100%;
+}
+
+.telaAnotacoes .containerA12 tr {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.telaAnotacoes .container1 tr img {
+    width: 20px;
+    margin: 0 0 0 1%;
+    cursor: pointer;
+}
+
+.telaAnotacoes .containerA12 input {
+    background-color: #D3D3D3;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 80%;
+    height: 5vh;
+    margin: 0 0 1% 0;
+    border-style: none;
+}
+
+#titulo {
+    width: 50%;
+}
+
+.telaAnotacoes .containerA13 {
+    align-self: flex-start;
+    width: 25%;
+    margin: 0 0 2% 0;
+}
+
+.telaAnotacoes .containerA14 button {
+    width: 13%;
+    background-color: #ADD8E6;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.telaAnotacoes .containerA14 span {
+    cursor: pointer;
+}
+
+.telaAnotacoes .containerA15 {
+    align-self: flex-start;
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.telaAnotacoes .containerA15 button {
+    width: 45%;
+    height: 5vh;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #0047AB;
+    font-weight: bold;
+    color: white;
+}
+
+/* FIM TELA ANOTAÇÕES */

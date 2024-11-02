@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
 button {
@@ -177,8 +178,9 @@ main .detalhe2 .detalhe2_1 {
 
 main .container1 img {
     position: absolute;
-    top: 25.7%;
+    top: 28.2%;
     left: 52%;
+    width: 25%;
 }
 /* FIM SESSÃO 1*/
 
@@ -959,7 +961,7 @@ main .container6 .container6_43 button{
     font-weight: bold;
     border-radius: 20px;
     width: 25%;
-    height: 6vh;
+    height: 8vh;
 }
 
 /* FIM SESSÃO 5 */
