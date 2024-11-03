@@ -66,8 +66,8 @@
                                 <span onclick="objetivo()" id="span_objetivo">Adicionar Objetivo</span>
                             </div>
                             <span onclick="andamento()" id="span_andamento">Em Andamento</span>
-                            <span id="span_concluido">Concluído</span>
-                            <span id="span_lixeira">Lixeira</span>
+                            <span onclick="concluido()" id="span_concluido">Concluído</span>
+                            <span onclick="lixeira()" id="span_lixeira">Lixeira</span>
                         </div>
 
                         <!-- INÍCIO TELA ADICIONAR OBJETIVO -->
@@ -98,54 +98,154 @@
                             <div class="containerA17">
                                 <span>14 objetivos em andamento</span>
                             </div>
-                            <div class="containerA18">
-                                <div class="containerA19">
-                                    <div class="containerA20">
-                                        <img src="../imagens/setaDireita.png">
-                                        <span>Título</span>
-                                    </div>
-                                    <div class="containerA21"></div>
-                                    <div class="containerA22">
-                                        <div class="containerA23"></div>
-                                        <span>15%</span>
-                                    </div>
-                                    <div class="containerA24">
-                                        <div class="containerA25">
-                                            <img src="../imagens/check.png">
+                            <div class="containerAA">
+                                <div class="containerA18">
+                                    <div class="containerA19">
+                                        <div class="containerA20">
+                                            <img src="../imagens/setaDireita.png">
+                                            <span>Título</span>
                                         </div>
-                                        <img src="../imagens/lixeira.png">
+                                        <div class="containerA21"></div>
+                                        <div class="containerA22">
+                                            <div class="containerA23"></div>
+                                            <span>15%</span>
+                                        </div>
+                                        <div class="containerA24">
+                                            <div class="containerA25">
+                                                <img src="../imagens/check.png">
+                                            </div>
+                                            <img src="../imagens/lixeira.png">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="containerA26">
-                                    <div class="containerA27">
-                                        <div class="containerA"></div>
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <input type="text" placeholder="Tarefa">
-                                                        <div class="containerA28">
-                                                            <div class="containerA29">
-                                                                <img src="../imagens/check.png">
+                                    <div class="containerA26">
+                                        <div class="containerA27">
+                                            <div class="containerA"></div>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="Tarefa">
+                                                            <div class="containerA28">
+                                                                <div class="containerA29">
+                                                                    <img src="../imagens/check.png">
+                                                                </div>
+                                                                <img src="../imagens/lixeira.png">
                                                             </div>
-                                                            <img src="../imagens/lixeira.png">
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="containerA31">
-                                        <div class="containerA"></div>
-                                        <div class="containerA32">
-                                            <button>+</button>
-                                            <span>Adicionar tarefa</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="containerA31">
+                                            <div class="containerA"></div>
+                                            <div class="containerA32">
+                                                <button>+</button>
+                                                <span>Adicionar tarefa</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                          </div>
                         <!-- FIM TELA EM ANDAMENTO -->
+
+                         <!-- INÍCIO TELA CONCLUÍDO -->
+                         <div class="containerA16" id="telaConcluido" style="display: none;">
+                            <div class="containerA17">
+                                <span>3 objetivos concluídos</span>
+                            </div>
+                            <div class="containerAA">
+                                <div class="containerA18">
+                                    <div class="containerA19">
+                                        <div class="containerA20">
+                                            <img src="../imagens/setaDireita.png">
+                                            <span>Título</span>
+                                        </div>
+                                        <div class="containerA21"></div>
+                                        <div class="containerA22">
+                                            <div class="containerA23"></div>
+                                            <span>100%</span>
+                                        </div>
+                                        <div class="containerA24">
+                                            <div class="containerA25">
+                                                <img src="../imagens/check.png">
+                                            </div>
+                                            <img src="../imagens/lixeira.png">
+                                        </div>
+                                    </div>
+                                    <div class="containerA26">
+                                        <div class="containerA27">
+                                            <div class="containerA"></div>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="Tarefa">
+                                                            <div class="containerA28">
+                                                                <div class="containerA29">
+                                                                    <img src="../imagens/check.png">
+                                                                </div>
+                                                                <img src="../imagens/lixeira.png">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                        <!-- FIM TELA CONCLUÍDO -->
+
+                         <!-- INÍCIO TELA LIXEIRA -->
+                         <div class="containerA16" id="telaLixeira" style="display: none;">
+                            <div class="containerA17">
+                                <span>4 objetivos apagados</span>
+                            </div>
+                            <div class="containerAA">
+                                <div class="containerA18">
+                                    <div class="containerA19">
+                                        <div class="containerA20">
+                                            <img src="../imagens/setaDireita.png">
+                                            <span>Título</span>
+                                        </div>
+                                        <div class="containerA21"></div>
+                                        <div class="containerA22">
+                                            <div class="containerA23"></div>
+                                            <span>20%</span>
+                                        </div>
+                                        <div class="containerA24">
+                                            <div class="containerA25">
+                                                <img src="../imagens/check.png">
+                                            </div>
+                                            <img src="../imagens/lixeira.png">
+                                        </div>
+                                    </div>
+                                    <div class="containerA26">
+                                        <div class="containerA27">
+                                            <div class="containerA"></div>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="Tarefa">
+                                                            <div class="containerA28">
+                                                                <div class="containerA29">
+                                                                    <img src="../imagens/check.png">
+                                                                </div>
+                                                                <img src="../imagens/lixeira.png">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                        <!-- FIM TELA LIXEIRA -->
                     </div>
                 </div>
             </div>
@@ -185,17 +285,41 @@
     function andamento(){
         telaAndamento.style.display = 'block'
         telaObjetivo.style.display = 'none';
+        telaConcluido.style.display = 'none';
+        telaLixeira.style.display = 'none';
+        span_andamento.style.borderBottom = '1px solid';
         span_objetivo.style.borderBottom = 'none'
         span_concluido.style.borderBottom = 'none'
         span_lixeira.style.borderBottom = 'none'
-        span_andamento.style.borderBottom = '1px solid';
     }
     function objetivo() {
         telaObjetivo.style.display = 'block';
         telaAndamento.style.display = 'none'
+        telaConcluido.style.display = 'none'
+        telaLixeira.style.display = 'none'
         span_objetivo.style.borderBottom = '1px solid'
         span_concluido.style.borderBottom = 'none'
         span_lixeira.style.borderBottom = 'none'
+        span_andamento.style.borderBottom = 'none';
+    }
+    function concluido() {
+        telaConcluido.style.display = 'block'
+        telaObjetivo.style.display = 'none';
+        telaAndamento.style.display = 'none'
+        telaLixeira.style.display = 'none'
+        span_concluido.style.borderBottom = '1px solid'
+        span_objetivo.style.borderBottom = 'none'
+        span_lixeira.style.borderBottom = 'none'
+        span_andamento.style.borderBottom = 'none';
+    }
+    function lixeira() {
+        telaLixeira.style.display = 'block'
+        telaConcluido.style.display = 'none'
+        telaObjetivo.style.display = 'none';
+        telaAndamento.style.display = 'none'
+        span_lixeira.style.borderBottom = '1px solid'
+        span_concluido.style.borderBottom = 'none'
+        span_objetivo.style.borderBottom = 'none'
         span_andamento.style.borderBottom = 'none';
     }
 </script>

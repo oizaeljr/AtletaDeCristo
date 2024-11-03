@@ -608,6 +608,11 @@ footer .container5 span {
 /* FIM ADICIONAR OBJETIVO */
 
 /*INÍCIO EM ANDAMENTO*/
+.telaAnotacoes .containerAA {
+    display: flex;
+    justify-content: center;
+}
+
 .telaAnotacoes .containerA16 {
     width: 100%;
     height: auto;
