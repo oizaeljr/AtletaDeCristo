@@ -786,3 +786,88 @@ footer .container5 span {
 /*FIM EM ANDAMENTO*/
 
 /* FIM TELA ANOTAÇÕES */
+
+
+/* INÍCIO TELA QUIZ */
+
+.telaQuiz .container8 {
+    align-items: center;
+}
+
+.telaQuiz .containerQ9 {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.telaQuiz .containerQ {
+    display: flex;
+    align-items: center;
+    height: 20%;
+}
+
+.telaQuiz .containerQ10 {
+    border: 3px solid;
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ADD8E6;
+}
+
+.telaQuiz .containerQ11 {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telaQuiz .containerQ11 img {
+    width: 50px;
+}
+
+.telaQuiz .containerQ12 {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telaQuiz .containerQ12 span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.telaQuiz .containerQ13 {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telaQuiz .containerQ14 {
+    width: 83%;
+    display: flex;
+}
+
+.telaQuiz .containerQ14 button {
+    width: 80%;
+    border-radius: 10px;
+    border-style: none;
+    background-color: white;
+}
+
+.telaQuiz .containerQ15 {
+    width: 10%;
+}
+
+.telaQuiz .containerQ15 span {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* FIM TELA QUIZ */
