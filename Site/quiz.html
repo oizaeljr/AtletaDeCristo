@@ -43,12 +43,12 @@
                 <div class="container4">
                     <div class="container5">
                         <ul>
-                            <li><a id="perfil" href="">Perfil</a></li>
-                            <li><a id="anotacoes" href="">Anotações</a></li>
-                            <li><a id="conhecimento" href="">Conhecimento</a></li>
-                            <li><a id="motivacao" href="">Motivação</a></li>
-                            <li><a id="biblia" href="">Bíblia</a></li>
-                            <li><a id="quiz" href="">Quiz</a></li>
+                            <li><a id="perfil" href="perfil.html">Perfil</a></li>
+                            <li><a id="anotacoes" href="anotacoes.html">Anotações</a></li>
+                            <li><a id="conhecimento" href="conhecimento.html">Conhecimento</a></li>
+                            <li><a id="motivacao" href="motivacao.html">Motivação</a></li>
+                            <li><a id="biblia" href="biblia.html">Bíblia</a></li>
+                            <li><a id="quiz" href="quiz.html">Quiz</a></li>
                         </ul>
                     </div>
                     <div class="container6">
@@ -128,10 +128,24 @@
                     <!-- FIM QUIZ ESPORTES -->
 
                     <!-- INÍCIO RANKING -->
-                    <div>
-                        <div>
-                            <span></span>
-                            <img>
+                    <div class="containerQ16" id="telaRanking" style="display: none;">
+                        <div class="containerQ17 top2">
+                            <span>2º</span>
+                            <span>Izael Junior</span>
+                            <div class="containerQQ1"></div>
+                            <span>18 pontos</span>
+                        </div>
+                        <div class="containerQ17 top1">
+                            <span>1º</span>
+                            <span>Izael Junior</span>
+                            <div class="containerQQ1"></div>
+                            <span>21 pontos</span>
+                        </div>
+                        <div class="containerQ17 top3">
+                            <span>3º</span>
+                            <span>Izael Junior</span>
+                            <div class="containerQQ1"></div>
+                            <span>15 pontos</span>
                         </div>
                     </div>
                     <!-- FIM RANKING -->
@@ -170,7 +184,8 @@
 </html>
 <script>
     function esportes() {
-        telaQuizEsportes.style.display = 'block';
+        telaQuizEsportes.style.display = 'flex';
+        telaRanking.style.display = 'none';
         quizEsporte.style.borderBottom = '1px solid';
         quizCristao.style.borderBottom = 'none';
         quizFutebol.style.borderBottom = 'none';
@@ -179,7 +194,8 @@
         selecione.style.display = 'none'
     }
     function cristao() {
-        telaQuizEsportes.style.display = 'block';
+        telaQuizEsportes.style.display = 'flex';
+        telaRanking.style.display = 'none';
         quizEsporte.style.borderBottom = 'none';
         quizCristao.style.borderBottom = '1px solid';
         quizFutebol.style.borderBottom = 'none';
@@ -188,7 +204,8 @@
         selecione.style.display = 'none'
     }
     function futebol() {
-        telaQuizEsportes.style.display = 'block';
+        telaQuizEsportes.style.display = 'flex';
+        telaRanking.style.display = 'none';
         quizEsporte.style.borderBottom = 'none';
         quizCristao.style.borderBottom = 'none';
         quizFutebol.style.borderBottom = '1px solid';
@@ -197,7 +214,8 @@
         selecione.style.display = 'none'
     }
     function aleatorio() {
-        telaQuizEsportes.style.display = 'block';
+        telaQuizEsportes.style.display = 'flex';
+        telaRanking.style.display = 'none';
         quizEsporte.style.borderBottom = 'none';
         quizCristao.style.borderBottom = 'none';
         quizFutebol.style.borderBottom = 'none';
@@ -206,12 +224,14 @@
         selecione.style.display = 'none'
     }
     function ranking() {
-        telaQuizEsportes.style.display = 'block';
+        telaQuizEsportes.style.display = 'none';
+        telaRanking.style.display = 'flex';
         quizEsporte.style.borderBottom = 'none';
         quizCristao.style.borderBottom = 'none';
         quizFutebol.style.borderBottom = 'none';
         quizAleatorio.style.borderBottom = 'none';
         quizRanking.style.borderBottom = '1px solid';
-        selecione.style.display = 'none'
+        selecione.style.display = 'block'
+        selecione.innerHTML = 'OS MELHORES ESTÃO AQUI!'
     }
 </script>

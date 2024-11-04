@@ -832,7 +832,6 @@ footer .container5 span {
     height: 60%;
     display: flex;
     justify-content: center;
-    margin: 0 0 0 50%;
 }
 
 .telaQuiz .containerQ {
@@ -903,5 +902,44 @@ footer .container5 span {
     font-weight: bold;
     font-size: 30px;
 }
-
 /* FIM TELA QUIZ */
+
+
+/* INÍCIO TELA RANKING */
+.telaQuiz .containerQ16 {
+    width: 50vw;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.telaQuiz .containerQ16 span {
+    font-weight: bold;
+    color: #001F3F;
+    font-size: 30px;
+}
+
+.telaQuiz .containerQ17 {
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+}
+
+.telaQuiz .containerQQ1 {
+    width: 40%;
+}
+
+.telaQuiz .top1 {
+    height: 100%;
+}
+.telaQuiz .top2 {
+    height: 75%;
+}
+.telaQuiz .top3 {
+    height: 60%;
+}
+/* FIM TELA RANKING */
