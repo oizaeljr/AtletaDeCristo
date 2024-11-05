@@ -1038,6 +1038,220 @@ footer .container5 span {
 /* FIM TELA HOME */
 
 
+/* INÍCIO TELA SOBRE MIM */
+.telaSobreMim .containerS1 {
+    background-color: black;
+    width: 100%;
+    height: 80vh;
+    border-radius: 0px 0px 200px 200px;
+    display: flex;
+}
+
+.telaSobreMim .containerS1 span {
+    color: white;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+#inspirar {
+    color: #ADD8E6;
+}
+
+#legado {
+    color: #ADD8E6;
+}
+
+#pessoas {
+    color: #ADD8E6;
+}
+
+.telaSobreMim .containerS2 {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.telaSobreMim .containerS3 {
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.telaSobreMim .containerS4 {
+    width: 30%;
+    height: 100%;
+    background-image: url('../imagens/leao.jfif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 200px 0;
+}
+
+.telaSobreMim .containerS5 {
+    width: 100%;
+    height: 70vh;
+    margin: 100px 0 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telaSobreMim .containerS6 {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.telaSobreMim .containerS7 {
+    width: 30%;
+    height: 100%;
+    border-radius: 20px;
+    background-image: url('../imagens/eu2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.telaSobreMim .containerS8 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telaSobreMim .containerS8 span {
+    font-size: 20px;
+}
+
+.telaSobreMim .containerS9 {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.telaSobreMim .containerS10 {
+    display: flex;
+    justify-content: center;
+}
+
+.telaSobreMim .containerS10 span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.telaSobreMim .containerS11 {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.telaSobreMim .containerS12 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telaSobreMim .containerS13 {
+    width: 70%;
+    height: auto;
+}
+
+.telaSobreMim .containerS14 {
+    width: 10%;
+    height: 15%;
+}
+
+.telaSobreMim .containerS14 span {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.telaSobreMim .containerS15 {
+    width: 13%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.telaSobreMim .containerS15 span {
+    font-size: 20px;
+}
+
+.telaSobreMim .containerS15 img {
+    width: 30px;
+}
+
+.telaSobreMim .containerS16 {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.telaSobreMim .containerS16 img {
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.telaSobreMim .containerS17 img:hover {
+    transform: scale(1.1);
+}
+
+.telaSobreMim .containerS17 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.telaSobreMim .containerS17 span {
+    font-weight: bold;
+}
+
+.telaSobreMim .containerS18 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.telaSobreMim .containerS19 {
+    border: 1px solid red;
+    width: 90%;
+    height: auto;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0047AB;
+}
+
+.telaSobreMim .containerS19 span {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* FIM TELA SOBRE MIM */
+
+
 /* INÍCIO TELA CADASTRO */
 
 .telaCadastro {
