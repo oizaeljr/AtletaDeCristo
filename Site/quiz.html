@@ -80,7 +80,7 @@
                                     <img src="../imagens/lampada.png">
                                 </div>
                                 <div class="containerQ12">
-                                    <span>Quiz esportes</span>
+                                    <span id="span_pergunta">Quiz esportes</span>
                                 </div>
                             </div>
                             <div class="containerQ13">
@@ -88,7 +88,7 @@
                                     <div class="containerQ15">
                                         <span>A</span>
                                     </div>
-                                    <button>Cristiano Ronaldo</button>
+                                    <button id="btn_A" onclick="alternativaA()">Cristiano Ronaldo</button>
                                 </div>
                             </div>
                             <div class="containerQ13">
@@ -96,7 +96,7 @@
                                     <div class="containerQ15">
                                         <span>B</span>
                                     </div>
-                                    <button>Cristiano Ronaldo</button>
+                                    <button id="btn_B" onclick="alternativaB()">Cristiano Ronaldo</button>
                                 </div>
                             </div>
                             <div class="containerQ13">
@@ -104,7 +104,7 @@
                                     <div class="containerQ15">
                                         <span>C</span>
                                     </div>
-                                    <button>Cristiano Ronaldo</button>
+                                    <button id="btn_C" onclick="alternativaC()">Cristiano Ronaldo</button>
                                 </div>
                             </div>
                             <div class="containerQ13">
@@ -112,7 +112,7 @@
                                     <div class="containerQ15">
                                         <span>D</span>
                                     </div>
-                                    <button>Cristiano Ronaldo</button>
+                                    <button id="btn_D" onclick="alternativaD()">Cristiano Ronaldo</button>
                                 </div>
                             </div>
                             <div class="containerQ13">
@@ -120,7 +120,46 @@
                                     <div class="containerQ15">
                                         <span>E</span>
                                     </div>
-                                    <button>Cristiano Ronaldo</button>
+                                    <button id="btn_E" onclick="alternativaE()">Cristiano Ronaldo</button>
+                                </div>
+                            </div>
+                            <div class="containerQ13" id="div_proxima" style="display: none;">
+                                <button onclick="proximaPergunta()">Próxima</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="containerQ9" id="telaPontuacao" style="display: none;">
+                        <div class="containerQ10">
+                            <div class="containerQ">
+                                <div class="containerQ11">
+                                    <img src="../imagens/pontuacao.png">
+                                </div>
+                                <div class="containerQ12">
+                                    <span id="parabens">Parabéns!</span>
+                                </div>
+                            </div>
+                            <div class="containerQ13">
+                                <div class="containerQ14 pontuacao">
+                                    <div class="containerQ15" id="quantidade">
+                                        <span>Quantidade de perguntas:</span>
+                                    </div>
+                                    <span id="span_quantidade">10</span>
+                                </div>
+                            </div>
+                            <div class="containerQ13">
+                                <div class="containerQ14 pontuacao">
+                                    <div class="containerQ15" id="acertos">
+                                        <span>Quantidade de acertos:</span>
+                                    </div>
+                                    <span id="span_acertos">10</span>
+                                </div>
+                            </div>
+                            <div class="containerQ13">
+                                <div class="containerQ14 pontuacao">
+                                    <div class="containerQ15" id="erros">
+                                        <span>Quantidade de erros:</span>
+                                    </div>
+                                    <span id="span_erros">10</span>
                                 </div>
                             </div>
                         </div>

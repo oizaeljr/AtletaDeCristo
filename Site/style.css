@@ -49,7 +49,7 @@ nav .container2 a {
 nav button{
     width: 150px;
     height: 50px;
-    border-radius: 30px;
+    border-radius: 10px;
     border: none;
     box-shadow: 0px 4px 4px 0px #5d5d5d;
     font-size: 20px;
@@ -59,10 +59,21 @@ nav button{
 #btn_login {
     background-color: white;
     color: #0047AB;
+    transition: 0.3s ease;
 }
 
 #btn_cadastrar{
     background-color: #0047AB;
+    color: white;
+    transition: 0.3s ease;
+}
+
+#btn_login:hover {
+    background-color: #ADD8E6;
+    color: white;
+}
+#btn_cadastrar:hover {
+    background-color: #ADD8E6;
     color: white;
 }
 
@@ -1264,7 +1275,7 @@ footer .container5 span {
 
 .telaCadastro .container1 {
     width: 100%;
-    height: 60%;
+    height: 65%;
     display: flex;
     justify-content: center;
 }
@@ -1323,8 +1334,9 @@ footer .container5 span {
 
 .telaCadastro .container7 {
     width: 100%;
-    height: 5vh;
+    height: 10vh;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 
@@ -1437,7 +1449,7 @@ footer .container5 span {
 
 .telaLogin .container1 {
     width: 100%;
-    height: 60%;
+    height: 65%;
     display: flex;
     justify-content: center;
 }
@@ -1498,8 +1510,9 @@ footer .container5 span {
 
 .telaLogin .container7 {
     width: 100%;
-    height: 5vh;
+    height: 10vh;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 

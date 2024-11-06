@@ -80,7 +80,7 @@
                             </div>
                             <div>
                                 <span>Data de Nasc:</span>
-                                <input type="date">
+                                <input type="date" id="dataNasc">
                             </div>
                             <div>
                                 <span>Esporte Favorito:</span>
@@ -102,7 +102,12 @@
                             </div>
                             <div>
                                 <span>Anos de Prática:</span>
-                                <input type="text" placeholder="">
+                                <select id="">
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="">menos de 1 ano</option>
+                                    <option value="">até 5 anos</option>
+                                    <option value="">mais de 5 anos</option>
+                                </select>
                             </div>
                             <div>
                                 <span>Grau de Impacto:</span>
@@ -131,7 +136,7 @@
                         </div>
                         <div class="containerFoto">
                             <div class="containerP1">
-                                <!-- <div class="containerP2">
+                                <div class="containerP2">
                                     <img id="fotoPerfil">
                                 </div>
                                 <div class="containerP3">
@@ -142,7 +147,7 @@
                                         <span>Escolher arquivo</span>
                                         <input type="file" accept="image/*" onchange="VisualizarFoto(event)">
                                     </label>
-                                </div> -->
+                                </div>
                                 <div class="containerP5">
                                     <span>Frase Motivacional:</span>
                                 </div>
