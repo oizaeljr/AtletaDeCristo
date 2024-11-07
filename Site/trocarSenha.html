@@ -65,19 +65,47 @@
                         </div>
                         <div class="container11">
                             <span>Senha atual:</span>
-                            <input type="password">
+                            <input type="password" id="txt_senhaAtual">
                         </div>
-                        <div>
+                        <div class="container11">
                             <span>Nova Senha:</span>
-                            <input type="password">
+                            <input type="password" id="txt_novaSenha" oninput="checkNovaSenha()">
                         </div>
-                        <div>
+                        <div class="container11">
                             <span>Confirmar senha:</span>
-                            <input type="password">
+                            <input type="password" id="txt_confirmarNovaSenha" oninput="checkConfirmarNovaSenha()">
+                        </div>
+                        <div class="containerT1" id="div_checklist" style="display: none;">
+                            <div class="containerT2">
+                                <div class="containerT3">
+                                    <img src="../imagens/errado.png" id="imgMaiusculaT">
+                                    <span>Letra maiúscula</span>
+                                </div>
+                                <div class="containerT3">
+                                    <img src="../imagens/errado.png" id="imgNumeroT">
+                                    <span>Número</span>
+                                </div>
+                                <div class="containerT3">
+                                    <img src="../imagens/errado.png" id="imgMinusculaT">
+                                    <span>Letra minúscula</span>
+                                </div>
+                                <div class="containerT3">
+                                    <img src="../imagens/errado.png" id="imgCaracterT">
+                                    <span>Caracter especial (!,@,#,$,%,&)</span>
+                                </div>
+                                <div class="containerT3">
+                                    <img src="../imagens/errado.png" id="imgTamanhoT">
+                                    <span>Quantidade de caracteres (min. 8)</span>
+                                </div>
+                                <div class="containerT3" id="div_confirmarNovaSenha" style="display: none;">
+                                    <img src="../imagens/errado.png" id="imgSenhasIguaisT">
+                                    <span>Senhas iguais</span>
+                                </div>
+                            </div>
                         </div>
                         <div class="botoes">
                             <button>Confirmar</button>
-                            <button>Voltar</button>
+                            <a href="perfil.html"><button>Voltar</button></a>
                         </div>
                     </div>
                 </div>
@@ -113,3 +141,4 @@
 </body>
 
 </html>
+<script src="funcionalidades.js"></script>

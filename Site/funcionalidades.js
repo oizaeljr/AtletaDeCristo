@@ -1068,3 +1068,84 @@ function confirmarSaida() {
 }
 
 /* FIM TELA QUIZ */
+
+
+/* INÍCIO TELA TROCAR SENHA */
+function checkNovaSenha() {
+    var senha = txt_novaSenha.value
+    var caracteres = senha.includes('!') || senha.includes('@') || senha.includes('#') || senha.includes('$') || senha.includes('%') || senha.includes('7')
+    var numero = senha.includes(0) || senha.includes(1) || senha.includes(2) || senha.includes(3) || senha.includes(4) || senha.includes(5) || senha.includes(6) || senha.includes(7) || senha.includes(8) || senha.includes(9)
+    var tamanho = senha.length
+    var minuscula = senha.toLowerCase()
+    var maiuscula = senha.toUpperCase()
+    var validacao = 0
+
+    if (senha != '') {
+        txt_novaSenha.style.border = '2px solid'
+        div_checklist.style.display = 'flex'
+    } else {
+        div_checklist.style.display = 'none'
+    }
+
+    if (senha != minuscula) {
+        imgMaiusculaT.src = '../imagens/certo.png'
+        validacao++
+    } else {
+        imgMaiusculaT.src = '../imagens/errado.png'
+    }
+
+    if (numero) {
+        imgNumeroT.src = '../imagens/certo.png'
+        validacao++
+    } else {
+        imgNumeroT.src = '../imagens/errado.png'
+    }
+
+    if (senha != maiuscula) {
+        imgMinusculaT.src = '../imagens/certo.png'
+        validacao++
+    } else {
+        imgMinusculaT.src = '../imagens/errado.png'
+    }
+
+    if (caracteres) {
+        imgCaracterT.src = '../imagens/certo.png'
+        validacao++
+    } else {
+        imgCaracterT.src = '../imagens/errado.png'
+    }
+
+    if (tamanho >= 8) {
+        imgTamanhoT.src = '../imagens/certo.png'
+        validacao++
+    } else {
+        imgTamanhoT.src = '../imagens/errado.png'
+    }
+
+    if (validacao == 5) {
+        txt_novaSenha.style.borderColor = 'green'
+    } else {
+        txt_novaSenha.style.borderColor = 'red'
+    }
+}
+
+function checkConfirmarNovaSenha() {
+    var senha = txt_novaSenha.value
+    var confirmarSenha = txt_confirmarNovaSenha.value
+
+    if (confirmarSenha != '') {
+        txt_confirmarNovaSenha.style.border = '2px solid';
+        div_confirmarNovaSenha.style.display = 'flex'
+    } else {
+        div_confirmarNovaSenha.style.display = 'none'
+    }
+
+    if (senha == confirmarSenha) {
+        txt_confirmarNovaSenha.style.borderColor = 'green'
+        imgSenhasIguaisT.src = '../imagens/certo.png'
+    } else {
+        txt_confirmarNovaSenha.style.borderColor = 'red'
+        imgSenhasIguaisT.src = '../imagens/errado.png'
+    }
+}
+/* FIM TELA TROCAR SENHA */
