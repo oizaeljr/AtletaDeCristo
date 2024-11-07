@@ -199,6 +199,18 @@ function proximaPergunta() {
             'Como o mindset de crescimento pode impactar o sucesso?',
             'Pessoas com mindset de crescimento geralmente veem os desafios como:'
         ];
+    } else if (tela == 'aleatorio') {
+        perguntas = ['Quantos livros há na Bíblia?',
+            'Em que país foi realizada a Copa do Mundo de 2014?',
+            'Qual é a importância do feedback para uma pessoa com mindset de crescimento?',
+            'Qual esporte é conhecido por ser praticado em uma piscina?',
+            'Quem traiu Jesus por 30 moedas de prata, segundo a Bíblia?',
+            'Qual é o maior artilheiro da história da seleção brasileira de futebol?',
+            'Para alguém com mindset fixo, o fracasso é visto como:',
+            'Qual desses esportes envolve um objetivo com uma cesta?',
+            'Quem é considerado o "pai da fé" na Bíblia?',
+            'Qual característica é essencial para o controle emocional?'
+        ];
     }
 
 
@@ -501,6 +513,77 @@ function proximaPergunta() {
                 btn_D.innerHTML = 'Apenas uma perda de tempo'
                 btn_E.innerHTML = 'Algo que não vale a pena enfrentar'
             }
+        } else if (tela == 'aleatorio') {
+            if (random == 1) {
+                btn_A.innerHTML = '45'
+                btn_B.innerHTML = '50'
+                btn_C.innerHTML = '66'
+                btn_D.innerHTML = '72'
+                btn_E.innerHTML = '80'
+            }
+            if (random == 2) {
+                btn_A.innerHTML = 'África do Sul'
+                btn_B.innerHTML = 'Alemanha'
+                btn_C.innerHTML = 'Brasil'
+                btn_D.innerHTML = 'Rússia'
+                btn_E.innerHTML = 'França'
+            }
+            if (random == 3) {
+                btn_A.innerHTML = 'Serve apenas para críticas destrutivas'
+                btn_B.innerHTML = 'É algo a ser evitado para proteger a autoconfiança'
+                btn_C.innerHTML = 'É uma oportunidade de aprender e melhorar'
+                btn_D.innerHTML = 'É desnecessário, pois as habilidades são fixas'
+                btn_E.innerHTML = 'É útil apenas para validar o que já se sabe'
+            }
+            if (random == 4) {
+                btn_A.innerHTML = 'Polo aquático'
+                btn_B.innerHTML = 'Golfe'
+                btn_C.innerHTML = 'Ciclismo'
+                btn_D.innerHTML = 'Rugby'
+                btn_E.innerHTML = 'Beisebol'
+            }
+            if (random == 5) {
+                btn_A.innerHTML = 'Pedro'
+                btn_B.innerHTML = 'Judas'
+                btn_C.innerHTML = 'João'
+                btn_D.innerHTML = 'Tomé'
+                btn_E.innerHTML = 'Filipe'
+            }
+            if (random == 6) {
+                btn_A.innerHTML = 'Romário'
+                btn_B.innerHTML = 'Zico'
+                btn_C.innerHTML = 'Pelé'
+                btn_D.innerHTML = 'Neymar'
+                btn_E.innerHTML = 'Ronaldo Fenômeno'
+            }
+            if (random == 7) {
+                btn_A.innerHTML = 'Uma oportunidade de aprendizado'
+                btn_B.innerHTML = 'Uma prova de falta de habilidade'
+                btn_C.innerHTML = 'Um incentivo para se esforçar mais'
+                btn_D.innerHTML = 'Algo normal e necessário para crescer'
+                btn_E.innerHTML = 'Uma chance de melhorar'
+            }
+            if (random == 8) {
+                btn_A.innerHTML = 'Futebol'
+                btn_B.innerHTML = 'Tênis'
+                btn_C.innerHTML = 'Basquete'
+                btn_D.innerHTML = 'Beisebol'
+                btn_E.innerHTML = 'Boxe'
+            }
+            if (random == 9) {
+                btn_A.innerHTML = 'Moisés'
+                btn_B.innerHTML = 'Noé'
+                btn_C.innerHTML = 'Abraão'
+                btn_D.innerHTML = 'Davi'
+                btn_E.innerHTML = 'Jacó'
+            }
+            if (random == 10) {
+                btn_A.innerHTML = 'Ignorar completamente as emoções'
+                btn_B.innerHTML = 'Reagir impulsivamente'
+                btn_C.innerHTML = 'Ser capaz de manter a calma em situações de estresse'
+                btn_D.innerHTML = 'Evitar conflitos a qualquer custo'
+                btn_E.innerHTML = 'Expressar todas as emoções imediatamente'
+            }
         }
 
     } else {
@@ -620,15 +703,26 @@ function mindset() {
     }
 }
 function aleatorio() {
-    telaQuizPerguntas.style.display = 'none';
-    telaRanking.style.display = 'none';
-    quizEsporte.style.borderBottom = 'none';
-    quizBiblia.style.borderBottom = 'none';
-    quizFutebol.style.borderBottom = 'none';
-    quizMindset.style.borderBottom = 'none';
-    quizAleatorio.style.borderBottom = '1px solid';
-    quizRanking.style.borderBottom = 'none';
-    selecione.style.display = 'none'
+    if (iniciou) {
+        if (tela != 'aleatorio' && tela != '') {
+            confirmarSaida()
+            if (saida) {
+                sairQuiz()
+            }
+        }
+    } else {
+        telaQuizPerguntas.style.display = 'flex';
+        telaRanking.style.display = 'none';
+        quizEsporte.style.borderBottom = 'none';
+        quizBiblia.style.borderBottom = 'none';
+        quizFutebol.style.borderBottom = 'none';
+        quizMindset.style.borderBottom = 'none';
+        quizAleatorio.style.borderBottom = '1px solid';
+        quizRanking.style.borderBottom = 'none';
+        selecione.style.display = 'none'
+        tela = 'aleatorio'
+        proximaPergunta()
+    }
 }
 function ranking() {
     telaQuizPerguntas.style.display = 'none';
@@ -693,6 +787,19 @@ function alternativaA() {
         } else {
 
         }
+    } else if (tela == 'aleatorio') {
+        if (respondida == false) {
+            if (numPergunta == 4) {
+                btn_A.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_A.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
     }
     respondida = true;
 }
@@ -739,6 +846,19 @@ function alternativaB() {
     } else if (tela == 'mindset') {
         if (respondida == false) {
             if (numPergunta == 1 || numPergunta == 4 || numPergunta == 7 || numPergunta == 10) {
+                btn_B.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_B.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
+    } else if (tela == 'aleatorio') {
+        if (respondida == false) {
+            if (numPergunta == 5 || numPergunta == 7) {
                 btn_B.style.backgroundColor = 'green'
                 acertos++
             } else {
@@ -805,6 +925,19 @@ function alternativaC() {
         } else {
 
         }
+    } else if (tela == 'aleatorio') {
+        if (respondida == false) {
+            if (numPergunta == 1 || numPergunta == 2 || numPergunta == 3 || numPergunta == 8 || numPergunta == 9 || numPergunta == 10) {
+                btn_C.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_C.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
     }
     respondida = true
 }
@@ -858,6 +991,19 @@ function alternativaD() {
         } else {
 
         }
+    } else if (tela == 'aleatorio') {
+        if (respondida == false) {
+            if (numPergunta == 6) {
+                btn_D.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_D.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
     }
     respondida = true
 }
@@ -894,6 +1040,16 @@ function alternativaE() {
 
         }
     } else if (tela == 'mindset') {
+        if (respondida == false) {
+
+            btn_E.style.backgroundColor = 'red'
+            erros++
+
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
+    } else if (tela == 'aleatorio') {
         if (respondida == false) {
 
             btn_E.style.backgroundColor = 'red'
