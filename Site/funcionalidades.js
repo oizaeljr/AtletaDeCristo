@@ -187,6 +187,18 @@ function proximaPergunta() {
             'Quem marcou o famoso gol de "Mão de Deus" na Copa do Mundo de 1986?',
             'Qual é o maior artilheiro da história das Copas do Mundo?'
         ];
+    } else if (tela == 'mindset') {
+        perguntas = ['Qual das opções descreve melhor o conceito de "mindset"?',
+            'O que significa "mindset de crescimento"?',
+            'Qual das seguintes características é típica de alguém com mindset de crescimento?',
+            'Qual é um benefício do mindset de crescimento?',
+            'De acordo com Carol Dweck, pessoas com mindset fixo tendem a:',
+            'Qual frase caracteriza melhor uma pessoa com mindset de crescimento?',
+            'Para desenvolver um mindset de crescimento, é importante:',
+            'Qual destes é um exemplo de comportamento de alguém com mindset fixo?',
+            'Como o mindset de crescimento pode impactar o sucesso?',
+            'Pessoas com mindset de crescimento geralmente veem os desafios como:'
+        ];
     }
 
 
@@ -418,6 +430,77 @@ function proximaPergunta() {
                 btn_D.innerHTML = 'Gerd Müller'
                 btn_E.innerHTML = 'Just Fontaine'
             }
+        } else if (tela == 'mindset') {
+            if (random == 1) {
+                btn_A.innerHTML = 'É a mentalidade de quem possui alto QI'
+                btn_B.innerHTML = 'É a forma como encaramos nossos talentos e habilidades'
+                btn_C.innerHTML = 'É o desejo de ter sucesso financeiro'
+                btn_D.innerHTML = 'É a capacidade de gerenciar emoções'
+                btn_E.innerHTML = 'É a habilidade de ser persuasivo'
+            }
+            if (random == 2) {
+                btn_A.innerHTML = 'Acreditar que a inteligência e as habilidades são fixas'
+                btn_B.innerHTML = 'Acreditar que o sucesso depende de sorte'
+                btn_C.innerHTML = 'Acreditar que as habilidades podem ser desenvolvidas com esforço e prática'
+                btn_D.innerHTML = 'Evitar desafios e permanecer na zona de conforto'
+                btn_E.innerHTML = 'Ignorar os feedbacks'
+            }
+            if (random == 3) {
+                btn_A.innerHTML = 'Acreditar que talento é fixo e imutável'
+                btn_B.innerHTML = 'Evitar feedback para proteger sua autoconfiança'
+                btn_C.innerHTML = 'Ver o esforço como parte essencial do aprendizado'
+                btn_D.innerHTML = 'Desistir quando enfrenta dificuldades'
+                btn_E.innerHTML = 'Preferir atividades em que já é naturalmente bom'
+            }
+            if (random == 4) {
+                btn_A.innerHTML = 'Evitar fracassos'
+                btn_B.innerHTML = 'Aumentar a confiança para enfrentar desafios'
+                btn_C.innerHTML = 'Ser reconhecido como naturalmente talentoso'
+                btn_D.innerHTML = 'Obter resultados imediatos'
+                btn_E.innerHTML = 'Se comparar com outras pessoas constantemente'
+            }
+            if (random == 5) {
+                btn_A.innerHTML = 'Ver o fracasso como uma oportunidade de aprendizado'
+                btn_B.innerHTML = 'Serem altamente resilientes'
+                btn_C.innerHTML = 'Desistir facilmente diante de dificuldades'
+                btn_D.innerHTML = 'Se interessarem por feedback construtivo'
+                btn_E.innerHTML = 'Procurar desafios para melhorar suas habilidades'
+            }
+            if (random == 6) {
+                btn_A.innerHTML = '"Eu já nasci bom nisso."'
+                btn_B.innerHTML = '"Eu odeio feedback."'
+                btn_C.innerHTML = '"Eu posso aprender qualquer coisa se me dedicar."'
+                btn_D.innerHTML = '"Eu não preciso de ajuda."'
+                btn_E.innerHTML = '"Eu evito o que é difícil."'
+            }
+            if (random == 7) {
+                btn_A.innerHTML = 'Ignorar seus erros'
+                btn_B.innerHTML = 'Aceitar desafios e aprender com os erros'
+                btn_C.innerHTML = 'Procurar sempre por aprovação externa'
+                btn_D.innerHTML = 'Evitar qualquer tipo de risco'
+                btn_E.innerHTML = 'Priorizar tarefas fáceis e rápidas'
+            }
+            if (random == 8) {
+                btn_A.innerHTML = 'Buscar soluções criativas para resolver problemas'
+                btn_B.innerHTML = 'Valorizar o processo de aprendizado'
+                btn_C.innerHTML = 'Desistir após cometer um erro'
+                btn_D.innerHTML = 'Estar aberto a novas experiências'
+                btn_E.innerHTML = 'Gostar de receber feedback'
+            }
+            if (random == 9) {
+                btn_A.innerHTML = 'Fazendo com que as pessoas ignorem suas falhas'
+                btn_B.innerHTML = 'Ajudando as pessoas a evitarem desafios'
+                btn_C.innerHTML = 'Aumentando a persistência e a disposição para aprender com erros'
+                btn_D.innerHTML = 'Garantindo o sucesso instantâneo'
+                btn_E.innerHTML = 'Evitando situações novas e desconhecidas'
+            }
+            if (random == 10) {
+                btn_A.innerHTML = 'Ameaças que devem ser evitadas'
+                btn_B.innerHTML = 'Oportunidades de aprendizado e crescimento'
+                btn_C.innerHTML = 'Barreiras insuperáveis'
+                btn_D.innerHTML = 'Apenas uma perda de tempo'
+                btn_E.innerHTML = 'Algo que não vale a pena enfrentar'
+            }
         }
 
     } else {
@@ -515,15 +598,26 @@ function futebol() {
     }
 }
 function mindset() {
-    telaQuizPerguntas.style.display = 'none';
-    telaRanking.style.display = 'none';
-    quizEsporte.style.borderBottom = 'none';
-    quizBiblia.style.borderBottom = 'none';
-    quizFutebol.style.borderBottom = 'none';
-    quizMindset.style.borderBottom = '1px solid';
-    quizAleatorio.style.borderBottom = 'none';
-    quizRanking.style.borderBottom = 'none';
-    selecione.style.display = 'none'
+    if (iniciou) {
+        if (tela != 'mindset' && tela != '') {
+            confirmarSaida()
+            if (saida) {
+                sairQuiz()
+            }
+        }
+    } else {
+        telaQuizPerguntas.style.display = 'flex';
+        telaRanking.style.display = 'none';
+        quizEsporte.style.borderBottom = 'none';
+        quizBiblia.style.borderBottom = 'none';
+        quizFutebol.style.borderBottom = 'none';
+        quizMindset.style.borderBottom = '1px solid';
+        quizAleatorio.style.borderBottom = 'none';
+        quizRanking.style.borderBottom = 'none';
+        selecione.style.display = 'none'
+        tela = 'mindset'
+        proximaPergunta()
+    }
 }
 function aleatorio() {
     telaQuizPerguntas.style.display = 'none';
@@ -589,6 +683,16 @@ function alternativaA() {
         } else {
 
         }
+    } else if (tela == 'mindset') {
+        if (respondida == false) {
+
+            btn_A.style.backgroundColor = 'red'
+            erros++
+
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
     }
     respondida = true;
 }
@@ -622,6 +726,19 @@ function alternativaB() {
     } else if (tela == 'futebol') {
         if (respondida == false) {
             if (numPergunta == 2) {
+                btn_B.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_B.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
+    } else if (tela == 'mindset') {
+        if (respondida == false) {
+            if (numPergunta == 1 || numPergunta == 4 || numPergunta == 7 || numPergunta == 10) {
                 btn_B.style.backgroundColor = 'green'
                 acertos++
             } else {
@@ -675,6 +792,19 @@ function alternativaC() {
         } else {
 
         }
+    } else if (tela == 'mindset') {
+        if (respondida == false) {
+            if (numPergunta == 2 || numPergunta == 3 || numPergunta == 5 || numPergunta == 6 || numPergunta == 8) {
+                btn_C.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_C.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
     }
     respondida = true
 }
@@ -718,6 +848,16 @@ function alternativaD() {
         } else {
 
         }
+    } else if (tela == 'mindset') {
+        if (respondida == false) {
+
+            btn_D.style.backgroundColor = 'red'
+            erros++
+
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
     }
     respondida = true
 }
@@ -744,6 +884,16 @@ function alternativaE() {
 
         }
     } else if (tela == 'futebol') {
+        if (respondida == false) {
+
+            btn_E.style.backgroundColor = 'red'
+            erros++
+
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
+    } else if (tela == 'mindset') {
         if (respondida == false) {
 
             btn_E.style.backgroundColor = 'red'
