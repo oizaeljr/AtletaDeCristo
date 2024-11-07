@@ -175,6 +175,18 @@ function proximaPergunta() {
             'Quem escreveu o livro de Apocalipse?',
             'Em que parte do corpo Jonas foi ferido enquanto estava no ventre do grande peixe?'
         ];
+    } else if (tela == 'futebol') {
+        perguntas = ['Qual jogador brasileiro é conhecido como "Rei do Futebol"?',
+            'Qual é o único clube que venceu o Mundial de Clubes da FIFA três vezes consecutivas?',
+            'Qual seleção venceu a primeira Copa do Mundo, realizada em 1930?',
+            'Quem é o jogador com mais gols em uma única temporada de La Liga?',
+            'Qual país é o maior vencedor de Copas do Mundo?',
+            'Qual jogador foi o artilheiro da Copa do Mundo de 2002?',
+            'Em que ano o Brasil conquistou seu primeiro título mundial?',
+            'Qual é o time com mais títulos da Liga dos Campeões da UEFA?',
+            'Quem marcou o famoso gol de "Mão de Deus" na Copa do Mundo de 1986?',
+            'Qual é o maior artilheiro da história das Copas do Mundo?'
+        ];
     }
 
 
@@ -335,6 +347,77 @@ function proximaPergunta() {
                 btn_D.innerHTML = 'Nenhuma'
                 btn_E.innerHTML = 'Olho'
             }
+        } else if (tela == 'futebol') {
+            if (random == 1) {
+                btn_A.innerHTML = 'Romário'
+                btn_B.innerHTML = 'Zico'
+                btn_C.innerHTML = 'Ronaldinho'
+                btn_D.innerHTML = 'Pelé'
+                btn_E.innerHTML = 'Rivaldo'
+            }
+            if (random == 2) {
+                btn_A.innerHTML = 'Barcelona'
+                btn_B.innerHTML = 'Real Madrid'
+                btn_C.innerHTML = 'Manchester United'
+                btn_D.innerHTML = 'Milan'
+                btn_E.innerHTML = 'Bayern de Munique'
+            }
+            if (random == 3) {
+                btn_A.innerHTML = 'Brasil'
+                btn_B.innerHTML = 'Argentina'
+                btn_C.innerHTML = 'Uruguai'
+                btn_D.innerHTML = 'Alemanha'
+                btn_E.innerHTML = 'Itália'
+            }
+            if (random == 4) {
+                btn_A.innerHTML = 'Lionel Messi'
+                btn_B.innerHTML = 'Cristiano Ronaldo'
+                btn_C.innerHTML = 'Telmo Zarra'
+                btn_D.innerHTML = 'Raúl'
+                btn_E.innerHTML = 'Luis Suárez'
+            }
+            if (random == 5) {
+                btn_A.innerHTML = 'Argentina'
+                btn_B.innerHTML = 'Alemanha'
+                btn_C.innerHTML = 'Itália'
+                btn_D.innerHTML = 'Brasil'
+                btn_E.innerHTML = 'França'
+            }
+            if (random == 6) {
+                btn_A.innerHTML = 'Rivaldo'
+                btn_B.innerHTML = 'Miroslav Klose'
+                btn_C.innerHTML = 'Ronaldo'
+                btn_D.innerHTML = 'Thierry Henry'
+                btn_E.innerHTML = 'Roberto Baggio'
+            }
+            if (random == 7) {
+                btn_A.innerHTML = '1966'
+                btn_B.innerHTML = '1954'
+                btn_C.innerHTML = '1958'
+                btn_D.innerHTML = '1970'
+                btn_E.innerHTML = '1994'
+            }
+            if (random == 8) {
+                btn_A.innerHTML = 'Barcelona'
+                btn_B.innerHTML = 'Manchester United'
+                btn_C.innerHTML = 'Real Madrid'
+                btn_D.innerHTML = 'Liverpool'
+                btn_E.innerHTML = 'Bayern de Munique'
+            }
+            if (random == 9) {
+                btn_A.innerHTML = 'Zico'
+                btn_B.innerHTML = 'Michel Platini'
+                btn_C.innerHTML = 'Diego Maradona'
+                btn_D.innerHTML = 'Romário'
+                btn_E.innerHTML = 'Gary Lineker'
+            }
+            if (random == 10) {
+                btn_A.innerHTML = 'Pelé'
+                btn_B.innerHTML = 'Ronaldo'
+                btn_C.innerHTML = 'Miroslav Klose'
+                btn_D.innerHTML = 'Gerd Müller'
+                btn_E.innerHTML = 'Just Fontaine'
+            }
         }
 
     } else {
@@ -365,14 +448,13 @@ function sairQuiz() {
 }
 
 function esportes() {
-
     if (iniciou) {
         if (tela != 'esporte' && tela != '') {
             confirmarSaida()
             if (saida) {
                 sairQuiz()
             }
-        } 
+        }
     } else {
         telaQuizPerguntas.style.display = 'flex';
         telaRanking.style.display = 'none';
@@ -389,14 +471,13 @@ function esportes() {
 
 }
 function cristao() {
-
     if (iniciou) {
         if (tela != 'biblia' && tela != '') {
             confirmarSaida()
             if (saida) {
                 sairQuiz()
             }
-        } 
+        }
     } else {
         telaQuizPerguntas.style.display = 'flex';
         telaRanking.style.display = 'none';
@@ -412,15 +493,26 @@ function cristao() {
     }
 }
 function futebol() {
-    telaQuizPerguntas.style.display = 'none';
-    telaRanking.style.display = 'none';
-    quizEsporte.style.borderBottom = 'none';
-    quizBiblia.style.borderBottom = 'none';
-    quizFutebol.style.borderBottom = '1px solid';
-    quizMindset.style.borderBottom = 'none';
-    quizAleatorio.style.borderBottom = 'none';
-    quizRanking.style.borderBottom = 'none';
-    selecione.style.display = 'none'
+    if (iniciou) {
+        if (tela != 'futebol' && tela != '') {
+            confirmarSaida()
+            if (saida) {
+                sairQuiz()
+            }
+        }
+    } else {
+        telaQuizPerguntas.style.display = 'flex';
+        telaRanking.style.display = 'none';
+        quizEsporte.style.borderBottom = 'none';
+        quizBiblia.style.borderBottom = 'none';
+        quizFutebol.style.borderBottom = '1px solid';
+        quizMindset.style.borderBottom = 'none';
+        quizAleatorio.style.borderBottom = 'none';
+        quizRanking.style.borderBottom = 'none';
+        selecione.style.display = 'none'
+        tela = 'futebol'
+        proximaPergunta()
+    }
 }
 function mindset() {
     telaQuizPerguntas.style.display = 'none';
@@ -484,6 +576,19 @@ function alternativaA() {
         } else {
 
         }
+    } else if (tela == 'futebol') {
+        if (respondida == false) {
+            if (numPergunta == 4) {
+                btn_A.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_A.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
     }
     respondida = true;
 }
@@ -504,6 +609,19 @@ function alternativaB() {
     } else if (tela == 'biblia') {
         if (respondida == false) {
             if (numPergunta == 1 || numPergunta == 2 || numPergunta == 3 || numPergunta == 4) {
+                btn_B.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_B.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
+    } else if (tela == 'futebol') {
+        if (respondida == false) {
+            if (numPergunta == 2) {
                 btn_B.style.backgroundColor = 'green'
                 acertos++
             } else {
@@ -544,6 +662,19 @@ function alternativaC() {
         } else {
 
         }
+    } else if (tela == 'futebol') {
+        if (respondida == false) {
+            if (numPergunta == 3 || numPergunta == 6 || numPergunta == 7 || numPergunta == 8 || numPergunta == 9 || numPergunta == 10) {
+                btn_C.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_C.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
     }
     respondida = true
 }
@@ -564,6 +695,19 @@ function alternativaD() {
     } else if (tela == 'biblia') {
         if (respondida == false) {
             if (numPergunta == 7 || numPergunta == 10) {
+                btn_D.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_D.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
+    } else if (tela == 'futebol') {
+        if (respondida == false) {
+            if (numPergunta == 1 || numPergunta == 5) {
                 btn_D.style.backgroundColor = 'green'
                 acertos++
             } else {
@@ -595,6 +739,16 @@ function alternativaE() {
                 btn_E.style.backgroundColor = 'red'
                 erros++
             }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
+    } else if (tela == 'futebol') {
+        if (respondida == false) {
+
+            btn_E.style.backgroundColor = 'red'
+            erros++
+
             div_proxima.style.display = 'flex';
         } else {
 
