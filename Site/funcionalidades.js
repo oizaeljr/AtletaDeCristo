@@ -145,19 +145,14 @@ var respondida = false
 var quantidade = 0
 var acertos = 0
 var erros = 0
+var iniciou = false
+var saida;
 
 function proximaPergunta() {
     quantidade++
-    if (quantidade <= 10) {
-
-        btn_A.style.backgroundColor = 'white'
-        btn_B.style.backgroundColor = 'white'
-        btn_C.style.backgroundColor = 'white'
-        btn_D.style.backgroundColor = 'white'
-        btn_E.style.backgroundColor = 'white'
-        respondida = false
-        div_proxima.style.display = 'none'
-        var perguntas = ['Qual é o país que venceu a Copa do Mundo de Futebol da FIFA em 2018?',
+    var perguntas = [];
+    if (tela == 'esporte') {
+        perguntas = ['Qual é o país que venceu a Copa do Mundo de Futebol da FIFA em 2018?',
             'Quantos jogadores há em uma equipe de basquete em quadra?',
             'Quem é o jogador com mais títulos de Grand Slam no tênis masculino (até 2023)?',
             'Em que ano o Brasil conquistou sua primeira medalha de ouro olímpica no futebol masculino?',
@@ -168,108 +163,317 @@ function proximaPergunta() {
             'Quantas voltas completam a maratona (42,195 km) em uma pista de atletismo?',
             'Quem foi o primeiro jogador de basquete a ser reconhecido globalmente e a se tornar um ícone mundial?'
         ];
+    } else if (tela == 'biblia') {
+        perguntas = ['Quem foi o primeiro rei de Israel?',
+            'Qual o nome do pai de João Batista?',
+            'Quantos livros tem o Novo Testamento?',
+            'Quem libertou o povo de Israel da escravidão no Egito?',
+            'Qual era o nome do gigante derrotado por Davi?',
+            'Quantos dias e noites choveu durante o dilúvio de Noé?',
+            'Quem traiu Jesus por 30 moedas de prata?',
+            'Onde Jesus realizou seu primeiro milagre?',
+            'Quem escreveu o livro de Apocalipse?',
+            'Em que parte do corpo Jonas foi ferido enquanto estava no ventre do grande peixe?'
+        ];
+    }
+
+
+    if (quantidade <= 10) {
+
+        btn_A.style.backgroundColor = 'white'
+        btn_B.style.backgroundColor = 'white'
+        btn_C.style.backgroundColor = 'white'
+        btn_D.style.backgroundColor = 'white'
+        btn_E.style.backgroundColor = 'white'
+        respondida = false
+        iniciou = true
+        div_proxima.style.display = 'none'
+
         random = parseInt(Math.random() * perguntas.length + 1);
-        tela = 'esporte'
 
         span_pergunta.innerHTML = `${perguntas[random - 1]}`
         numPergunta = random;
-        if (random == 1) {
-            btn_A.innerHTML = 'Brasil'
-            btn_B.innerHTML = 'Alemanha'
-            btn_C.innerHTML = 'França'
-            btn_D.innerHTML = 'Argentina'
-            btn_E.innerHTML = 'Espanha'
+        if (tela == 'esporte') {
+            if (random == 1) {
+                btn_A.innerHTML = 'Brasil'
+                btn_B.innerHTML = 'Alemanha'
+                btn_C.innerHTML = 'França'
+                btn_D.innerHTML = 'Argentina'
+                btn_E.innerHTML = 'Espanha'
+            }
+            if (random == 2) {
+                btn_A.innerHTML = '4'
+                btn_B.innerHTML = '5'
+                btn_C.innerHTML = '6'
+                btn_D.innerHTML = '7'
+                btn_E.innerHTML = '8'
+            }
+            if (random == 3) {
+                btn_A.innerHTML = 'Pete Sampras'
+                btn_B.innerHTML = 'Andre Agassi'
+                btn_C.innerHTML = 'Rafael Nadal'
+                btn_D.innerHTML = 'Novak Djokovic'
+                btn_E.innerHTML = 'Roger Federer'
+            }
+            if (random == 4) {
+                btn_A.innerHTML = '1996'
+                btn_B.innerHTML = '2004'
+                btn_C.innerHTML = '2008'
+                btn_D.innerHTML = '2016'
+                btn_E.innerHTML = '2020'
+            }
+            if (random == 5) {
+                btn_A.innerHTML = 'Catcher'
+                btn_B.innerHTML = 'Shortstop'
+                btn_C.innerHTML = 'First Baseman'
+                btn_D.innerHTML = 'Pitcher'
+                btn_E.innerHTML = 'Batter'
+            }
+            if (random == 6) {
+                btn_A.innerHTML = 'Basquete'
+                btn_B.innerHTML = 'Rugby'
+                btn_C.innerHTML = 'Tênis'
+                btn_D.innerHTML = 'Golfe'
+                btn_E.innerHTML = 'Futebol Americano'
+            }
+            if (random == 7) {
+                btn_A.innerHTML = 'Estados Unidos'
+                btn_B.innerHTML = 'Rússia'
+                btn_C.innerHTML = 'China'
+                btn_D.innerHTML = 'Reino Unido'
+                btn_E.innerHTML = 'Alemanha'
+            }
+            if (random == 8) {
+                btn_A.innerHTML = 'Tênis'
+                btn_B.innerHTML = 'Squash'
+                btn_C.innerHTML = 'Pingue-pongue'
+                btn_D.innerHTML = 'Badminton'
+                btn_E.innerHTML = 'Pólo'
+            }
+            if (random == 9) {
+                btn_A.innerHTML = '80'
+                btn_B.innerHTML = '105,5'
+                btn_C.innerHTML = '125'
+                btn_D.innerHTML = '100'
+                btn_E.innerHTML = '95'
+            }
+            if (random == 10) {
+                btn_A.innerHTML = 'LeBron James'
+                btn_B.innerHTML = 'Magic Johnson'
+                btn_C.innerHTML = 'Michael Jordan'
+                btn_D.innerHTML = 'Kobe Bryant'
+                btn_E.innerHTML = 'Larry Bird'
+            }
+        } else if (tela == 'biblia') {
+            if (random == 1) {
+                btn_A.innerHTML = 'Davi'
+                btn_B.innerHTML = 'Saul'
+                btn_C.innerHTML = 'Salomão'
+                btn_D.innerHTML = 'Josué'
+                btn_E.innerHTML = 'Samuel'
+            }
+            if (random == 2) {
+                btn_A.innerHTML = 'Zorobabel'
+                btn_B.innerHTML = 'Zacarias'
+                btn_C.innerHTML = 'Zaqueu'
+                btn_D.innerHTML = 'José'
+                btn_E.innerHTML = 'Noé'
+            }
+            if (random == 3) {
+                btn_A.innerHTML = '39'
+                btn_B.innerHTML = '27'
+                btn_C.innerHTML = '40'
+                btn_D.innerHTML = '66'
+                btn_E.innerHTML = '24'
+            }
+            if (random == 4) {
+                btn_A.innerHTML = 'Abraão'
+                btn_B.innerHTML = 'Moisés'
+                btn_C.innerHTML = 'Davi'
+                btn_D.innerHTML = 'Josué'
+                btn_E.innerHTML = 'Elias'
+            }
+            if (random == 5) {
+                btn_A.innerHTML = 'Golias'
+                btn_B.innerHTML = 'Saul'
+                btn_C.innerHTML = 'Sansão'
+                btn_D.innerHTML = 'Nabucodonosor'
+                btn_E.innerHTML = 'Judas'
+            }
+            if (random == 6) {
+                btn_A.innerHTML = '30'
+                btn_B.innerHTML = '7'
+                btn_C.innerHTML = '40'
+                btn_D.innerHTML = '12'
+                btn_E.innerHTML = '50'
+            }
+            if (random == 7) {
+                btn_A.innerHTML = 'Pedro'
+                btn_B.innerHTML = 'João'
+                btn_C.innerHTML = 'Tomé'
+                btn_D.innerHTML = 'Judas'
+                btn_E.innerHTML = 'Tiago'
+            }
+            if (random == 8) {
+                btn_A.innerHTML = 'Cafarnaum'
+                btn_B.innerHTML = 'Nazaré'
+                btn_C.innerHTML = 'Jerusalém'
+                btn_D.innerHTML = 'Belém'
+                btn_E.innerHTML = 'Caná'
+            }
+            if (random == 9) {
+                btn_A.innerHTML = 'Paulo'
+                btn_B.innerHTML = 'Pedro'
+                btn_C.innerHTML = 'João'
+                btn_D.innerHTML = 'Tiago'
+                btn_E.innerHTML = 'Moisés'
+            }
+            if (random == 10) {
+                btn_A.innerHTML = 'Braço'
+                btn_B.innerHTML = 'Perna'
+                btn_C.innerHTML = 'Cabeça'
+                btn_D.innerHTML = 'Nenhuma'
+                btn_E.innerHTML = 'Olho'
+            }
         }
-        if (random == 2) {
-            btn_A.innerHTML = '4'
-            btn_B.innerHTML = '5'
-            btn_C.innerHTML = '6'
-            btn_D.innerHTML = '7'
-            btn_E.innerHTML = '8'
-        }
-        if (random == 3) {
-            btn_A.innerHTML = 'Pete Sampras'
-            btn_B.innerHTML = 'Andre Agassi'
-            btn_C.innerHTML = 'Rafael Nadal'
-            btn_D.innerHTML = 'Novak Djokovic'
-            btn_E.innerHTML = 'Roger Federer'
-        }
-        if (random == 4) {
-            btn_A.innerHTML = '1996'
-            btn_B.innerHTML = '2004'
-            btn_C.innerHTML = '2008'
-            btn_D.innerHTML = '2016'
-            btn_E.innerHTML = '2020'
-        }
-        if (random == 5) {
-            btn_A.innerHTML = 'Catcher'
-            btn_B.innerHTML = 'Shortstop'
-            btn_C.innerHTML = 'First Baseman'
-            btn_D.innerHTML = 'Pitcher'
-            btn_E.innerHTML = 'Batter'
-        }
-        if (random == 6) {
-            btn_A.innerHTML = 'Basquete'
-            btn_B.innerHTML = 'Rugby'
-            btn_C.innerHTML = 'Tênis'
-            btn_D.innerHTML = 'Golfe'
-            btn_E.innerHTML = 'Futebol Americano'
-        }
-        if (random == 7) {
-            btn_A.innerHTML = 'Estados Unidos'
-            btn_B.innerHTML = 'Rússia'
-            btn_C.innerHTML = 'China'
-            btn_D.innerHTML = 'Reino Unido'
-            btn_E.innerHTML = 'Alemanha'
-        }
-        if (random == 8) {
-            btn_A.innerHTML = 'Tênis'
-            btn_B.innerHTML = 'Squash'
-            btn_C.innerHTML = 'Pingue-pongue'
-            btn_D.innerHTML = 'Badminton'
-            btn_E.innerHTML = 'Pólo'
-        }
-        if (random == 9) {
-            btn_A.innerHTML = '80'
-            btn_B.innerHTML = '105,5'
-            btn_C.innerHTML = '125'
-            btn_D.innerHTML = '100'
-            btn_E.innerHTML = '95'
-        }
-        if (random == 10) {
-            btn_A.innerHTML = 'LeBron James'
-            btn_B.innerHTML = 'Magic Johnson'
-            btn_C.innerHTML = 'Michael Jordan'
-            btn_D.innerHTML = 'Kobe Bryant'
-            btn_E.innerHTML = 'Larry Bird'
-        }
+
     } else {
-        telaQuizEsportes.style.display = 'none'
-        span_quantidade.innerHTML = `${quantidade-1}`
+        telaQuizPerguntas.style.display = 'none'
+        span_quantidade.innerHTML = `${quantidade - 1}`
         span_acertos.innerHTML = `${acertos}`
         span_erros.innerHTML = `${erros}`
         telaPontuacao.style.display = 'flex'
     }
 }
 
-function esportes() {
-    telaQuizEsportes.style.display = 'flex';
-    telaRanking.style.display = 'none';
-    quizEsporte.style.borderBottom = '1px solid';
-    quizCristao.style.borderBottom = 'none';
+function sairQuiz() {
+    telaQuizPerguntas.style.display = 'none';
+    telaPontuacao.style.display = 'none'
+    selecione.style.display = 'flex'
+    quantidade = 0
+    acertos = 0
+    erros = 0
+    respondida = false
+    iniciou = false
+    tela = ''
+    quizEsporte.style.borderBottom = 'none';
+    quizBiblia.style.borderBottom = 'none';
     quizFutebol.style.borderBottom = 'none';
+    quizMindset.style.borderBottom = 'none';
+    quizAleatorio.style.borderBottom = 'none';
+    quizRanking.style.borderBottom = 'none';
+}
+
+function esportes() {
+
+    if (iniciou) {
+        if (tela != 'esporte' && tela != '') {
+            confirmarSaida()
+            if (saida) {
+                sairQuiz()
+            }
+        } 
+    } else {
+        telaQuizPerguntas.style.display = 'flex';
+        telaRanking.style.display = 'none';
+        quizEsporte.style.borderBottom = '1px solid';
+        quizBiblia.style.borderBottom = 'none';
+        quizFutebol.style.borderBottom = 'none';
+        quizMindset.style.borderBottom = 'none';
+        quizAleatorio.style.borderBottom = 'none';
+        quizRanking.style.borderBottom = 'none';
+        selecione.style.display = 'none'
+        tela = 'esporte'
+        proximaPergunta()
+    }
+
+}
+function cristao() {
+
+    if (iniciou) {
+        if (tela != 'biblia' && tela != '') {
+            confirmarSaida()
+            if (saida) {
+                sairQuiz()
+            }
+        } 
+    } else {
+        telaQuizPerguntas.style.display = 'flex';
+        telaRanking.style.display = 'none';
+        quizEsporte.style.borderBottom = 'none';
+        quizBiblia.style.borderBottom = '1px solid';
+        quizFutebol.style.borderBottom = 'none';
+        quizMindset.style.borderBottom = 'none';
+        quizAleatorio.style.borderBottom = 'none';
+        quizRanking.style.borderBottom = 'none';
+        selecione.style.display = 'none'
+        tela = 'biblia'
+        proximaPergunta()
+    }
+}
+function futebol() {
+    telaQuizPerguntas.style.display = 'none';
+    telaRanking.style.display = 'none';
+    quizEsporte.style.borderBottom = 'none';
+    quizBiblia.style.borderBottom = 'none';
+    quizFutebol.style.borderBottom = '1px solid';
+    quizMindset.style.borderBottom = 'none';
     quizAleatorio.style.borderBottom = 'none';
     quizRanking.style.borderBottom = 'none';
     selecione.style.display = 'none'
-    
-    proximaPergunta()
-
+}
+function mindset() {
+    telaQuizPerguntas.style.display = 'none';
+    telaRanking.style.display = 'none';
+    quizEsporte.style.borderBottom = 'none';
+    quizBiblia.style.borderBottom = 'none';
+    quizFutebol.style.borderBottom = 'none';
+    quizMindset.style.borderBottom = '1px solid';
+    quizAleatorio.style.borderBottom = 'none';
+    quizRanking.style.borderBottom = 'none';
+    selecione.style.display = 'none'
+}
+function aleatorio() {
+    telaQuizPerguntas.style.display = 'none';
+    telaRanking.style.display = 'none';
+    quizEsporte.style.borderBottom = 'none';
+    quizBiblia.style.borderBottom = 'none';
+    quizFutebol.style.borderBottom = 'none';
+    quizMindset.style.borderBottom = 'none';
+    quizAleatorio.style.borderBottom = '1px solid';
+    quizRanking.style.borderBottom = 'none';
+    selecione.style.display = 'none'
+}
+function ranking() {
+    telaQuizPerguntas.style.display = 'none';
+    telaRanking.style.display = 'flex';
+    quizEsporte.style.borderBottom = 'none';
+    quizBiblia.style.borderBottom = 'none';
+    quizFutebol.style.borderBottom = 'none';
+    quizMindset.style.borderBottom = 'none';
+    quizAleatorio.style.borderBottom = 'none';
+    quizRanking.style.borderBottom = '1px solid';
+    selecione.style.display = 'block'
+    selecione.innerHTML = 'OS MELHORES ESTÃO AQUI!'
 }
 
 function alternativaA() {
     if (tela == 'esporte') {
         if (respondida == false) {
             if (numPergunta == 7) {
+                btn_A.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_A.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
+    } else if (tela == 'biblia') {
+        if (respondida == false) {
+            if (numPergunta == 5) {
                 btn_A.style.backgroundColor = 'green'
                 acertos++
             } else {
@@ -297,6 +501,19 @@ function alternativaB() {
         } else {
 
         }
+    } else if (tela == 'biblia') {
+        if (respondida == false) {
+            if (numPergunta == 1 || numPergunta == 2 || numPergunta == 3 || numPergunta == 4) {
+                btn_B.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_B.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
     }
     respondida = true
 }
@@ -304,6 +521,19 @@ function alternativaC() {
     if (tela == 'esporte') {
         if (respondida == false) {
             if (numPergunta == 1 || numPergunta == 6 || numPergunta == 10) {
+                btn_C.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_C.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
+    } else if (tela == 'biblia') {
+        if (respondida == false) {
+            if (numPergunta == 6 || numPergunta == 9) {
                 btn_C.style.backgroundColor = 'green'
                 acertos++
             } else {
@@ -331,6 +561,19 @@ function alternativaD() {
         } else {
 
         }
+    } else if (tela == 'biblia') {
+        if (respondida == false) {
+            if (numPergunta == 7 || numPergunta == 10) {
+                btn_D.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_D.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
     }
     respondida = true
 }
@@ -343,49 +586,25 @@ function alternativaE() {
         } else {
 
         }
+    } else if (tela == 'biblia') {
+        if (respondida == false) {
+            if (numPergunta == 8) {
+                btn_E.style.backgroundColor = 'green'
+                acertos++
+            } else {
+                btn_E.style.backgroundColor = 'red'
+                erros++
+            }
+            div_proxima.style.display = 'flex';
+        } else {
+
+        }
     }
     respondida = true
 }
 
-function cristao() {
-    telaQuizEsportes.style.display = 'flex';
-    telaRanking.style.display = 'none';
-    quizEsporte.style.borderBottom = 'none';
-    quizCristao.style.borderBottom = '1px solid';
-    quizFutebol.style.borderBottom = 'none';
-    quizAleatorio.style.borderBottom = 'none';
-    quizRanking.style.borderBottom = 'none';
-    selecione.style.display = 'none'
+function confirmarSaida() {
+    saida = confirm('Você quer sair?')
 }
-function futebol() {
-    telaQuizEsportes.style.display = 'flex';
-    telaRanking.style.display = 'none';
-    quizEsporte.style.borderBottom = 'none';
-    quizCristao.style.borderBottom = 'none';
-    quizFutebol.style.borderBottom = '1px solid';
-    quizAleatorio.style.borderBottom = 'none';
-    quizRanking.style.borderBottom = 'none';
-    selecione.style.display = 'none'
-}
-function aleatorio() {
-    telaQuizEsportes.style.display = 'flex';
-    telaRanking.style.display = 'none';
-    quizEsporte.style.borderBottom = 'none';
-    quizCristao.style.borderBottom = 'none';
-    quizFutebol.style.borderBottom = 'none';
-    quizAleatorio.style.borderBottom = '1px solid';
-    quizRanking.style.borderBottom = 'none';
-    selecione.style.display = 'none'
-}
-function ranking() {
-    telaQuizEsportes.style.display = 'none';
-    telaRanking.style.display = 'flex';
-    quizEsporte.style.borderBottom = 'none';
-    quizCristao.style.borderBottom = 'none';
-    quizFutebol.style.borderBottom = 'none';
-    quizAleatorio.style.borderBottom = 'none';
-    quizRanking.style.borderBottom = '1px solid';
-    selecione.style.display = 'block'
-    selecione.innerHTML = 'OS MELHORES ESTÃO AQUI!'
-}
+
 /* FIM TELA QUIZ */
