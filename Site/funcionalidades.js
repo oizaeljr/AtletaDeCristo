@@ -9,15 +9,20 @@ function checkNome() {
         txt_nome.style.border = '2px solid';
         if (caracteres) {
             txt_nome.style.borderColor = 'red';
+            return false;
         } else if (numero) {
             txt_nome.style.borderColor = 'red';
+            return false;
         } else if (tamanho < 3) {
             txt_nome.style.borderColor = 'red';
+            return false;
         } else {
             txt_nome.style.borderColor = 'green';
+            return true;
         }
     } else {
-        txt_nome.style.borderColor = 'green';
+        txt_nome.style.borderColor = 'red';
+        return false;
     }
 }
 
@@ -52,8 +57,10 @@ function checkEmail() {
 
     if (validacao) {
         txt_email.style.borderColor = 'green'
+        return true;
     } else {
         txt_email.style.borderColor = 'red'
+        return false;
     }
 }
 
@@ -110,8 +117,10 @@ function checkSenha() {
 
     if (validacao == 5) {
         txt_senha.style.borderColor = 'green'
+        return true;
     } else {
         txt_senha.style.borderColor = 'red'
+        return false;
     }
 }
 
@@ -129,12 +138,80 @@ function checkConfirmarSenha() {
     if (senha == confirmarSenha) {
         txt_confirmarSenha.style.borderColor = 'green'
         imgSenhasIguais.src = '../imagens/certo.png'
+        return true;
     } else {
         txt_confirmarSenha.style.borderColor = 'red'
         imgSenhasIguais.src = '../imagens/errado.png'
+        return false;
     }
 }
 /* FIM DA TELA CADASTRO */
+
+function cadastrar() {
+    // aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = txt_nome.value;
+    var emailVar = txt_email.value;
+    var senhaVar = txt_senha.value;
+
+    // Verificando se há algum campo em branco
+    if (checkNome() && checkEmail() && checkSenha() && checkConfirmarSenha()) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "(Mensagem de erro para todos os campos em branco)";
+
+      finalizarAguardar();
+      return false;
+    } else {
+      setInterval(sumirMensagem, 5000);
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+          limparFormulario();
+          finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
 
 
 /* INÍCIO TELA QUIZ */

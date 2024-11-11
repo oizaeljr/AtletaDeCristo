@@ -669,6 +669,7 @@ footer .container5 span {
     border: 1px solid;
     border-radius: 10px;
     width: 76%;
+    height: auto;
 }
 
 .telaAnotacoes .containerA19 {
@@ -756,7 +757,7 @@ footer .container5 span {
     background-color: #D3D3D3;
     font-weight: bold;
     border-radius: 10px;
-    width: 81.5%;
+    width: 41vw;
     height: 5vh;
     margin: 0 0 1% 0;
     border-style: none;
