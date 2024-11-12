@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iJr</title>
+    <link rel="icon" href="../public/assets/imagens/cerebro.png" type="image/png">
+    <link rel="stylesheet" href="./css/styleLogado.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container1">
+                <a href="home.html">
+                    <img src="./assets/imagens/iJr.1.png">
+                </a>
+            </div>
+            <div class="container2">
+                <a href="">Sobre mim</a>
+                <a href="">Esportes</a>
+                <a href="">Mindset</a>
+                <a href="">Quiz</a>
+            </div>
+            <div class="container3">
+                <span>Izael Junior</span>
+                <img id="fotoUsuario">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container1">
+            <div class="container2">
+                <span>Foco, força e fé</span>
+            </div>
+            <div class="container3">
+                <div class="container4">
+                    <div class="container5">
+                        <ul>
+                            <li><a id="perfil" href="perfil.html">Perfil</a></li>
+                            <li><a id="anotacoes" href="anotacoes.html">Anotações</a></li>
+                            <li><a id="conhecimento" href="conhecimento.html">Conhecimento</a></li>
+                            <li><a id="motivacao" href="motivacao.html">Motivação</a></li>
+                            <li><a id="biblia" href="biblia.html">Bíblia</a></li>
+                            <li><a id="quiz" href="quiz.html">Quiz</a></li>
+                        </ul>
+                    </div>
+                    <div class="container6">
+                        <div class="container7">
+                            <img src="./assets/imagens/logout.png">
+                            <span>Sair</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container8">
+                    <div class="container9">
+                        <div class="container10">
+                            <div>
+                                <span>Nome:</span>
+                                <input type="text" placeholder="Digite seu nome">
+                            </div>
+                            <div>
+                                <span>Sobrenome:</span>
+                                <input type="text" placeholder="Digite seu sobrenome">
+                            </div>
+                            <div>
+                                <span>Email:</span>
+                                <input type="text" placeholder="Digite seu email">
+                            </div>
+                            <div>
+                                <span>Senha:</span>
+                                <input type="password" placeholder="Digite sua senha">
+                                <a href="trocarSenha.html"><button class="trocarSenha">Trocar senha</button></a>
+                            </div>
+                            <div>
+                                <span>Data de Nasc:</span>
+                                <input type="date" id="dataNasc">
+                            </div>
+                            <div>
+                                <span>Esporte Favorito:</span>
+                                <select id="">
+                                    <option value="">Selecione um esporte</option>
+                                    <option value="">Futebol</option>
+                                    <option value="">Vôlei</option>
+                                    <option value="">Basquete</option>
+                                </select>
+                            </div>
+                            <div>
+                                <span>Nível:</span>
+                                <select id="">
+                                    <option value="">Selecione o nível</option>
+                                    <option value="">Profissional</option>
+                                    <option value="">Amador</option>
+                                    <option value="">Diversão</option>
+                                </select>
+                            </div>
+                            <div>
+                                <span>Anos de Prática:</span>
+                                <select id="">
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="">menos de 1 ano</option>
+                                    <option value="">até 5 anos</option>
+                                    <option value="">mais de 5 anos</option>
+                                </select>
+                            </div>
+                            <div>
+                                <span>Grau de Impacto:</span>
+                                <select id="">
+                                    <option value="">Selecione o impacto</option>
+                                    <option value="">Baixo</option>
+                                    <option value="">Médio</option>
+                                    <option value="">Alto</option>
+                                </select>
+                            </div>
+                            <div>
+                                <span>Cristão?</span>
+                                <select id="">
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="">Sim</option>
+                                    <option value="">Não</option>
+                                </select>
+                            </div>
+                            <div>
+                                <span>Anos de Cristão:</span>
+                                <input type="number">
+                            </div>
+                            <div class="containerBotao">
+                                <button class="salvar">Salvar</button>
+                            </div>
+                        </div>
+                        <div class="containerFoto">
+                            <div class="containerP1">
+                                <div class="containerP2">
+                                    <img id="fotoPerfil">
+                                </div>
+                                <div class="containerP3">
+                                    <span>Foto de perfil</span>
+                                </div>
+                                <div class="containerP4">
+                                    <label>
+                                        <span>Escolher arquivo</span>
+                                        <input type="file" accept="image/*" onchange="VisualizarFoto(event)">
+                                    </label>
+                                </div>
+                                <div class="containerP5">
+                                    <span>Frase Motivacional:</span>
+                                </div>
+                                <div class="containerP6">
+                                    <input type="text">
+                                </div>
+                                <div class="containerP7">
+                                    <span>Objetivos concluídos: <span>14</span></span>
+                                </div>
+                                <div class="containerP8">
+                                    <span>Bíblia completa: <span>25%</span></span>
+                                </div>
+                                <div class="containerP9">
+                                    <span>Ranking Quiz <span>3º</span></span>
+                                </div>
+                                <div class="containerP10">
+                                    <span>Conta criada em <span>30/10/2024</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container1">
+            <div class="container1_1">
+                <div class="container2">
+                    <img src="./assets/imagens/iJr.2.png">
+                </div>
+                <div class="container3">
+                    <span>Um jovem sonhador que acredita</span>
+                    <span>que não há limites para fazer o</span>
+                    <span>que é certo.</span>
+                </div>
+                <div class="container4">
+                    <a href="https://www.instagram.com/oizaeljunior" target="_blank"><img
+                            src="./assets/imagens/instagram.png"></a>
+                    <a href="https://wa.me/5511966090323" target="_blank"><img src="./assets/imagens/whatsapp.png"></a>
+                    <a href="https://github.com/oizaeljr" target="_blank"><img src="./assets/imagens/github.png"></a>
+                    <a href="https://www.linkedin.com/in/oizaeljunior/" target="_blank"><img
+                            src="./assets/imagens/linkedin.png"></a>
+                </div>
+            </div>
+            <div class="linha"></div>
+            <div class="container5">
+                <span>© Copyright 2024, All Rights Reserved by Izael Junior</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+    function VisualizarFoto(event) {
+        var foto = document.getElementById('fotoPerfil')
+        var arquivo = event.target.files[0];
+
+        if (arquivo && arquivo.type.startsWith('image/')) {
+            foto.src = `${URL.createObjectURL(arquivo)}`
+        } else {
+            foto.src = ``
+        }
+    }
+</script>
