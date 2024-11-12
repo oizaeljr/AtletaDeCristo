@@ -76,19 +76,19 @@
                                 <tbody id="tableCampo">
                                     <tr>
                                         <td><input type="text" placeholder="Título" id="titulo"></td>
-                                        <td><input type="text" placeholder="Tarefa"><img src="../imagens/lixeira.png">
+                                        <td><input type="text" placeholder="Tarefa"><img src="../imagens/lixeira.png" onclick="removerTarefa()">
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                             <div class="containerA13">
                                 <div class="containerA14">
-                                    <button>+</button>
+                                    <button onclick="adicionarTarefa()">+</button>
                                     <span>Adicionar Tarefa</span>
                                 </div>
                             </div>
                             <div class="containerA15">
-                                <button>Salvar</button>
+                                <button onclick="salvarTarefa()">Salvar</button>
                                 <button>Cancelar</button>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                                         <div class="containerA27">
                                             <div class="containerA"></div>
                                             <table id="table_tarefas" style="display: none;">
-                                                <tbody>
+                                                <tbody id="tbodyCampo">
                                                     <tr>
                                                         <td>
                                                             <input type="text" placeholder="Tarefa">
@@ -139,10 +139,6 @@
                                         </div>
                                         <div class="containerA31" id="div_addTarefa" style="display: none;">
                                             <div class="containerA"></div>
-                                            <div class="containerA32">
-                                                <button>+</button>
-                                                <span>Adicionar tarefa</span>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -335,6 +331,27 @@
             div_addTarefa.style.display = 'none';
             img_abrirAnotacoes.src = '../imagens/setaDireita.png'
         } 
-        
     }
+
+        
+function adicionarTarefa() {
+    tableCampo.innerHTML += ` <tr>
+                            <td><input type="text" placeholder="Tarefa"><img src="../imagens/lixeira.png"></td>
+                        </tr>`
+}
+
+function salvarTarefa() {
+    tbodyCampo.innerHTML += `<tr>
+                            <td>
+                                <input type="text" placeholder="Tarefa">
+                                <div class="containerA28">
+                                    <div class="containerA29">
+                                        <img src="../imagens/check.png">
+                                    </div>
+                                    <img src="../imagens/lixeira.png">
+                                </div>
+                            </td>
+                        </tr>`
+}
+
 </script>

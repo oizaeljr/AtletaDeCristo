@@ -1226,3 +1226,4 @@ function checkConfirmarNovaSenha() {
     }
 }
 /* FIM TELA TROCAR SENHA */
+
