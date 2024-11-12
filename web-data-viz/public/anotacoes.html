@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iJr</title>
+    <link rel="icon" href="./assets/imagens/cerebro.png" type="image/png">
+    <link rel="stylesheet" href="./css/styleLogado.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container1">
+                <a href="home.html">
+                    <img src="./assets/imagens/iJr.1.png">
+                </a>
+            </div>
+            <div class="container2">
+                <a href="sobreMim.html">Sobre mim</a>
+                <a href="anotacoes.html">Anotações</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="">Bíblia</a>
+            </div>
+            <div class="container3">
+                <span>Olá, <span>Izael Junior</span></span>
+            </div>
+        </nav>
+    </header>
+    <main class="telaAnotacoes">
+        <div class="container1">
+            <div class="container2">
+                <span>Foco, força e fé</span>
+            </div>
+            <div class="container3">
+                <!-- <div class="container4">
+                    <div class="container5">
+                        <ul>
+                            <li><a id="perfil" href="perfil.html">Perfil</a></li>
+                            <li><a id="anotacoes" href="anotacoes.html">Anotações</a></li>
+                            <li><a id="conhecimento" href="conhecimento.html">Conhecimento</a></li>
+                            <li><a id="motivacao" href="motivacao.html">Motivação</a></li>
+                            <li><a id="biblia" href="biblia.html">Bíblia</a></li>
+                            <li><a id="quiz" href="quiz.html">Quiz</a></li>
+                        </ul>
+                    </div>
+                    <div class="container6">
+                        <div class="container7">
+                            <img src="./assets/imagens/logout.png">
+                            <span>Sair</span>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="container8">
+                    <div class="containerA9">
+                        <div class="containerA10">
+                            <div class="containerA11">
+                                <button>+</button>
+                                <span onclick="objetivo()" id="span_objetivo">Adicionar Objetivo</span>
+                            </div>
+                            <span onclick="andamento()" id="span_andamento">Em Andamento</span>
+                            <span onclick="concluido()" id="span_concluido">Concluído</span>
+                            <span onclick="lixeira()" id="span_lixeira">Lixeira</span>
+                        </div>
+
+                        <!-- INÍCIO TELA ADICIONAR OBJETIVO -->
+                        <div class="containerA12" id="telaObjetivo">
+                            <table>
+                                <tbody id="tableCampo">
+                                    <tr>
+                                        <td><input type="text" placeholder="Título" id="titulo"></td>
+                                        <td><input type="text" placeholder="Tarefa"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="containerA13">
+                                <div class="containerA14">
+                                    <button onclick="adicionarTarefa()">+</button>
+                                    <span>Adicionar Tarefa</span>
+                                </div>
+                            </div>
+                            <div class="containerA15">
+                                <button onclick="salvarTarefa()">Salvar</button>
+                                <button onclick="cancelarTarefa()">Cancelar</button>
+                            </div>
+                        </div>
+                        <!-- FIM TELA ADICIONAR OBJETIVO -->
+
+                        <!-- INÍCIO TELA EM ANDAMENTO -->
+                        <div class="containerA16" id="telaAndamento" style="display: none;">
+                            <div class="containerA17">
+                                <span>14 objetivos em andamento</span>
+                            </div>
+                            <div class="containerAA">
+                                <div class="containerA18">
+                                    <div class="containerA19">
+                                        <div class="containerA20" >
+                                            <img onclick="abrirAnotacoes()" src="./assets/imagens/setaDireita.png" id="img_abrirAnotacoes">
+                                            <span >Título</span>
+                                        </div>
+                                        <div class="containerA21"></div>
+                                        <div class="containerA22">
+                                            <div class="containerA23"></div>
+                                            <span>15%</span>
+                                        </div>
+                                        <div class="containerA24">
+                                            <div class="containerA25">
+                                                <img src="./assets/imagens/check.png">
+                                            </div>
+                                            <img src="./assets/imagens/lixeira.png">
+                                        </div>
+                                    </div>
+                                    <div class="containerA26">
+                                        <div class="containerA27">
+                                            <div class="containerA"></div>
+                                            <table id="table_tarefas" style="display: none;">
+                                                <tbody id="tbodyCampo">
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="Tarefa">
+                                                            <div class="containerA28">
+                                                                <div class="containerA29">
+                                                                    <img src="./assets/imagens/check.png">
+                                                                </div>
+                                                                <img src="./assets/imagens/lixeira.png">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="containerA31" id="div_addTarefa" style="display: none;">
+                                            <div class="containerA"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIM TELA EM ANDAMENTO -->
+
+                        <!-- INÍCIO TELA CONCLUÍDO -->
+                        <div class="containerA16" id="telaConcluido" style="display: none;">
+                            <div class="containerA17">
+                                <span>3 objetivos concluídos</span>
+                            </div>
+                            <div class="containerAA">
+                                <div class="containerA18">
+                                    <div class="containerA19">
+                                        <div class="containerA20">
+                                            <img src="./assets/imagens/setaDireita.png">
+                                            <span>Título</span>
+                                        </div>
+                                        <div class="containerA21"></div>
+                                        <div class="containerA22">
+                                            <div class="containerA23"></div>
+                                            <span>100%</span>
+                                        </div>
+                                        <div class="containerA24">
+                                            <div class="containerA25">
+                                                <img src="./assets/imagens/check.png">
+                                            </div>
+                                            <img src="./assets/imagens/lixeira.png">
+                                        </div>
+                                    </div>
+                                    <div class="containerA26">
+                                        <div class="containerA27">
+                                            <div class="containerA"></div>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="Tarefa">
+                                                            <div class="containerA28">
+                                                                <div class="containerA29">
+                                                                    <img src="./assets/imagens/check.png">
+                                                                </div>
+                                                                <img src="./assets/imagens/lixeira.png">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIM TELA CONCLUÍDO -->
+
+                        <!-- INÍCIO TELA LIXEIRA -->
+                        <div class="containerA16" id="telaLixeira" style="display: none;">
+                            <div class="containerA17">
+                                <span>4 objetivos apagados</span>
+                            </div>
+                            <div class="containerAA">
+                                <div class="containerA18">
+                                    <div class="containerA19">
+                                        <div class="containerA20">
+                                            <img src="./assets/imagens/setaDireita.png">
+                                            <span>Título</span>
+                                        </div>
+                                        <div class="containerA21"></div>
+                                        <div class="containerA22">
+                                            <div class="containerA23"></div>
+                                            <span>20%</span>
+                                        </div>
+                                        <div class="containerA24">
+                                            <div class="containerA25">
+                                                <img src="./assets/imagens/check.png">
+                                            </div>
+                                            <img src="./assets/imagens/lixeira.png">
+                                        </div>
+                                    </div>
+                                    <div class="containerA26">
+                                        <div class="containerA27">
+                                            <div class="containerA"></div>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="Tarefa">
+                                                            <div class="containerA28">
+                                                                <div class="containerA29">
+                                                                    <img src="./assets/imagens/check.png">
+                                                                </div>
+                                                                <img src="./assets/imagens/lixeira.png">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FIM TELA LIXEIRA -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container1">
+            <div class="container1_1">
+                <div class="container2">
+                    <img src="./assets/imagens/iJr.2.png">
+                </div>
+                <div class="container3">
+                    <span>Um jovem sonhador que acredita</span>
+                    <span>que não há limites para fazer o</span>
+                    <span>que é certo.</span>
+                </div>
+                <div class="container4">
+                    <a href="https://www.instagram.com/oizaeljunior" target="_blank"><img
+                            src="./assets/imagens/instagram.png"></a>
+                    <a href="https://wa.me/5511966090323" target="_blank"><img src="./assets/imagens/whatsapp.png"></a>
+                    <a href="https://github.com/oizaeljr" target="_blank"><img src="./assets/imagens/github.png"></a>
+                    <a href="https://www.linkedin.com/in/oizaeljunior/" target="_blank"><img
+                            src="./assets/imagens/linkedin.png"></a>
+                </div>
+            </div>
+            <div class="linha"></div>
+            <div class="container5">
+                <span>© Copyright 2024, All Rights Reserved by Izael Junior</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+
+<script>
+    function andamento() {
+        telaAndamento.style.display = 'block'
+        telaObjetivo.style.display = 'none';
+        telaConcluido.style.display = 'none';
+        telaLixeira.style.display = 'none';
+        span_andamento.style.borderBottom = '1px solid';
+        span_objetivo.style.borderBottom = 'none'
+        span_concluido.style.borderBottom = 'none'
+        span_lixeira.style.borderBottom = 'none'
+    }
+    function objetivo() {
+        telaObjetivo.style.display = 'block';
+        telaAndamento.style.display = 'none'
+        telaConcluido.style.display = 'none'
+        telaLixeira.style.display = 'none'
+        span_objetivo.style.borderBottom = '1px solid'
+        span_concluido.style.borderBottom = 'none'
+        span_lixeira.style.borderBottom = 'none'
+        span_andamento.style.borderBottom = 'none';
+    }
+    function concluido() {
+        telaConcluido.style.display = 'block'
+        telaObjetivo.style.display = 'none';
+        telaAndamento.style.display = 'none'
+        telaLixeira.style.display = 'none'
+        span_concluido.style.borderBottom = '1px solid'
+        span_objetivo.style.borderBottom = 'none'
+        span_lixeira.style.borderBottom = 'none'
+        span_andamento.style.borderBottom = 'none';
+    }
+    function lixeira() {
+        telaLixeira.style.display = 'block'
+        telaConcluido.style.display = 'none'
+        telaObjetivo.style.display = 'none';
+        telaAndamento.style.display = 'none'
+        span_lixeira.style.borderBottom = '1px solid'
+        span_concluido.style.borderBottom = 'none'
+        span_objetivo.style.borderBottom = 'none'
+        span_andamento.style.borderBottom = 'none';
+    }
+
+    function abrirAnotacoes() {
+        console.log(img_abrirAnotacoes.src)
+        if (img_abrirAnotacoes.src == 'file:///C:/Users/izael/OneDrive/Documentos/SPTECH/ProjetoIndividual/web-data-viz/public/assets/imagens/setaDireita.png') {
+            table_tarefas.style.display = 'flex';
+            div_addTarefa.style.display = 'flex';
+            img_abrirAnotacoes.src = './assets/imagens/setaBaixo.png'
+        } else if (img_abrirAnotacoes.src == 'file:///C:/Users/izael/OneDrive/Documentos/SPTECH/ProjetoIndividual/web-data-viz/public/assets/imagens/setaBaixo.png') {
+            table_tarefas.style.display = 'none';
+            div_addTarefa.style.display = 'none';
+            img_abrirAnotacoes.src = './assets/imagens/setaDireita.png'
+        } 
+    }
+
+        
+function adicionarTarefa() {
+    tableCampo.innerHTML += ` <tr>
+                            <td><input type="text" placeholder="Tarefa"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
+                        </tr>`
+}
+
+function removerLinha(botao) {
+    // Encontre a linha (elemento <tr>) onde o botão foi clicado
+  let linha = botao.parentNode;
+  
+  // Remova a linha da tabela
+  linha.parentNode.removeChild(linha);
+}
+
+function salvarTarefa() {
+    tbodyCampo.innerHTML += `<tr>
+                            <td>
+                                <input type="text" placeholder="Tarefa">
+                                <div class="containerA28">
+                                    <div class="containerA29">
+                                        <img src="./assets/imagens/check.png">
+                                    </div>
+                                    <img src="./assets/imagens/lixeira.png">
+                                </div>
+                            </td>
+                        </tr>`
+}
+
+function cancelarTarefa() {
+    
+}
+
+</script>

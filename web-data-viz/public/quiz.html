@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iJr</title>
+    <link rel="icon" href="./assets/imagens/cerebro.png" type="image/png">
+    <link rel="stylesheet" href="./css/styleLogado.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container1">
+                <a href="index.html">
+                    <img src="./assets/imagens/iJr.1.png">
+                </a>
+            </div>
+            <div class="container2">
+                <a href="sobreMim.html">Sobre mim</a>
+                <a href="anotacoes.html">Anotações</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="">Bíblia</a>
+            </div>
+            <div class="container3">
+                <span>Olá, <span>Izael Junior</span></span>
+            </div>
+        </nav>
+    </header>
+    <main class="telaQuiz">
+        <div class="container1">
+            <div class="container2">
+                <span>Foco, força e fé</span>
+            </div>
+            <div class="container3">
+                <!-- <div class="container4">
+                    <div class="container5">
+                        <ul>
+                            <li><a id="perfil" href="perfil.html">Perfil</a></li>
+                            <li><a id="anotacoes" href="anotacoes.html">Anotações</a></li>
+                            <li><a id="conhecimento" href="conhecimento.html">Conhecimento</a></li>
+                            <li><a id="motivacao" href="motivacao.html">Motivação</a></li>
+                            <li><a id="biblia" href="biblia.html">Bíblia</a></li>
+                            <li><a id="quiz" href="quiz.html">Quiz</a></li>
+                        </ul>
+                    </div>
+                    <div class="container6">
+                        <div class="container7">
+                            <img src="./assets/imagens/logout.png">
+                            <span>Sair</span>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="container8">
+                    <div class="container8_1">
+                        <div class="containerQQ">
+                            <div class="containerQQQ">
+                                <span onclick="esportes()" id="quizEsporte">Quiz esportes</span>
+                                <span onclick="cristao()" id="quizBiblia">Quiz Bíblia</span>
+                                <span onclick="futebol()" id="quizFutebol">Quiz futebol</span>
+                                <span onclick="mindset()" id="quizMindset">Quiz mindset</span>
+                                <span onclick="aleatorio()" id="quizAleatorio">Quiz aleatório</span>
+                                <span onclick="ranking()" id="quizRanking">Ranking</span>
+                            </div>
+                        </div>
+                        <div class="containerQQQQ">
+                            <span id="selecione">Selecione um quiz!</span>
+                        </div>
+                    </div>
+                    
+
+                    <!-- INÍCIO QUIZ ESPORTES -->
+                    <div class="containerQ9" id="telaQuizPerguntas" style="display: none;">
+                        <div class="containerQ10">
+                            <div class="containerQ">
+                                <div class="containerQ11">
+                                    <img src="./assets/imagens/lampada.png">
+                                </div>
+                                <div class="containerQ12">
+                                    <span id="span_pergunta">Quiz esportes</span>
+                                </div>
+                            </div>
+                            <div class="containerQ13">
+                                <div class="containerQ14">
+                                    <div class="containerQ15">
+                                        <span>A</span>
+                                    </div>
+                                    <button id="btn_A" onclick="alternativaA()">Cristiano Ronaldo</button>
+                                </div>
+                            </div>
+                            <div class="containerQ13">
+                                <div class="containerQ14">
+                                    <div class="containerQ15">
+                                        <span>B</span>
+                                    </div>
+                                    <button id="btn_B" onclick="alternativaB()">Cristiano Ronaldo</button>
+                                </div>
+                            </div>
+                            <div class="containerQ13">
+                                <div class="containerQ14">
+                                    <div class="containerQ15">
+                                        <span>C</span>
+                                    </div>
+                                    <button id="btn_C" onclick="alternativaC()">Cristiano Ronaldo</button>
+                                </div>
+                            </div>
+                            <div class="containerQ13">
+                                <div class="containerQ14">
+                                    <div class="containerQ15">
+                                        <span>D</span>
+                                    </div>
+                                    <button id="btn_D" onclick="alternativaD()">Cristiano Ronaldo</button>
+                                </div>
+                            </div>
+                            <div class="containerQ13">
+                                <div class="containerQ14">
+                                    <div class="containerQ15">
+                                        <span>E</span>
+                                    </div>
+                                    <button id="btn_E" onclick="alternativaE()">Cristiano Ronaldo</button>
+                                </div>
+                            </div>
+                            <div class="containerQ13" id="div_proxima" style="display: none;">
+                                <button onclick="proximaPergunta()">Próxima</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="containerQ9" id="telaPontuacao" style="display: none;">
+                        <div class="containerQ10">
+                            <div class="containerQ">
+                                <div class="containerQ11">
+                                    <img src="./assets/imagens/pontuacao.png">
+                                </div>
+                                <div class="containerQ12">
+                                    <span id="parabens">Parabéns!</span>
+                                </div>
+                            </div>
+                            <div class="containerQ13">
+                                <div class="containerQ14 pontuacao">
+                                    <div class="containerQ15" id="quantidade">
+                                        <span>Quantidade de perguntas:</span>
+                                    </div>
+                                    <span id="span_quantidade">10</span>
+                                </div>
+                            </div>
+                            <div class="containerQ13">
+                                <div class="containerQ14 pontuacao">
+                                    <div class="containerQ15" id="acertos">
+                                        <span>Quantidade de acertos:</span>
+                                    </div>
+                                    <span id="span_acertos">10</span>
+                                </div>
+                            </div>
+                            <div class="containerQ13">
+                                <div class="containerQ14 pontuacao">
+                                    <div class="containerQ15" id="erros">
+                                        <span>Quantidade de erros:</span>
+                                    </div>
+                                    <span id="span_erros">10</span>
+                                </div>
+                            </div>
+                            <div class="containerQ13">
+                                <div class="containerQQ13">
+                                    <button onclick="sairQuiz()">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FIM QUIZ ESPORTES -->
+
+                    <!-- INÍCIO RANKING -->
+                    <div class="containerQ16" id="telaRanking" style="display: none;">
+                        <div class="containerQ17 top2">
+                            <span>2º</span>
+                            <span>Izael Junior</span>
+                            <div class="containerQQ1"></div>
+                            <span>18 pontos</span>
+                        </div>
+                        <div class="containerQ17 top1">
+                            <span>1º</span>
+                            <span>Izael Junior</span>
+                            <div class="containerQQ1"></div>
+                            <span>21 pontos</span>
+                        </div>
+                        <div class="containerQ17 top3">
+                            <span>3º</span>
+                            <span>Izael Junior</span>
+                            <div class="containerQQ1"></div>
+                            <span>15 pontos</span>
+                        </div>
+                    </div>
+                    <!-- FIM RANKING -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container1">
+            <div class="container1_1">
+                <div class="container2">
+                    <img src="./assets/imagens/iJr.2.png">
+                </div>
+                <div class="container3">
+                    <span>Um jovem sonhador que acredita</span>
+                    <span>que não há limites para fazer o</span>
+                    <span>que é certo.</span>
+                </div>
+                <div class="container4">
+                    <a href="https://www.instagram.com/oizaeljunior" target="_blank"><img
+                            src="./assets/imagens/instagram.png"></a>
+                    <a href="https://wa.me/5511966090323" target="_blank"><img src="./assets/imagens/whatsapp.png"></a>
+                    <a href="https://github.com/oizaeljr" target="_blank"><img src="./assets/imagens/github.png"></a>
+                    <a href="https://www.linkedin.com/in/oizaeljunior/" target="_blank"><img
+                            src="./assets/imagens/linkedin.png"></a>
+                </div>
+            </div>
+            <div class="linha"></div>
+            <div class="container5">
+                <span>© Copyright 2024, All Rights Reserved by Izael Junior</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script src="./js/funcionalidades.js"></script>

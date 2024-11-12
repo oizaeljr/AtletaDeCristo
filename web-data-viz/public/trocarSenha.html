@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iJr</title>
+    <link rel="icon" href="./assets/imagens/cerebro.png" type="image/png">
+    <link rel="stylesheet" href="./css/styleLogado.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container1">
+                <a href="index.html">
+                    <img src="./assets/imagens/iJr.1.png">
+                </a>
+            </div>
+            <div class="container2">
+                <a href="sobreMim.html">Sobre mim</a>
+                <a href="anotacoes.html">Anotações</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="">Bíblia</a>
+            </div>
+            <div class="container3">
+                <span>Olá, <span>Izael Junior</span></span>
+            </div>
+        </nav>
+    </header>
+    <main class="telaTrocarSenha">
+        <div class="container1">
+            <div class="container2">
+                <span>Foco, força e fé</span>
+            </div>
+            <div class="container3">
+                <!-- <div class="container4">
+                    <div class="container5">
+                        <ul>
+                            <li><a id="perfil" href="perfil.html">Perfil</a></li>
+                            <li><a id="anotacoes" href="anotacoes.html">Anotações</a></li>
+                            <li><a id="conhecimento" href="conhecimento.html">Conhecimento</a></li>
+                            <li><a id="motivacao" href="motivacao.html">Motivação</a></li>
+                            <li><a id="biblia" href="biblia.html">Bíblia</a></li>
+                            <li><a id="quiz" href="quiz.html">Quiz</a></li>
+                        </ul>
+                    </div>
+                    <div class="container6">
+                        <div class="container7">
+                            <img src="./assets/imagens/logout.png">
+                            <span>Sair</span>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="container8">
+                    <div class="container9">
+                        <div class="container10">
+                            <span>Trocar Senha</span>
+                        </div>
+                        <div class="container11">
+                            <span>Senha atual:</span>
+                            <input type="password" id="txt_senhaAtual">
+                        </div>
+                        <div class="container11">
+                            <span>Nova Senha:</span>
+                            <input type="password" id="txt_novaSenha" oninput="checkNovaSenha()">
+                        </div>
+                        <div class="container11">
+                            <span>Confirmar senha:</span>
+                            <input type="password" id="txt_confirmarNovaSenha" oninput="checkConfirmarNovaSenha()">
+                        </div>
+                        <div class="containerT1" id="div_checklist" style="display: none;">
+                            <div class="containerT2">
+                                <div class="containerT3">
+                                    <img src="./assets/imagens/errado.png" id="imgMaiusculaT">
+                                    <span>Letra maiúscula</span>
+                                </div>
+                                <div class="containerT3">
+                                    <img src="./assets/imagens/errado.png" id="imgNumeroT">
+                                    <span>Número</span>
+                                </div>
+                                <div class="containerT3">
+                                    <img src="./assets/imagens/errado.png" id="imgMinusculaT">
+                                    <span>Letra minúscula</span>
+                                </div>
+                                <div class="containerT3">
+                                    <img src="./assets/imagens/errado.png" id="imgCaracterT">
+                                    <span>Caracter especial (!,@,#,$,%,&)</span>
+                                </div>
+                                <div class="containerT3">
+                                    <img src="./assets/imagens/errado.png" id="imgTamanhoT">
+                                    <span>Quantidade de caracteres (min. 8)</span>
+                                </div>
+                                <div class="containerT3" id="div_confirmarNovaSenha" style="display: none;">
+                                    <img src="./assets/imagens/errado.png" id="imgSenhasIguaisT">
+                                    <span>Senhas iguais</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="botoes">
+                            <button>Confirmar</button>
+                            <a href="perfil.html"><button>Voltar</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container1">
+            <div class="container1_1">
+                <div class="container2">
+                    <img src="./assets/imagens/iJr.2.png">
+                </div>
+                <div class="container3">
+                    <span>Um jovem sonhador que acredita</span>
+                    <span>que não há limites para fazer o</span>
+                    <span>que é certo.</span>
+                </div>
+                <div class="container4">
+                    <a href="https://www.instagram.com/oizaeljunior" target="_blank"><img
+                            src="./assets/imagens/instagram.png"></a>
+                    <a href="https://wa.me/5511966090323" target="_blank"><img src="./assets/imagens/whatsapp.png"></a>
+                    <a href="https://github.com/oizaeljr" target="_blank"><img src="./assets/imagens/github.png"></a>
+                    <a href="https://www.linkedin.com/in/oizaeljunior/" target="_blank"><img
+                            src="./assets/imagens/linkedin.png"></a>
+                </div>
+            </div>
+            <div class="linha"></div>
+            <div class="container5">
+                <span>© Copyright 2024, All Rights Reserved by Izael Junior</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script src="./js/funcionalidades.js"></script>

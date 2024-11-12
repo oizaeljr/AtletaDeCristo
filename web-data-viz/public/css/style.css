@@ -115,7 +115,7 @@ main .container1{
     height: 80vh;
     background-color: #001F3F;
     border-radius: 0px 0px 200px 200px;
-    background-image: url('../imagens/banner1.png');
+    background-image: url('../assets/imagens/banner1.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -251,7 +251,7 @@ main .container3 .container3_4 .container3_lucas {
     width: 100%;
     height: 60vh;
     border-radius: 10px;
-    background-image: url('../imagens/lucas1.jfif');
+    background-image: url('../assets/imagens/lucas1.jfif');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -259,14 +259,14 @@ main .container3 .container3_4 .container3_lucas {
 }
 
 main .container3 .container3_4 .container3_lucas:hover {
-    background-image: url('../imagens/lucas2.jfif');
+    background-image: url('../assets/imagens/lucas2.jfif');
 }
 
 main .container3 .container3_4 .container3_kaka {
     width: 100%;
     height: 60vh;
     border-radius: 10px;
-    background-image: url('../imagens/kaka1.png');
+    background-image: url('../assets/imagens/kaka1.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -274,14 +274,14 @@ main .container3 .container3_4 .container3_kaka {
 }
 
 main .container3 .container3_4 .container3_kaka:hover {
-    background-image: url('../imagens/kaka2.png');
+    background-image: url('../assets/imagens/kaka2.png');
 }
 
 main .container3 .container3_4 .container3_pedro {
     width: 100%;
     height: 60vh;
     border-radius: 10px;
-    background-image: url('../imagens/pedro1.png');
+    background-image: url('../assets/imagens/pedro1.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -289,7 +289,7 @@ main .container3 .container3_4 .container3_pedro {
 }
 
 main .container3 .container3_4 .container3_pedro:hover {
-    background-image: url('../imagens/pedro2.jfif');
+    background-image: url('../assets/imagens/pedro2.jfif');
 }
 
 main .container3 .container3_6 {
@@ -307,7 +307,7 @@ main .container3 .container3_7 .container3_8 {
     width: 50px;
     height: 50px;
     margin: 0 0 0 5%;
-    background-image: url(../imagens/aspas1.png);
+    background-image: url(../assets/imagens/aspas1.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -352,7 +352,7 @@ main .container3 .container3_11 {
     width: 50px;
     height: 50px;
     margin: 0 5% 0 40%;
-    background-image: url(../imagens/aspas2.png);
+    background-image: url(../assets/imagens/aspas2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -372,7 +372,6 @@ main .container3 .aspasPedro {
 
 main .container4 {
     height: 70vh;
-    margin: 10% 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -384,7 +383,6 @@ main .container4 .container4_2 {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 0 0 2% 0;
 }
 
 main .container4 .container4_2 span {
@@ -405,7 +403,7 @@ main .container4 .container4_3 div{
     height: 50px;
     background-color: #001F3F;
     border-radius: 0 20px 20px 0;
-    margin: 0 1% 0 1%;
+    margin: 0 10px 0 10px;
 }
 
 main .container4 span {
@@ -418,7 +416,7 @@ main .container4 .container4_4 {
     height: auto;
     display: flex;
     align-items: center;
-    margin: 0.6% 6.3% 0 0;
+    margin: 10px 105px 0 0;
 }
 
 main .container4 .container4_4 div{
@@ -426,7 +424,7 @@ main .container4 .container4_4 div{
     height: 50px;
     background-color: #001F3F;
     border-radius: 0 20px 20px 0;
-    margin: 0 1% 0 1%;
+    margin: 0 10px 0 10px;
 }
 
 main .container4 .container4_5 {
@@ -434,7 +432,7 @@ main .container4 .container4_5 {
     height: auto;
     display: flex;
     align-items: center;
-    margin: 0.6% 9.6% 0 0;
+    margin: 10px 160px 0 0;
 }
 
 main .container4 .container4_5 div{
@@ -442,7 +440,7 @@ main .container4 .container4_5 div{
     height: 50px;
     background-color: #001F3F;
     border-radius: 0 20px 20px 0;
-    margin: 0 1% 0 1%;
+    margin: 0 10px 0 10px;
 }
 
 main .container4 .container4_6 {
@@ -450,7 +448,7 @@ main .container4 .container4_6 {
     height: auto;
     display: flex;
     align-items: center;
-    margin: 0.6% 10.5% 0 0;
+    margin: 10px 175px 0 0;
 }
 
 main .container4 .container4_6 div{
@@ -458,7 +456,7 @@ main .container4 .container4_6 div{
     height: 50px;
     background-color: #001F3F;
     border-radius: 0 20px 20px 0;
-    margin: 0 1% 0 1%;
+    margin: 0 10px 0 10px;
 }
 
 main .container4 .container4_7 {
@@ -466,7 +464,7 @@ main .container4 .container4_7 {
     height: auto;
     display: flex;
     align-items: center;
-    margin: 0.6% 14.7% 0 0;
+    margin: 10px 246px 0 0;
 }
 
 main .container4 .container4_7 div{
@@ -474,7 +472,7 @@ main .container4 .container4_7 div{
     height: 50px;
     background-color: #001F3F;
     border-radius: 0 20px 20px 0;
-    margin: 0 1% 0 1%;
+    margin: 0 10px 0 10px;
 }
 
 /* FIM SESSÃO 3 */
@@ -975,7 +973,7 @@ main .container6 .container6_43 button{
     font-size: 25px;
     font-weight: bold;
     border-radius: 20px;
-    width: 25%;
+    width: 10vw;
     height: 8vh;
 }
 
@@ -1060,7 +1058,7 @@ footer .container5 span {
     height: 80vh;
     border-radius: 0px 0px 200px 200px;
     display: flex;
-    background-image: url('../imagens/banner2.png');
+    background-image: url('../assets/imagens/banner2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1104,7 +1102,7 @@ footer .container5 span {
 .telaSobreMim .containerS4 {
     width: 30%;
     height: 100%;
-    background-image: url('../imagens/leao.jfif');
+    background-image: url('../assets/imagens/leao.jfif');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1132,7 +1130,7 @@ footer .container5 span {
     width: 30%;
     height: 100%;
     border-radius: 20px;
-    background-image: url('../imagens/eu2.png');
+    background-image: url('../assets/imagens/eu2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
