@@ -75,6 +75,29 @@ nav .container3 {
     border: 2px solid;
     border-radius: 10px;
     box-shadow: 0px 0px 5px #0f11088d;
+    cursor: pointer;
+}
+
+.container3:hover .containerOpcoes{
+    display: flex;
+}
+
+.containerOpcoes {
+    border: 2px solid;
+    box-shadow: 0px 0px 5px #0f11088d;
+    background-color: white;
+    width: 14vw;
+    height: 12vh;
+    border-radius: 10px;
+    position: absolute;
+    right: 10vw;
+    top: 8vh;
+    display: none;
+    flex-direction: column;
+}
+
+.containerOpcoes span:hover {
+    color: black;
 }
 
 nav span {
@@ -496,7 +519,7 @@ footer .container5 span {
     display: flex;
     align-items: center;
     width: 17vw;
-} 
+}
 
 .telaTrocarSenha .containerT3 img {
     width: 15px;

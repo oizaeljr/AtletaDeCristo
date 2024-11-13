@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iJr</title>
+    <script src="./js/sessao.js"></script>
     <link rel="icon" href="./assets/imagens/cerebro.png" type="image/png">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,23 +15,27 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body onload="validarSessao()">
     <header>
         <nav>
             <div class="container1">
-                <a href="index.html">
+                <a href="indexLogado.html">
                     <img src="./assets/imagens/iJr.1.png">
                 </a>
             </div>
             <div class="container2">
-                <a href="sobreMim.html">Sobre mim</a>
+                <a href="sobreMim.html" style="border-bottom: 1px solid;">Sobre mim</a>
                 <a href="anotacoes.html">Anotações</a>
                 <a href="quiz.html">Quiz</a>
                 <a href="">Bíblia</a>
             </div>
-            <div>
-                <a href="login.html"><button id="btn_login">Login</button></a>
-                <a href="cadastro.html"><button id="btn_cadastrar">Cadastrar</button></a>
+            <div class="container3">
+                <span>Olá, <span id="span_usuario"></span></span>
+                <div class="containerOpcoes">
+                    <a href="perfil.html"><span>Perfil</span></a>
+                    <a href=""><span>Dashboards</span></a>
+                    <a><span onclick="limparSessao()">Sair</span></a>
+                </div>
             </div>
         </nav>
     </header>
@@ -161,6 +166,8 @@
 </html>
 
 <script>
+    span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
     function saoCaetano(){
         div_Historia.style.display = 'flex'
         historiaTimes.innerHTML = `Comecei a jogar futebol com 4 anos. Eu comecei a pedir pra minha mãe me levar para treinar, 

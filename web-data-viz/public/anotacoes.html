@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iJr</title>
+    <script src="./js/sessao.js"></script>
     <link rel="icon" href="./assets/imagens/cerebro.png" type="image/png">
     <link rel="stylesheet" href="./css/styleLogado.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,22 +15,27 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body onload="validarSessao()">
     <header>
         <nav>
             <div class="container1">
-                <a href="home.html">
+                <a href="indexLogado.html">
                     <img src="./assets/imagens/iJr.1.png">
                 </a>
             </div>
             <div class="container2">
                 <a href="sobreMim.html">Sobre mim</a>
-                <a href="anotacoes.html">Anotações</a>
+                <a href="anotacoes.html" style="border-bottom: 1px solid;">Anotações</a>
                 <a href="quiz.html">Quiz</a>
                 <a href="">Bíblia</a>
             </div>
             <div class="container3">
-                <span>Olá, <span>Izael Junior</span></span>
+                <span>Olá, <span id="span_usuario"></span></span>
+                <div class="containerOpcoes">
+                    <a href="perfil.html"><span>Perfil</span></a>
+                    <a href=""><span>Dashboards</span></a>
+                    <a><span onclick="limparSessao()">Sair</span></a>
+                </div>
             </div>
         </nav>
     </header>
@@ -114,7 +120,7 @@
                                             <div class="containerA25">
                                                 <img src="./assets/imagens/check.png">
                                             </div>
-                                            <img src="./assets/imagens/lixeira.png">
+                                            <img src="./assets/imagens/lixeira.png" onclick="removerLinhaTitulo(this)">
                                         </div>
                                     </div>
                                     <div class="containerA26">
@@ -129,7 +135,7 @@
                                                                 <div class="containerA29">
                                                                     <img src="./assets/imagens/check.png">
                                                                 </div>
-                                                                <img src="./assets/imagens/lixeira.png">
+                                                                <img src="./assets/imagens/lixeira.png" onclick="removerLinhaTarefas(this)">
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -278,6 +284,8 @@
 </html>
 
 <script>
+    span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
     function andamento() {
         telaAndamento.style.display = 'block'
         telaObjetivo.style.display = 'none';
@@ -341,7 +349,21 @@ function adicionarTarefa() {
 
 function removerLinha(botao) {
     // Encontre a linha (elemento <tr>) onde o botão foi clicado
-  let linha = botao.parentNode;
+  var linha = botao.parentNode;
+  
+  // Remova a linha da tabela
+  linha.parentNode.removeChild(linha);
+}
+function removerLinhaTitulo(botao) {
+    // Encontre a linha (elemento <tr>) onde o botão foi clicado
+  var linha = botao.parentNode.parentNode.parentNode;
+  
+  // Remova a linha da tabela
+  linha.parentNode.removeChild(linha);
+}
+function removerLinhaTarefas(botao) {
+    // Encontre a linha (elemento <tr>) onde o botão foi clicado
+  var linha = botao.parentNode.parentNode;
   
   // Remova a linha da tabela
   linha.parentNode.removeChild(linha);
@@ -355,14 +377,10 @@ function salvarTarefa() {
                                     <div class="containerA29">
                                         <img src="./assets/imagens/check.png">
                                     </div>
-                                    <img src="./assets/imagens/lixeira.png">
+                                    <img src="./assets/imagens/lixeira.png" onclick="removerLinhaTarefas(this)">
                                 </div>
                             </td>
                         </tr>`
-}
-
-function cancelarTarefa() {
-    
 }
 
 </script>

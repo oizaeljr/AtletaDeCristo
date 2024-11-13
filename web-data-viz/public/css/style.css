@@ -46,7 +46,7 @@ nav .container2 a {
     font-size: 22px;
 }
 
-nav button{
+nav button {
     width: 150px;
     height: 50px;
     border-radius: 10px;
@@ -62,7 +62,7 @@ nav button{
     transition: 0.3s ease;
 }
 
-#btn_cadastrar{
+#btn_cadastrar {
     background-color: #0047AB;
     color: white;
     transition: 0.3s ease;
@@ -72,6 +72,7 @@ nav button{
     background-color: #ADD8E6;
     color: white;
 }
+
 #btn_cadastrar:hover {
     background-color: #ADD8E6;
     color: white;
@@ -81,8 +82,34 @@ nav .container3 {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 20%;
-    height: 85px;
+    width: 14vw;
+    height: 50px;
+    border: 2px solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #0f11088d;
+
+}
+
+.container3:hover .containerOpcoes{
+    display: flex;
+}
+
+.containerOpcoes {
+    border: 2px solid;
+    box-shadow: 0px 0px 5px #0f11088d;
+    background-color: white;
+    width: 14vw;
+    height: 12vh;
+    border-radius: 10px;
+    position: absolute;
+    right: 10vw;
+    top: 8vh;
+    display: none;
+    flex-direction: column;
+}
+
+.containerOpcoes span:hover {
+    color: black;
 }
 
 nav span {
@@ -90,6 +117,7 @@ nav span {
     color: #0047AB;
     font-weight: bold;
     font-size: 22px;
+    cursor: pointer;
 }
 
 #fotoUsuario {
@@ -110,7 +138,7 @@ main {
     margin: 0 0 5% 0;
 }
 
-main .container1{
+main .container1 {
     width: 100%;
     height: 80vh;
     background-color: #001F3F;
@@ -209,7 +237,7 @@ main .container3 {
     height: auto;
 }
 
-main .container3 .container3_1{
+main .container3 .container3_1 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -398,7 +426,7 @@ main .container4 .container4_3 {
     align-items: center;
 }
 
-main .container4 .container4_3 div{
+main .container4 .container4_3 div {
     width: 110vh;
     height: 50px;
     background-color: #001F3F;
@@ -419,7 +447,7 @@ main .container4 .container4_4 {
     margin: 10px 105px 0 0;
 }
 
-main .container4 .container4_4 div{
+main .container4 .container4_4 div {
     width: 100vh;
     height: 50px;
     background-color: #001F3F;
@@ -435,7 +463,7 @@ main .container4 .container4_5 {
     margin: 10px 160px 0 0;
 }
 
-main .container4 .container4_5 div{
+main .container4 .container4_5 div {
     width: 95vh;
     height: 50px;
     background-color: #001F3F;
@@ -451,7 +479,7 @@ main .container4 .container4_6 {
     margin: 10px 175px 0 0;
 }
 
-main .container4 .container4_6 div{
+main .container4 .container4_6 div {
     width: 92vh;
     height: 50px;
     background-color: #001F3F;
@@ -467,7 +495,7 @@ main .container4 .container4_7 {
     margin: 10px 246px 0 0;
 }
 
-main .container4 .container4_7 div{
+main .container4 .container4_7 div {
     width: 82vh;
     height: 50px;
     background-color: #001F3F;
@@ -967,7 +995,7 @@ main .container6 .container6_43 {
     margin: 2% 0 0 0;
 }
 
-main .container6 .container6_43 button{
+main .container6 .container6_43 button {
     background-color: #001F3F;
     color: white;
     font-size: 25px;
@@ -1332,7 +1360,7 @@ footer .container5 span {
     margin: 0 0 0 6%;
 }
 
-.telaCadastro .container6 span{
+.telaCadastro .container6 span {
     font-size: 16px;
     font-weight: bold;
 }
@@ -1345,7 +1373,7 @@ footer .container5 span {
     justify-content: center;
 }
 
-.telaCadastro .container7 button{
+.telaCadastro .container7 button {
     width: 9vw;
     height: 5vh;
     border-radius: 10px;
@@ -1508,7 +1536,7 @@ footer .container5 span {
     margin: 0 0 0 9%;
 }
 
-.telaLogin .container6 span{
+.telaLogin .container6 span {
     font-size: 16px;
     font-weight: bold;
 }
@@ -1521,7 +1549,7 @@ footer .container5 span {
     justify-content: center;
 }
 
-.telaLogin .container7 button{
+.telaLogin .container7 button {
     width: 9vw;
     height: 5vh;
     border-radius: 10px;
@@ -1547,7 +1575,7 @@ footer .container5 span {
     align-items: center;
 }
 
-.telaLogin .esqueceu a{
+.telaLogin .esqueceu a {
     font-weight: bold;
     color: black;
 }

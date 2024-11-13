@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iJr</title>
+    <script src="./js/sessao.js"></script>
     <link rel="icon" href="../public/assets/imagens/cerebro.png" type="image/png">
     <link rel="stylesheet" href="./css/styleLogado.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +19,7 @@
     <header>
         <nav>
             <div class="container1">
-                <a href="index.html">
+                <a href="indexLogado.html">
                     <img src="./assets/imagens/iJr.1.png">
                 </a>
             </div>
@@ -29,7 +30,12 @@
                 <a href="">Bíblia</a>
             </div>
             <div class="container3">
-                <span>Olá, <span>Izael Junior</span></span>
+                <span>Olá, <span id="span_usuario"></span></span>
+                <div class="containerOpcoes">
+                    <a href="perfil.html"><span>Perfil</span></a>
+                    <a href=""><span>Dashboards</span></a>
+                    <a><span onclick="limparSessao()">Sair</span></a>
+                </div>
             </div>
         </nav>
     </header>
@@ -202,6 +208,8 @@
 
 </html>
 <script>
+    span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
     function VisualizarFoto(event) {
         var foto = document.getElementById('fotoPerfil')
         var arquivo = event.target.files[0];
