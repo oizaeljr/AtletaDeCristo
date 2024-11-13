@@ -137,235 +137,147 @@ main .container3 {
     display: flex;
 }
 
-main .container4 {
-    width: 20%;
-    background-color: #001F3F;
-}
-
-#perfil {
-    color: white;
-}
-
-main .container4 a {
-    color: #ADD8E6;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-main .container5 {
-    height: 30%;
-    width: 70%;
-    display: flex;
-    justify-content: center;
-}
-
-main .container5 ul {
-    list-style-type: none;
+main .container8 {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-}
-
-main .container6 {
-    width: 70%;
-    height: 30%;
-    display: flex;
-    align-items: center;
-}
-
-main .container6 img {
-    width: 50px;
-    cursor: pointer;
-}
-
-main .container7 {
-    display: flex;
-    align-items: center;
     justify-content: center;
-    width: 70%;
+    align-items: center;
 }
 
-main .container7 span {
+main .spanTitulo {
+    font-weight: bold;
+    color: #001F3F;
+}
+
+main .container88 {
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+main .container88 button {
+    width: 5vw;
+    height: 9vh;
+    border-radius: 50px;
+    background-color: #0047AB;
     color: white;
     font-weight: bold;
-    cursor: pointer;
 }
 
-main .container8 {
-    width: 90%;
-    display: flex;
-    justify-content: center;
+main .container88 button:hover {
+    background-color: #ADD8E6;
 }
 
-main .container9 {
-    width: 90%;
+main .container8_1 {
+    width: 100%;
+    height: 50%;
     display: flex;
 }
 
-main .container10 {
+main .container8_2 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+main .container8_12 {
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 100px;
+    box-shadow: 0px 4px 4px 1px #5d5d5d;
 }
 
-main .container10 span {
-    color: #001F3F;
+main .containerTitulo {
+    display: flex;
+    justify-content: center;
+}
+
+main .containerDados {
+    width: 40vw;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+}
+
+main .containerDados span {
     font-weight: bold;
+    margin: 0 10px 0 0;
 }
 
-main .container10 input {
+
+main .containerDados input {
     width: 20vw;
-    height: 4vh;
-    border-radius: 10px;
-    border-style: none;
+    height: 5vh;
     background-color: #D3D3D3;
-}
-
-main .container10 select {
-    width: 10vw;
-    height: 4vh;
     border-radius: 10px;
-    border-style: none;
-    background-color: #D3D3D3;
+    margin: 0 10px 0 0;
 }
 
-#dataNasc {
-    width: 7vw;
-}
-
-main .container10 .trocarSenha {
-    width: 7vw;
-    height: 4vh;
+main .containerDados button {
+    width: 8vw;
+    height: 5vh;
     border-radius: 10px;
-    border-style: none;
     background-color: #ADD8E6;
     font-weight: bold;
 }
 
-main .containerBotao {
-    height: 7%;
-}
-
-main .container10 .salvar {
-    width: 7vw;
+main .containerDados select {
+    width: 20vw;
     height: 5vh;
+    background-color: #D3D3D3;
     border-radius: 10px;
-    border-style: none;
-    background-color: #0047AB;
-    font-weight: bold;
-    color: white;
+    margin: 0 10px 0 0;
 }
 
-main .containerFoto {
+#dataNasc {
+    width: 8vw;
+    text-align: center;
+}
+
+#div_trocarSenha button {
+    margin: 0 10px 0 0;
+}
+
+main .containerDados button:hover {
+    transform: scale(1.03);
+}
+
+main .container8_13 {
     width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-main .containerP1 {
-    width: 90%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-main .containerP2 {
-    display: flex;
-}
-
-main .containerP2 img {
+    height: 100%;
     border: 1px solid;
-    width: 14vw;
-    height: 25vh;
-    border-radius: 150px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    border-radius: 100px;
+    box-shadow: 0px 4px 4px 1px #5d5d5d;
 }
 
-main .containerP3 {
+main .container8_22 {
+    width: 50%;
+    height: 100%;
+    border: 1px solid;
     display: flex;
-    justify-content: center;
-    width: 43%;
-}
-
-main .containerP4 {
-    display: flex;
-    justify-content: center;
-    width: 43%;
-}
-
-main .containerP4 input {
-    display: none;
-}
-
-main .containerP4 span {
-    cursor: pointer;
-    background-color: #D3D3D3;
-    border-radius: 10px;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-}
-
-main .containerP4 label {
-    width: 30vw;
-    display: flex;
-    justify-content: center;
-}
-
-main .containerFoto span {
-    font-weight: bold;
-}
-
-main .containerP5 {
-    width: 75%;
-    height: 7vh;
-    display: flex;
-    align-items: end;
-}
-
-main .containerP6 {
-    width: 100%;
-    height: 10vh;
-    display: flex;
+    flex-direction: column;
     align-items: center;
+    border-radius: 100px;
+    box-shadow: 0px 4px 4px 1px #5d5d5d;
 }
 
-main .containerP6 input {
-    width: 55%;
-    height: 90%;
-    background-color: #D3D3D3;
-    border-radius: 10px;
-    border-style: none;
-}
-
-main .containerP7 {
-    width: 82%;
-    height: 5vh;
+main .container8_23 {
+    width: 50%;
+    height: 100%;
+    border: 1px solid;
     display: flex;
-    align-items: end;
-}
-
-main .containerP8 {
-    width: 77.5%;
-    display: flex;
-}
-
-main .containerP9 {
-    width: 69.8%;
-    display: flex;
-}
-
-main .containerP10 {
-    width: 89%;
-    height: 10vh;
-    display: flex;
-    align-items: end;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 100px;
+    box-shadow: 0px 4px 4px 1px #5d5d5d;
 }
 
 /* FIM MAIN */

@@ -45,49 +45,58 @@
                 <span>Foco, força e fé</span>
             </div>
             <div class="container3">
-                <!-- <div class="container4">
-                    <div class="container5">
-                        <ul>
-                            <li><a id="perfil" href="perfil.html">Perfil</a></li>
-                            <li><a id="anotacoes" href="anotacoes.html">Anotações</a></li>
-                            <li><a id="conhecimento" href="conhecimento.html">Conhecimento</a></li>
-                            <li><a id="motivacao" href="motivacao.html">Motivação</a></li>
-                            <li><a id="biblia" href="biblia.html">Bíblia</a></li>
-                            <li><a id="quiz" href="quiz.html">Quiz</a></li>
-                        </ul>
-                    </div>
-                    <div class="container6">
-                        <div class="container7">
-                            <img src="./assets/imagens/logout.png">
-                            <span>Sair</span>
-                        </div>
-                    </div>
-                </div> -->
                 <div class="container8">
-                    <div class="container9">
-                        <div class="container10">
-                            <div>
+                    <div class="container8_1">
+                        <div class="container8_12" id="div_dadosPessoais" style="display: flex;">
+                            <div class="containerTitulo">
+                                <span class="spanTitulo">Dados Pessoais</span>
+                            </div>
+                            <div class="containerDados">
                                 <span>Nome:</span>
                                 <input type="text" placeholder="Digite seu nome">
                             </div>
-                            <div>
-                                <span>Sobrenome:</span>
-                                <input type="text" placeholder="Digite seu sobrenome">
-                            </div>
-                            <div>
+                            <div class="containerDados">
                                 <span>Email:</span>
-                                <input type="text" placeholder="Digite seu email">
+                                <input type="text" placeholder="Digite seu nome">
                             </div>
-                            <div>
+                            <div class="containerDados">
                                 <span>Senha:</span>
-                                <input type="password" placeholder="Digite sua senha">
-                                <a href="trocarSenha.html"><button class="trocarSenha">Trocar senha</button></a>
+                                <input type="password" placeholder="Digite sua senha" disabled>
+                                <button class="trocarSenha" onclick="abrirTrocarSenha()">Trocar senha</button>
                             </div>
-                            <div>
+                            <div class="containerDados">
                                 <span>Data de Nasc:</span>
                                 <input type="date" id="dataNasc">
                             </div>
-                            <div>
+                        </div>
+
+                        <div class="container8_12" id="div_trocarSenha" style="display: none;">
+                            <div class="containerTitulo">
+                                <span class="spanTitulo">Trocar Senha</span>
+                            </div>
+                            <div class="containerDados">
+                                <span>Senha Atual:</span>
+                                <input type="password" placeholder="Digite sua senha atual">
+                            </div>
+                            <div class="containerDados">
+                                <span>Nova Senha:</span>
+                                <input type="password" placeholder="Digite sua nova senha">
+                            </div>
+                            <div class="containerDados">
+                                <span>Confirmar Senha:</span>
+                                <input type="password" placeholder="Confirme sua nova senha">
+                            </div>
+                            <div class="containerDados">
+                                <button>Confirmar</button>
+                                <button onclick="abrirDadosPessoais()">Voltar</button>
+                            </div>
+                        </div>
+
+                        <div class="container8_13">
+                            <div class="containerTitulo">
+                                <span class="spanTitulo">Esporte</span>
+                            </div>
+                            <div class="containerDados">
                                 <span>Esporte Favorito:</span>
                                 <select id="">
                                     <option value="">Selecione um esporte</option>
@@ -96,7 +105,7 @@
                                     <option value="">Basquete</option>
                                 </select>
                             </div>
-                            <div>
+                            <div class="containerDados">
                                 <span>Nível:</span>
                                 <select id="">
                                     <option value="">Selecione o nível</option>
@@ -105,7 +114,7 @@
                                     <option value="">Diversão</option>
                                 </select>
                             </div>
-                            <div>
+                            <div class="containerDados">
                                 <span>Anos de Prática:</span>
                                 <select id="">
                                     <option value="">Selecione uma opção</option>
@@ -114,7 +123,7 @@
                                     <option value="">mais de 5 anos</option>
                                 </select>
                             </div>
-                            <div>
+                            <div class="containerDados">
                                 <span>Grau de Impacto:</span>
                                 <select id="">
                                     <option value="">Selecione o impacto</option>
@@ -123,7 +132,17 @@
                                     <option value="">Alto</option>
                                 </select>
                             </div>
-                            <div>
+                        </div>
+                    </div>
+                    <div class="container88">
+                        <button>Salvar</button>
+                    </div>
+                    <div class="container8_2">
+                        <div class="container8_22">
+                            <div class="containerTitulo">
+                                <span class="spanTitulo">Cristianismo</span>
+                            </div>
+                            <div class="containerDados">
                                 <span>Cristão?</span>
                                 <select id="">
                                     <option value="">Selecione uma opção</option>
@@ -131,46 +150,38 @@
                                     <option value="">Não</option>
                                 </select>
                             </div>
-                            <div>
+                            <div class="containerDados">
                                 <span>Anos de Cristão:</span>
                                 <input type="number">
                             </div>
-                            <div class="containerBotao">
-                                <button class="salvar">Salvar</button>
+                            <div class="containerDados">
+                                <span>Já leu a Bíblia completa?</span>
+                                <select id="">
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="">Sim</option>
+                                    <option value="">Não</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="containerFoto">
-                            <div class="containerP1">
-                                <div class="containerP2">
-                                    <img id="fotoPerfil">
-                                </div>
-                                <div class="containerP3">
-                                    <span>Foto de perfil</span>
-                                </div>
-                                <div class="containerP4">
-                                    <label>
-                                        <span>Escolher arquivo</span>
-                                        <input type="file" accept="image/*" onchange="VisualizarFoto(event)">
-                                    </label>
-                                </div>
-                                <div class="containerP5">
-                                    <span>Frase Motivacional:</span>
-                                </div>
-                                <div class="containerP6">
-                                    <input type="text">
-                                </div>
-                                <div class="containerP7">
-                                    <span>Objetivos concluídos: <span>14</span></span>
-                                </div>
-                                <div class="containerP8">
-                                    <span>Bíblia completa: <span>25%</span></span>
-                                </div>
-                                <div class="containerP9">
-                                    <span>Ranking Quiz <span>3º</span></span>
-                                </div>
-                                <div class="containerP10">
-                                    <span>Conta criada em <span>30/10/2024</span></span>
-                                </div>
+                        <div class="container8_23">
+                            <div class="containerTitulo">
+                                <span class="spanTitulo">Status</span>
+                            </div>
+                            <div class="containerDados">
+                                <span>Frase Motivacional:</span>
+                                <input type="text">
+                            </div>
+                            <div class="containerDados">
+                                <span>Objetivos concluídos: <span>14</span></span>
+                            </div>
+                            <div class="containerDados">
+                                <span>Bíblia completa: <span>25%</span></span>
+                            </div>
+                            <div class="containerDados">
+                                <span>Ranking Quiz <span>3º</span></span>
+                            </div>
+                            <div class="containerDados">
+                                <span>Conta criada em <span>30/10/2024</span></span>
                             </div>
                         </div>
                     </div>
@@ -210,14 +221,13 @@
 <script>
     span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
-    function VisualizarFoto(event) {
-        var foto = document.getElementById('fotoPerfil')
-        var arquivo = event.target.files[0];
+    function abrirTrocarSenha() {
+        div_dadosPessoais.style.display = 'none';
+        div_trocarSenha.style.display = 'flex';
+    }
 
-        if (arquivo && arquivo.type.startsWith('image/')) {
-            foto.src = `${URL.createObjectURL(arquivo)}`
-        } else {
-            foto.src = ``
-        }
+    function abrirDadosPessoais() {
+        div_trocarSenha.style.display = 'none';
+        div_dadosPessoais.style.display = 'flex';
     }
 </script>
