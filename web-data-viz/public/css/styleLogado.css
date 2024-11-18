@@ -573,6 +573,7 @@ footer .container5 span {
 /*INÍCIO EM ANDAMENTO*/
 .telaAnotacoes .containerAA {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 

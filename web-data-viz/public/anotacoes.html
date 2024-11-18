@@ -15,7 +15,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao()">
+<body onload="validarSessao(); buscarAnotacoes()">
     <header>
         <nav>
             <div class="container1">
@@ -84,9 +84,9 @@
                         <!-- INÍCIO TELA EM ANDAMENTO -->
                         <div class="containerA16" id="telaAndamento" style="display: none;">
                             <div class="containerA17">
-                                <span>14 objetivos em andamento</span>
+                                <span><span id="lbl_quantAndamento">0 </span>objetivos em andamento</span>
                             </div>
-                            <div class="containerAA">
+                            <div class="containerAA" id="div_objetivosAndamento">
                                 <div class="containerA18">
                                     <div class="containerA19">
                                         <div class="containerA20" >
@@ -263,7 +263,7 @@
     </footer>
 </body>
 
-</html>
+</html> 
 <script>
     span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 </script>

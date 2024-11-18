@@ -53,15 +53,15 @@
                             </div>
                             <div class="containerDados">
                                 <span>Nome:</span>
-                                <input type="text" placeholder="Digite seu nome">
+                                <input type="text" placeholder="Digite seu nome" id="txt_nome" disabled>
                             </div>
                             <div class="containerDados">
                                 <span>Email:</span>
-                                <input type="text" placeholder="Digite seu nome">
+                                <input type="text" placeholder="Digite seu nome" id="txt_email" disabled>
                             </div>
                             <div class="containerDados">
                                 <span>Senha:</span>
-                                <input type="password" placeholder="Digite sua senha" disabled>
+                                <input type="password" placeholder="**********" disabled id="txt_senha">
                                 <button class="trocarSenha" onclick="abrirTrocarSenha()">Trocar senha</button>
                             </div>
                             <div class="containerDados">
@@ -98,7 +98,7 @@
                             </div>
                             <div class="containerDados">
                                 <span>Esporte Favorito:</span>
-                                <select id="">
+                                <select id="sel_esporteFav">
                                     <option value="">Selecione um esporte</option>
                                     <option value="">Futebol</option>
                                     <option value="">Vôlei</option>
@@ -107,7 +107,7 @@
                             </div>
                             <div class="containerDados">
                                 <span>Nível:</span>
-                                <select id="">
+                                <select id="sel_esporteNivel">
                                     <option value="">Selecione o nível</option>
                                     <option value="">Profissional</option>
                                     <option value="">Amador</option>
@@ -116,7 +116,7 @@
                             </div>
                             <div class="containerDados">
                                 <span>Anos de Prática:</span>
-                                <select id="">
+                                <select id="sel_esporteAnos">
                                     <option value="">Selecione uma opção</option>
                                     <option value="">menos de 1 ano</option>
                                     <option value="">até 5 anos</option>
@@ -125,7 +125,7 @@
                             </div>
                             <div class="containerDados">
                                 <span>Grau de Impacto:</span>
-                                <select id="">
+                                <select id="sel_esporteGrau">
                                     <option value="">Selecione o impacto</option>
                                     <option value="">Baixo</option>
                                     <option value="">Médio</option>
@@ -144,7 +144,7 @@
                             </div>
                             <div class="containerDados">
                                 <span>Cristão?</span>
-                                <select id="">
+                                <select id="sel_cristao">
                                     <option value="">Selecione uma opção</option>
                                     <option value="">Sim</option>
                                     <option value="">Não</option>
@@ -152,11 +152,11 @@
                             </div>
                             <div class="containerDados">
                                 <span>Anos de Cristão:</span>
-                                <input type="number">
+                                <input type="number" id="txt_cristaoAnos">
                             </div>
                             <div class="containerDados">
                                 <span>Já leu a Bíblia completa?</span>
-                                <select id="">
+                                <select id="sel_biblia">
                                     <option value="">Selecione uma opção</option>
                                     <option value="">Sim</option>
                                     <option value="">Não</option>
@@ -169,19 +169,19 @@
                             </div>
                             <div class="containerDados">
                                 <span>Frase Motivacional:</span>
-                                <input type="text">
+                                <input type="text" id="txt_frase">
                             </div>
                             <div class="containerDados">
-                                <span>Objetivos concluídos: <span>14</span></span>
+                                <span>Objetivos concluídos: <span id="lbl_objetivos">14</span></span>
                             </div>
                             <div class="containerDados">
-                                <span>Bíblia completa: <span>25%</span></span>
+                                <span>Bíblia completa: <span id="lbl_bilbiaPorc">25%</span></span>
                             </div>
                             <div class="containerDados">
-                                <span>Ranking Quiz <span>3º</span></span>
+                                <span>Ranking Quiz <span id="lbl_ranking">3º</span></span>
                             </div>
                             <div class="containerDados">
-                                <span>Conta criada em <span>30/10/2024</span></span>
+                                <span>Conta criada em <span id="lbl_contaCriada">30/10/2024</span></span>
                             </div>
                         </div>
                     </div>
@@ -220,6 +220,9 @@
 </html>
 <script>
     span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    txt_nome.value = sessionStorage.NOME_USUARIO;
+    txt_email.value = sessionStorage.EMAIL_USUARIO;
+    txt_senha.value = sessionStorage.SENHA_USUARIO;
 
     function abrirTrocarSenha() {
         div_dadosPessoais.style.display = 'none';

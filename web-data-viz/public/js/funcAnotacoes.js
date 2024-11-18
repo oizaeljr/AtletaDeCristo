@@ -20,7 +20,7 @@ function adicionar() {
     }
 
     // Enviando o valor da nova input
-    fetch(`/anotacoes/adicionar/${idVar}`, {
+    fetch(`/anotacoes/adicionar`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ function adicionar() {
         // Agora vá para o arquivo routes/usuario.js
         objetivoServer: objetivoVar,
         tarefaServer: tarefaVar,
-        idServer: idVar
+        idServer: idVar 
       }),
     })
       .then(function (resposta) {
@@ -40,6 +40,53 @@ function adicionar() {
         //   cardErro.style.display = "block";
           objetivoVar.innerHTML = ''
           tarefaVar.innerHTML = ''
+          resposta.json().then(json => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+            
+          
+          div_objetivosAndamento.innerHTML += `<div class="containerA18">
+                                    <div class="containerA19">
+                                        <div class="containerA20" >
+                                            <img onclick="abrirAnotacoes(${json.idInserido})" src="./assets/imagens/setaDireita.png" id="img_abrirAnotacoes">
+                                            <span>${objetivoVar}</span>
+                                        </div>
+                                        <div class="containerA21"></div>
+                                        <div class="containerA22">
+                                            <div class="containerA23"></div>
+                                            <span>15%</span>
+                                        </div>
+                                        <div class="containerA24">
+                                            <div class="containerA25">
+                                                <img src="./assets/imagens/check.png">
+                                            </div>
+                                            <img src="./assets/imagens/lixeira.png" onclick="removerLinhaTitulo(this)">
+                                        </div>
+                                    </div>
+                                    <div class="containerA26">
+                                        <div class="containerA27">
+                                            <div class="containerA"></div>
+                                            <table id="table_tarefas" style="display: none;">
+                                                <tbody id="tbodyCampo">
+                                                    <tr>
+                                                        <td>
+                                                            <input type="text" placeholder="Tarefa" disabled value="${tarefaVar}">
+                                                            <div class="containerA28">
+                                                                <div class="containerA29">
+                                                                    <img src="./assets/imagens/check.png">
+                                                                </div>
+                                                                <img src="./assets/imagens/lixeira.png" onclick="removerLinhaTarefas(this)">
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="containerA31" id="div_addTarefa${json.idInserido}" style="display: none;">
+                                            <div class="containerA"></div>
+                                        </div>
+                                    </div>
+                                </div>`
         //   mensagem_erro.innerHTML =
         //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
@@ -49,6 +96,7 @@ function adicionar() {
 
         //   limparFormulario();
         //   finalizarAguardar();
+      })  
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
         }
@@ -60,6 +108,7 @@ function adicionar() {
 
     return false;
   }
+
 
   function andamento() {
     telaAndamento.style.display = 'block'
@@ -102,13 +151,13 @@ function lixeira() {
     span_andamento.style.borderBottom = 'none';
 }
 
-function abrirAnotacoes() {
-    console.log(img_abrirAnotacoes.src)
-    if (img_abrirAnotacoes.src == 'file:///C:/Users/izael/OneDrive/Documentos/SPTECH/ProjetoIndividual/web-data-viz/public/assets/imagens/setaDireita.png') {
+function abrirAnotacoes(id) {
+    console.log(id);
+    if (img_abrirAnotacoes.src == 'http://localhost:3333/assets/imagens/setaDireita.png') {
         table_tarefas.style.display = 'flex';
         div_addTarefa.style.display = 'flex';
         img_abrirAnotacoes.src = './assets/imagens/setaBaixo.png'
-    } else if (img_abrirAnotacoes.src == 'file:///C:/Users/izael/OneDrive/Documentos/SPTECH/ProjetoIndividual/web-data-viz/public/assets/imagens/setaBaixo.png') {
+    } else if (img_abrirAnotacoes.src == 'http://localhost:3333/assets/imagens/setaBaixo.png') {
         table_tarefas.style.display = 'none';
         div_addTarefa.style.display = 'none';
         img_abrirAnotacoes.src = './assets/imagens/setaDireita.png'
