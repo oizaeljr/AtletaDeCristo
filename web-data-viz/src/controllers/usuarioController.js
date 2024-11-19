@@ -33,7 +33,8 @@ function autenticar(req, res) {
                             cristaoAnos: resultadoAutenticar[0].cristaoAnos,
                             biblia: resultadoAutenticar[0].biblia,
                             frase: resultadoAutenticar[0].frase,
-                            dtCriacao: resultadoAutenticar[0].dtCriacao
+                            dtCriacao: resultadoAutenticar[0].dtCriacao,
+                            pontosQuiz: resultadoAutenticar[0].pontosQuiz
                         });
 
 
@@ -100,6 +101,7 @@ function atualizar(req, res) {
     var cristaoAnos = req.body.cristaoAnosServer;
     var biblia = req.body.bibliaServer;
     var frase = req.body.fraseServer;
+    
     console.log(esporteFav)
 
     // Faça as validações dos valores

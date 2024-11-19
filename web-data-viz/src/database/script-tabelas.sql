@@ -1,11 +1,3 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
-
-/*
-comandos para mysql server
-*/
-
 CREATE DATABASE AtletaCristo;
 
 USE AtletaCristo;
@@ -24,7 +16,8 @@ cristao char(3),
 cristaoAnos varchar(45),
 biblia char(3),
 frase varchar(45),
-dtCriacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+dtCriacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+pontosQuiz int
 );
 
 CREATE TABLE objetivo (

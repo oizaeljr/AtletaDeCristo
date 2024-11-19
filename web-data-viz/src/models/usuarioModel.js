@@ -3,7 +3,7 @@ var database = require("../database/config")
 function autenticar(email, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
     var instrucaoSql = `
-        SELECT idUsuario, nome, email, senha, dtNasc, esporteFav, esporteNivel, esporteAnos, esporteGrau, cristao, cristaoAnos, biblia, frase, dtCriacao FROM usuario WHERE email = '${email}' AND senha = '${senha}';
+        SELECT idUsuario, nome, email, senha, dtNasc, esporteFav, esporteNivel, esporteAnos, esporteGrau, cristao, cristaoAnos, biblia, frase, dtCriacao, pontosQuiz FROM usuario WHERE email = '${email}' AND senha = '${senha}';
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -41,7 +41,7 @@ function pontuar(id, pontos) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
-        UPDATE usuario SET pontosQuiz = pontosQuiz + ${pontos} WHERE idUsuario = ${id};
+        UPDATE usuario SET pontosQuiz = IFNULL(pontosQuiz, 0) + ${pontos} WHERE idUsuario = ${id};
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
