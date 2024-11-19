@@ -158,56 +158,56 @@ function cadastrar() {
 
     // Verificando se há algum campo em branco
     if (!checkNome() && !checkEmail() && !checkSenha() && !checkConfirmarSenha()) {
-    //   cardErro.style.display = "block";
-    //   mensagem_erro.innerHTML =
-    //     "(Mensagem de erro para todos os campos em branco)";
+        //   cardErro.style.display = "block";
+        //   mensagem_erro.innerHTML =
+        //     "(Mensagem de erro para todos os campos em branco)";
 
-    //   finalizarAguardar();
-      return false;
+        //   finalizarAguardar();
+        return false;
     } else {
-    //   setInterval(sumirMensagem, 5000);
+        //   setInterval(sumirMensagem, 5000);
     }
 
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar
-      }),
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            nomeServer: nomeVar,
+            emailServer: emailVar,
+            senhaServer: senhaVar
+        }),
     })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
 
-        if (resposta.ok) {
-        //   cardErro.style.display = "block";
+            if (resposta.ok) {
+                //   cardErro.style.display = "block";
 
-        //   mensagem_erro.innerHTML =
-        //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                //   mensagem_erro.innerHTML =
+                //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-          setTimeout(() => {
-            window.location = "login.html";
-          }, "2000");
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000");
 
-        //   limparFormulario();
-        //   finalizarAguardar();
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        // finalizarAguardar();
-      });
+                //   limparFormulario();
+                //   finalizarAguardar();
+            } else {
+                throw "Houve um erro ao tentar realizar o cadastro!";
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
 
     return false;
-  }
+}
 
 //   function sumirMensagem() {
 //     cardErro.style.display = "none";
@@ -669,6 +669,53 @@ function proximaPergunta() {
         span_acertos.innerHTML = `${acertos}`
         span_erros.innerHTML = `${erros}`
         telaPontuacao.style.display = 'flex'
+
+        /* INÍCIO DASHBOARD RESULTADO QUIZ */
+
+        const labels1 = [
+            'Acertos',
+            'Erros'
+        ];
+
+
+        const data1 = {
+            labels: labels1,
+            datasets: [{
+                label: 'Quantidade',
+                backgroundColor: [
+                    'rgb(0, 128, 55)',
+                    'rgb(163, 0, 0.7)',
+                ],
+                borderColor: [
+                    'rgb(0, 0, 0)',
+                    'rgb(0, 0, 0)',
+                ],
+                data: [acertos, erros]
+            }]
+
+        };
+        console.log(acertos)
+        console.log(erros)
+        const config1 = {
+            type: 'doughnut',
+            data: data1,
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Resultado do Quiz'
+                    }
+                }
+            }
+        }
+
+
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config1
+
+        )
+        /* FIM DASHBOARD RESULTADO QUIZ */
     }
 }
 
@@ -1227,48 +1274,3 @@ function checkConfirmarNovaSenha() {
 }
 /* FIM TELA TROCAR SENHA */
 
-/* INÍCIO DASHBOARD RESULTADO QUIZ */
-
-     const labels1 = [
-         'Acertos',
-        'Erros'
-    ];
-
-
-    const data1 = {
-        labels: labels1,
-        datasets: [{
-            label: 'Quantidade',
-            backgroundColor: [
-                'rgb(0, 128, 55)',
-                'rgb(163, 0, 0.7)',
-            ],
-            borderColor: [
-                'rgb(0, 0, 0)',
-                'rgb(0, 0, 0)',
-            ],
-            data: [acertos, erros]
-        }]
-
-    };
-
-    const config1 = {
-        type: 'doughnut',
-        data: data1,
-        options: {
-            plugins: {
-                title: {
-                    display: true,
-                    text: 'Resultado do Quiz'
-                }
-            }
-        }
-    }
-    
-
-    const myChart = new Chart(
-        document.getElementById('myChart'),
-        config1
-
-    )
-/* FIM DASHBOARD RESULTADO QUIZ */
