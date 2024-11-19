@@ -850,6 +850,7 @@ function aleatorio() {
     }
 }
 function ranking() {
+    listar()
     telaQuizPerguntas.style.display = 'none';
     telaRanking.style.display = 'flex';
     telaPontuacao.style.display = 'none';
@@ -1321,3 +1322,47 @@ function pontuar() {
     return false;
   }
 
+  function listar() {
+    // aguardar();
+
+
+    fetch("/ranking/listar", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!")
+
+        if (resposta.ok) {
+            console.log(resposta);
+
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+                span_nomePrimeiro.innerHTML = json[0].nome;
+                span_pontosPrimeiro.innerHTML = json[0].pontosQuiz;
+                span_nomeSegundo.innerHTML = json[1].nome;
+                span_pontosSegundo.innerHTML = json[1].pontosQuiz;
+                span_nomeTerceiro.innerHTML = json[2].nome;
+                span_pontosTerceiro.innerHTML = json[2].pontosQuiz;
+                
+            });
+
+        } else {
+
+            console.log("Houve um erro ao tentar realizar o login!");
+
+            resposta.text().then(texto => {
+                console.error(texto);
+                // finalizarAguardar(texto);
+            });
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+    return false;
+}
