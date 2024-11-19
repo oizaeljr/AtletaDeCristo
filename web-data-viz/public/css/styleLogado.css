@@ -297,7 +297,7 @@ footer .container1 {
 footer .container1_1 {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 80%; 
 }
 
 footer .container2 {
@@ -474,7 +474,7 @@ footer .container5 span {
 }
 
 .telaAnotacoes .containerA11 {
-    width: 18%;
+    width: 12vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -574,7 +574,10 @@ footer .container5 span {
 .telaAnotacoes .containerAA {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+    height: auto;
+    margin: 0 0 10px 0;
 }
 
 .telaAnotacoes .containerA16 {
@@ -602,6 +605,7 @@ footer .container5 span {
     border-radius: 10px;
     width: 76%;
     height: auto;
+    margin: 10px;
 }
 
 .telaAnotacoes .containerA19 {
@@ -613,8 +617,7 @@ footer .container5 span {
 .telaAnotacoes .containerA20 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: auto;
+    width: 60vw;
 }
 
 .telaAnotacoes .containerA20 img {
@@ -623,7 +626,7 @@ footer .container5 span {
 }
 
 .telaAnotacoes .containerA21 {
-    width: 50%;
+    width: 10vw;
 }
 
 .telaAnotacoes .containerA22 {
@@ -634,14 +637,14 @@ footer .container5 span {
 }
 
 .telaAnotacoes .containerA23 {
-    width: 85%;
+    width: 20vw;
     height: 4vh;
     border-radius: 10px;
     background: linear-gradient(to right, #6FD480 15%, #D3D3D3 1%);
 }
 
 .telaAnotacoes .containerA24 {
-    width: 7.5vw;
+    width: 15vw;
     height: 4vh;
     display: flex;
     align-items: center;

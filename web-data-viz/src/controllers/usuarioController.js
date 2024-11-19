@@ -23,7 +23,17 @@ function autenticar(req, res) {
                             id: resultadoAutenticar[0].idUsuario,
                             nome: resultadoAutenticar[0].nome,
                             email: resultadoAutenticar[0].email,
-                            senha: resultadoAutenticar[0].senha
+                            senha: resultadoAutenticar[0].senha,
+                            dtNasc: resultadoAutenticar[0].dtNasc,
+                            esporteFav: resultadoAutenticar[0].esporteFav,
+                            esporteNivel: resultadoAutenticar[0].esporteNivel,
+                            esporteAnos: resultadoAutenticar[0].esporteAnos,
+                            esporteGrau: resultadoAutenticar[0].esporteGrau,
+                            cristao: resultadoAutenticar[0].cristao,
+                            cristaoAnos: resultadoAutenticar[0].cristaoAnos,
+                            biblia: resultadoAutenticar[0].biblia,
+                            frase: resultadoAutenticar[0].frase,
+                            dtCriacao: resultadoAutenticar[0].dtCriacao
                         });
 
 
@@ -78,7 +88,58 @@ function cadastrar(req, res) {
     }
 }
 
+function atualizar(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var id = req.body.idServer;
+    var dtNasc = req.body.dtNascServer;
+    var esporteFav = req.body.esporteFavServer;
+    var esporteNivel = req.body.esporteNivelServer;
+    var esporteAnos = req.body.esporteAnosServer;
+    var esporteGrau = req.body.esporteGrauServer;
+    var cristao = req.body.cristaoServer;
+    var cristaoAnos = req.body.cristaoAnosServer;
+    var biblia = req.body.bibliaServer;
+    var frase = req.body.fraseServer;
+    console.log(esporteFav)
+
+    // Faça as validações dos valores
+    if (esporteFav == '#') {
+
+    } else if (esporteNivel == '#') {
+
+    } else if (esporteAnos == '#') {
+
+    } else if (esporteGrau == '#') {
+
+    } else if (cristao == '#') {
+
+    } else if (cristaoAnos < 0) {
+
+    } else if (biblia == '#') {
+
+    } else {
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.atualizar(id, dtNasc, esporteFav, esporteNivel, esporteAnos, esporteGrau, cristao, cristaoAnos, biblia, frase)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    atualizar
 }

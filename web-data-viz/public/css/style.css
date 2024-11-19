@@ -1009,51 +1009,6 @@ footer .container5 span {
     background-size: cover;
 }
 
-/* .telaSobreMim .containerS1 span {
-    color: white;
-    font-weight: bold;
-    font-size: 70px;
-}
-
-#inspirar {
-    color: #ADD8E6;
-}
-
-#legado {
-    color: #ADD8E6;
-}
-
-#pessoas {
-    color: #ADD8E6;
-}
-
-.telaSobreMim .containerS2 {
-    width: 70%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.telaSobreMim .containerS3 {
-    width: 80%;
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.telaSobreMim .containerS4 {
-    width: 30%;
-    height: 100%;
-    background-image: url('../assets/imagens/leao.jfif');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 0 0 200px 0;
-} */
-
 .telaSobreMim .containerS5 {
     width: 100%;
     height: 70vh;
@@ -1201,7 +1156,7 @@ footer .container5 span {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #001F3F;
+    background-color: #0047AB;
 }
 
 .telaSobreMim .containerS19 span {
@@ -1209,6 +1164,82 @@ footer .container5 span {
     font-weight: bold;
     padding: 10px;
 }
+
+.telaSobreMim .containerS20 {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.telaSobreMim .containerS21 {
+    width: 70%;
+    height: 80%;
+}
+
+.telaSobreMim .containerS22 {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.telaSobreMim .containerS22 span {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.telaSobreMim .containerS23 {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.telaSobreMim .containerS24 {
+    width: 20vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0047AB;
+    border-radius: 20px;
+}
+
+.telaSobreMim .containerS25 {
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px white;
+}
+
+.telaSobreMim .containerS26 {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.telaSobreMim .valores {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.telaSobreMim .valoresTexto {
+    color: white;
+}
+
+.telaSobreMim .valoresPalavra {
+    font-weight: bold;
+}
+
 
 /* FIM TELA SOBRE MIM */
 
