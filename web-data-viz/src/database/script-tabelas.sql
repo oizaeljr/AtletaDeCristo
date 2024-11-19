@@ -14,7 +14,17 @@ CREATE TABLE usuario (
 idUsuario int primary key auto_increment,
 nome varchar(45),
 email varchar(45),
-senha varchar(45)
+senha varchar(45),
+dtNasc date,
+esporteFav varchar(45),
+esporteNivel varchar(45),
+esporteAnos varchar(45),
+esporteGrau varchar(45),
+cristao char(3),
+cristaoAnos varchar(45),
+biblia char(3),
+frase varchar(45),
+dtCriacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE objetivo (
@@ -34,3 +44,7 @@ constraint fkObjetivoTarefa foreign key (fkObjetivo) references objetivo (idObje
 
 SELECT * FROM usuario;
 SELECT * FROM objetivo;
+
+
+
+
