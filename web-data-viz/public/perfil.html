@@ -229,8 +229,7 @@
     txt_senha.value = sessionStorage.SENHA_USUARIO;
 
 
-    var dataNascCompleta = new Date(sessionStorage.DT_NASC);
-    var somenteDataNasc = dataNascCompleta.toLocaleDateString("pt-BR");
+    var somenteDataNasc = sessionStorage.DT_NASC.split("T")[0];
     dataNasc.value = somenteDataNasc;
     
     sel_esporteFav.value = sessionStorage.ESPORTE_FAV;
