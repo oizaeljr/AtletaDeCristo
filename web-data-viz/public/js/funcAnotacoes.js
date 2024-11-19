@@ -38,7 +38,7 @@ function adicionar() {
 
       if (resposta.ok) {
         //   cardErro.style.display = "block";
-        
+
         resposta.json().then(json => {
           console.log(json);
           console.log(JSON.stringify(json));
@@ -48,7 +48,7 @@ function adicionar() {
           div_objetivosAndamento.innerHTML += `<div class="containerA18">
                                     <div class="containerA19">
                                         <div class="containerA20" >
-                                            <img onclick="abrirAnotacoes(${json.idInserido})" src="./assets/imagens/setaDireita.png" id="img_abrirAnotacoes">
+                                            <img onclick="abrirAnotacoes(${json.idInserido})" src="./assets/imagens/setaDireita.png" id="img_abrirAnotacoes${json.idInserido}">
                                             <span>${objetivoVar}</span>
                                         </div>
                                         <div class="containerA21"></div>
@@ -66,7 +66,7 @@ function adicionar() {
                                     <div class="containerA26">
                                         <div class="containerA27">
                                             <div class="containerA"></div>
-                                            <table id="table_tarefas" style="display: none;">
+                                            <table id="table_tarefas${json.idInserido}" style="display: none;">
                                                 <tbody id="tbodyCampo">
                                                     <tr>
                                                         <td>
@@ -87,16 +87,11 @@ function adicionar() {
                                         </div>
                                     </div>
                                 </div>`
-                                alert('Objetivo cadastrado com sucesso!')
-          //   mensagem_erro.innerHTML =
-          //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-          //   setTimeout(() => {
-          //     window.location = ".html";
-          //   }, "2000");
-
-          //   limparFormulario();
-          //   finalizarAguardar();
+          alert('Objetivo cadastrado com sucesso!')
+          tableCampo.innerHTML = ` <tr>
+                        <td><input type="text" placeholder="Título" id="txt_titulo"></td>
+                        <td><input type="text" placeholder="Tarefa"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
+                    </tr>`
         })
       } else {
         throw "Houve um erro ao tentar realizar o cadastro!";
@@ -161,6 +156,16 @@ function lixeira() {
 
 function abrirAnotacoes(id) {
   console.log(id);
+  console.log(`table_tarefas${id}`);
+  console.log(document.getElementById(`table_tarefas${id}`));
+  console.log(`div_addTarefa${id}`);
+  console.log(document.getElementById(`div_addTarefa${id}`));
+  console.log(`img_abrirAnotacoes${id}`);
+  console.log(document.getElementById(`img_abrirAnotacoes${id}`));
+  const table_tarefas = document.getElementById(`table_tarefas${id}`)
+  const div_addTarefa = document.getElementById(`div_addTarefa${id}`)
+  const img_abrirAnotacoes = document.getElementById(`img_abrirAnotacoes${id}`)
+
   if (img_abrirAnotacoes.src == 'http://localhost:3333/assets/imagens/setaDireita.png') {
     table_tarefas.style.display = 'flex';
     div_addTarefa.style.display = 'flex';
