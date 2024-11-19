@@ -740,7 +740,7 @@ function sairQuiz() {
 
 function esportes() {
     if (iniciou) {
-        if (tela != 'esporte' && tela != '') {
+        if (tela != 'esporte') {
             confirmarSaida()
             if (saida) {
                 sairQuiz()
@@ -763,7 +763,7 @@ function esportes() {
 }
 function cristao() {
     if (iniciou) {
-        if (tela != 'biblia' && tela != '') {
+        if (tela != 'biblia') {
             confirmarSaida()
             if (saida) {
                 sairQuiz()
@@ -785,7 +785,7 @@ function cristao() {
 }
 function futebol() {
     if (iniciou) {
-        if (tela != 'futebol' && tela != '') {
+        if (tela != 'futebol') {
             confirmarSaida()
             if (saida) {
                 sairQuiz()
@@ -807,7 +807,7 @@ function futebol() {
 }
 function mindset() {
     if (iniciou) {
-        if (tela != 'mindset' && tela != '') {
+        if (tela != 'mindset') {
             confirmarSaida()
             if (saida) {
                 sairQuiz()
@@ -829,7 +829,7 @@ function mindset() {
 }
 function aleatorio() {
     if (iniciou) {
-        if (tela != 'aleatorio' && tela != '') {
+        if (tela != 'aleatorio') {
             confirmarSaida()
             if (saida) {
                 sairQuiz()
@@ -850,18 +850,28 @@ function aleatorio() {
     }
 }
 function ranking() {
-    listar()
-    telaQuizPerguntas.style.display = 'none';
-    telaRanking.style.display = 'flex';
-    telaPontuacao.style.display = 'none';
-    quizEsporte.style.borderBottom = 'none';
-    quizBiblia.style.borderBottom = 'none';
-    quizFutebol.style.borderBottom = 'none';
-    quizMindset.style.borderBottom = 'none';
-    quizAleatorio.style.borderBottom = 'none';
-    quizRanking.style.borderBottom = '1px solid';
-    selecione.style.display = 'block'
-    selecione.innerHTML = 'OS MELHORES ESTÃO AQUI!'
+    if (iniciou) {
+        if (tela != 'ranking') {
+            confirmarSaida()
+            if (saida) {
+                sairQuiz()
+            }
+        }
+    } else {
+        listar()
+        telaQuizPerguntas.style.display = 'none';
+        telaRanking.style.display = 'flex';
+        telaPontuacao.style.display = 'none';
+        quizEsporte.style.borderBottom = 'none';
+        quizBiblia.style.borderBottom = 'none';
+        quizFutebol.style.borderBottom = 'none';
+        quizMindset.style.borderBottom = 'none';
+        quizAleatorio.style.borderBottom = 'none';
+        quizRanking.style.borderBottom = '1px solid';
+        selecione.style.display = 'block'
+        tela = 'ranking'
+        selecione.innerHTML = 'OS MELHORES ESTÃO AQUI!'
+    }
 }
 
 function alternativaA() {
@@ -1279,50 +1289,50 @@ function checkConfirmarNovaSenha() {
 
 function pontuar() {
     // aguardar();
-  
+
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
-  
+
     var pontosVar = acertos;
     var idVar = sessionStorage.ID_USUARIO;
-  
+
     // Enviando o valor da nova input
     fetch(`/usuarios/pontuar/${idVar}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        idServer: idVar,
-        pontosServer: pontosVar
-      }),
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idServer: idVar,
+            pontosServer: pontosVar
+        }),
     })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
-  
-        if (resposta.ok) {
-          //   cardErro.style.display = "block";
-  
-          //   mensagem_erro.innerHTML =
-          //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-  
-          //   limparFormulario();
-          //   finalizarAguardar();
-        } else {
-          throw "Houve um erro ao tentar realizar a pontuação!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        // finalizarAguardar();
-      });
-  
-    return false;
-  }
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
 
-  function listar() {
+            if (resposta.ok) {
+                //   cardErro.style.display = "block";
+
+                //   mensagem_erro.innerHTML =
+                //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                //   limparFormulario();
+                //   finalizarAguardar();
+            } else {
+                throw "Houve um erro ao tentar realizar a pontuação!";
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            // finalizarAguardar();
+        });
+
+    return false;
+}
+
+function listar() {
     // aguardar();
 
 
@@ -1331,7 +1341,7 @@ function pontuar() {
         headers: {
             "Content-Type": "application/json"
         },
-        
+
     }).then(function (resposta) {
         console.log("ESTOU NO THEN DO entrar()!")
 
@@ -1347,7 +1357,7 @@ function pontuar() {
                 span_pontosSegundo.innerHTML = json[1].pontosQuiz;
                 span_nomeTerceiro.innerHTML = json[2].nome;
                 span_pontosTerceiro.innerHTML = json[2].pontosQuiz;
-                
+
             });
 
         } else {

@@ -41,7 +41,7 @@ function pontuar(id, pontos) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
-        UPDATE usuario SET pontosQuiz = ${pontos} WHERE idUsuario = ${id};
+        UPDATE usuario SET pontosQuiz = pontosQuiz + ${pontos} WHERE idUsuario = ${id};
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);

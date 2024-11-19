@@ -1,8 +1,8 @@
 var rankingModel = require("../models/rankingModel");
 
 function listar(req, res) {
-    rankingModel.listar().then((resultado) => {
-        res.status(200).json(resultado);
+    rankingModel.listar().then((resultadoAutenticar) => {
+        res.status(200).json(resultadoAutenticar);
 
 
         rankingModel.listar()
@@ -17,7 +17,7 @@ function listar(req, res) {
             ).catch(
                 function (erro) {
                     console.log(erro);
-                    console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                    console.log("\nHouve um erro ao realizar o listar! Erro: ", erro.sqlMessage);
                     return res.status(500).json(erro.sqlMessage);
                 }
             );
