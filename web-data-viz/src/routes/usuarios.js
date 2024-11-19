@@ -16,4 +16,8 @@ router.put("/atualizar/:id", function (req, res) {
     usuarioController.atualizar(req, res);
 });
 
+router.put("/pontuar/:id", function (req, res) {
+    usuarioController.pontuar(req, res);
+});
+
 module.exports = router;

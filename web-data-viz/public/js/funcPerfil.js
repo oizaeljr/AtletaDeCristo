@@ -16,7 +16,7 @@ function atualizar() {
   var idVar = sessionStorage.ID_USUARIO;
 
   if (esporteFavVar == 1) {
-    
+
   }
 
   // Enviando o valor da nova input

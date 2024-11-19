@@ -669,6 +669,7 @@ function proximaPergunta() {
         span_acertos.innerHTML = `${acertos}`
         span_erros.innerHTML = `${erros}`
         telaPontuacao.style.display = 'flex'
+        pontuar()
 
         /* INÍCIO DASHBOARD RESULTADO QUIZ */
 
@@ -851,6 +852,7 @@ function aleatorio() {
 function ranking() {
     telaQuizPerguntas.style.display = 'none';
     telaRanking.style.display = 'flex';
+    telaPontuacao.style.display = 'none';
     quizEsporte.style.borderBottom = 'none';
     quizBiblia.style.borderBottom = 'none';
     quizFutebol.style.borderBottom = 'none';
@@ -1273,4 +1275,49 @@ function checkConfirmarNovaSenha() {
     }
 }
 /* FIM TELA TROCAR SENHA */
+
+function pontuar() {
+    // aguardar();
+  
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+  
+    var pontosVar = acertos;
+    var idVar = sessionStorage.ID_USUARIO;
+  
+    // Enviando o valor da nova input
+    fetch(`/usuarios/pontuar/${idVar}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: idVar,
+        pontosServer: pontosVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+  
+        if (resposta.ok) {
+          //   cardErro.style.display = "block";
+  
+          //   mensagem_erro.innerHTML =
+          //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+  
+          //   limparFormulario();
+          //   finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar a pontuação!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+      });
+  
+    return false;
+  }
 

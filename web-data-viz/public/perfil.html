@@ -228,37 +228,20 @@
     txt_email.value = sessionStorage.EMAIL_USUARIO;
     txt_senha.value = sessionStorage.SENHA_USUARIO;
 
+
     var dataNascCompleta = new Date(sessionStorage.DT_NASC);
     var somenteDataNasc = dataNascCompleta.toLocaleDateString("pt-BR");
     dataNasc.value = somenteDataNasc;
-
-    if (sessionStorage.DT_NASC != null) {
-    } 
-    if (sessionStorage.ESPORTE_FAV != null) {
-        sel_esporteFav.value = sessionStorage.ESPORTE_FAV;
-    } 
-    if (sessionStorage.ESPORTE_NIVEL != null) {
-        sel_esporteNivel.value = sessionStorage.ESPORTE_NIVEL;
-    }
-    if (sessionStorage.ESPORTE_ANOS != null) {
-        sel_esporteAnos.value = sessionStorage.ESPORTE_ANOS;
-    }
-    if (sessionStorage.ESPORTE_GRAU != null) {
-        sel_esporteGrau.value = sessionStorage.ESPORTE_GRAU;
-    }
-    if (sessionStorage.CRISTAO != null) {
-        sel_cristao.value = sessionStorage.CRISTAO;
-    }
-    if (sessionStorage.CRISTAO_ANOS != null) {
-        txt_cristaoAnos.value = sessionStorage.CRISTAO_ANOS;
-    }
-    if (sessionStorage.BIBLIA != null) {
-        sel_biblia.value = sessionStorage.BIBLIA;
-    }
-    if (sessionStorage.FRASE != null) {
-        txt_frase.value = sessionStorage.FRASE;
-        fraseMotivacional.innerHTML = sessionStorage.FRASE;
-    }
+    
+    sel_esporteFav.value = sessionStorage.ESPORTE_FAV;
+    sel_esporteNivel.value = sessionStorage.ESPORTE_NIVEL;
+    sel_esporteAnos.value = sessionStorage.ESPORTE_ANOS;
+    sel_esporteGrau.value = sessionStorage.ESPORTE_GRAU;
+    sel_cristao.value = sessionStorage.CRISTAO;
+    txt_cristaoAnos.value = sessionStorage.CRISTAO_ANOS;
+    sel_biblia.value = sessionStorage.BIBLIA;
+    txt_frase.value = sessionStorage.FRASE;
+    fraseMotivacional.innerHTML = sessionStorage.FRASE;
 
     var dataCompleta = new Date(sessionStorage.DT_CRIACAO);
     var somenteData = dataCompleta.toLocaleDateString("pt-BR");
