@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iJr</title>
     <script src="./js/sessao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" href="./assets/imagens/cerebro.png" type="image/png">
     <link rel="stylesheet" href="./css/styleLogado.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,7 +62,7 @@
                             <span id="selecione">Selecione um quiz!</span>
                         </div>
                     </div>
-                    
+
 
                     <!-- INÍCIO QUIZ ESPORTES -->
                     <div class="containerQ9" id="telaQuizPerguntas" style="display: none;">
@@ -119,7 +120,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="containerQ9" id="telaPontuacao" style="display: none;">
+                    <div class="containerQ9" id="telaPontuacao" style="display: flex;">
                         <div class="containerQ10">
                             <div class="containerQ">
                                 <div class="containerQ11">
@@ -129,30 +130,38 @@
                                     <span id="parabens">Parabéns!</span>
                                 </div>
                             </div>
-                            <div class="containerQ13">
-                                <div class="containerQ14 pontuacao">
-                                    <div class="containerQ15" id="quantidade">
-                                        <span>Quantidade de perguntas:</span>
+                            <div class="containerQG">
+                                <div class="containerQG1">
+                                    <div class="containerQ13">
+                                        <div class="containerQ14 pontuacao">
+                                            <div class="containerQ15" id="quantidade">
+                                                <span>Quantidade de perguntas:</span>
+                                            </div>
+                                            <span id="span_quantidade">10</span>
+                                        </div>
                                     </div>
-                                    <span id="span_quantidade">10</span>
+                                    <div class="containerQ13">
+                                        <div class="containerQ14 pontuacao">
+                                            <div class="containerQ15" id="acertos">
+                                                <span>Quantidade de acertos:</span>
+                                            </div>
+                                            <span id="span_acertos">10</span>
+                                        </div>
+                                    </div>
+                                    <div class="containerQ13">
+                                        <div class="containerQ14 pontuacao">
+                                            <div class="containerQ15" id="erros">
+                                                <span>Quantidade de erros:</span>
+                                            </div>
+                                            <span id="span_erros">10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="containerQG2">
+                                    <canvas id="myChart" height: "2vh"; width: "2vw";></canvas>
                                 </div>
                             </div>
-                            <div class="containerQ13">
-                                <div class="containerQ14 pontuacao">
-                                    <div class="containerQ15" id="acertos">
-                                        <span>Quantidade de acertos:</span>
-                                    </div>
-                                    <span id="span_acertos">10</span>
-                                </div>
-                            </div>
-                            <div class="containerQ13">
-                                <div class="containerQ14 pontuacao">
-                                    <div class="containerQ15" id="erros">
-                                        <span>Quantidade de erros:</span>
-                                    </div>
-                                    <span id="span_erros">10</span>
-                                </div>
-                            </div>
+
                             <div class="containerQ13">
                                 <div class="containerQQ13">
                                     <button onclick="sairQuiz()">Sair</button>
@@ -221,3 +230,5 @@
 <script>
     span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 </script>
+
+   

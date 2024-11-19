@@ -858,6 +858,22 @@ footer .container5 span {
     font-size: 30px;
 }
 
+.telaQuiz .containerQG {
+    display: flex;
+    justify-content: center;
+}
+
+.telaQuiz .containerQG1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.telaQuiz .containerQG2 {
+    width: 25%;
+}
+
 .telaQuiz .containerQ13 {
     height: 8vh;
     display: flex;

@@ -1226,3 +1226,49 @@ function checkConfirmarNovaSenha() {
     }
 }
 /* FIM TELA TROCAR SENHA */
+
+/* INÍCIO DASHBOARD RESULTADO QUIZ */
+
+     const labels1 = [
+         'Acertos',
+        'Erros'
+    ];
+
+
+    const data1 = {
+        labels: labels1,
+        datasets: [{
+            label: 'Quantidade',
+            backgroundColor: [
+                'rgb(0, 128, 55)',
+                'rgb(163, 0, 0.7)',
+            ],
+            borderColor: [
+                'rgb(0, 0, 0)',
+                'rgb(0, 0, 0)',
+            ],
+            data: [acertos, erros]
+        }]
+
+    };
+
+    const config1 = {
+        type: 'doughnut',
+        data: data1,
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Resultado do Quiz'
+                }
+            }
+        }
+    }
+    
+
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config1
+
+    )
+/* FIM DASHBOARD RESULTADO QUIZ */
