@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iJr</title>
+    <script src="./js/sessao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="./assets/imagens/cerebro.png" type="image/png">
+    <link rel="stylesheet" href="./css/styleLogado.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="validarSessao()">
+    <header>
+        <nav>
+            <div class="container1">
+                <a href="indexLogado.html">
+                    <img src="./assets/imagens/iJr.1.png">
+                </a>
+            </div>
+            <div class="container2">
+                <a href="sobreMim.html">Sobre mim</a>
+                <a href="anotacoes.html" style="border-bottom: 1px solid;">Anotações</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="">Bíblia</a>
+            </div>
+            <div class="container3">
+                <span>Olá, <span id="span_usuario"></span></span>
+                <div class="containerOpcoes">
+                    <a href="perfil.html"><span>Perfil</span></a>
+                    <a href="graficos.html"><span>Dashboards</span></a>
+                    <a><span onclick="limparSessao()">Sair</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="telaGraficos">
+        <div class="container1">
+            <div class="container2">
+                <span id="fraseMotivacional">Foco, força e fé</span>
+            </div>
+            <div class="container3">
+                <div class="container4">
+                    <div class="container5">
+                        <div class="container5_1">
+                            <span>RANKING ATUAL</span>
+                        </div>
+                        <div class="container5_2">
+                            <span><span>5</span>º</span>
+                        </div>
+                    </div>
+                    <div class="container5">
+                        <canvas id="myChart1"></canvas>
+                    </div>
+                    <div class="container5">
+                        <canvas id="myChart2"></canvas>
+                    </div>
+                </div>
+                <div class="container4">
+                    <div class="container5">
+                        <canvas id="myChart3"></canvas>
+                    </div>
+                    <div class="container5">
+                        <canvas id="myChart4"></canvas>
+                    </div>
+                    <div class="container5">
+                        <canvas id="myChart5"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container1">
+            <div class="container1_1">
+                <div class="container2">
+                    <img src="./assets/imagens/iJr.2.png">
+                </div>
+                <div class="container3">
+                    <span>Um jovem sonhador que acredita</span>
+                    <span>que não há limites para fazer o</span>
+                    <span>que é certo.</span>
+                </div>
+                <div class="container4">
+                    <a href="https://www.instagram.com/oizaeljunior" target="_blank"><img
+                            src="./assets/imagens/instagram.png"></a>
+                    <a href="https://wa.me/5511966090323" target="_blank"><img src="./assets/imagens/whatsapp.png"></a>
+                    <a href="https://github.com/oizaeljr" target="_blank"><img src="./assets/imagens/github.png"></a>
+                    <a href="https://www.linkedin.com/in/oizaeljunior/" target="_blank"><img
+                            src="./assets/imagens/linkedin.png"></a>
+                </div>
+            </div>
+            <div class="linha"></div>
+            <div class="container5">
+                <span>© Copyright 2024, All Rights Reserved by Izael Junior</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script>
+    span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    fraseMotivacional.innerHTML = sessionStorage.FRASE;
+</script>
+<script src="./js/funcAnotacoes.js"></script>
+<script>
+    const labelsA = [
+        'Cristão',
+        'Não Cristão'
+    ];
+
+
+    const dataA = {
+        labels: labelsA,
+        datasets: [{
+            label: 'Quantidade',
+            backgroundColor: [
+                'rgb(0, 31, 63)',
+                'rgb(173, 216, 230)'
+            ],
+            borderColor: [
+                'rgb(0, 0, 0)',
+                'rgb(0, 0, 0)'
+            ],
+            data: [3, 2]
+        }]
+
+    };
+
+    const configA = {
+        type: 'doughnut',
+        data: dataA,
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'USUÁRIOS CRISTÃOS'
+                }
+            }
+        }
+    }
+
+    const labelsB = [
+        'Leram',
+        'Não leram'
+    ];
+
+
+    const dataB = {
+        labels: labelsB,
+        datasets: [{
+            label: 'Quantidade',
+            backgroundColor: [
+                'rgb(0, 0, 0)',
+                'rgb(211, 211, 211)'
+            ],
+            borderColor: [
+                'rgb(0, 0, 0)',
+                'rgb(0, 0, 0)'
+            ],
+            data: [3, 2]
+        }]
+
+    };
+
+    const configB = {
+        type: 'pie',
+        data: dataB,
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'USUÁRIOS QUE LERAM A BIBLÍA COMPLETA'
+                }
+            }
+        }
+    }
+
+    const labelsC = [
+        'Futebol',
+        'Vôlei',
+        'Basquete',
+        'Tênis',
+        'Golfe'
+    ];
+
+
+    const dataC = {
+        labels: labelsC,
+        datasets: [{
+            label: 'Futebol',
+            backgroundColor: [
+                'rgb(0, 0, 0)',
+                'rgb(0, 71, 171)',
+                'rgb(173, 216, 230)',
+                'rgb(0, 31, 63)',
+                'rgb(211, 211, 211)',
+            ],
+            borderColor: [
+                'rgb(0, 0, 0)',
+                'rgb(0, 0, 0)',
+                'rgb(0, 0, 0)',
+                'rgb(0, 0, 0)',
+                'rgb(0, 0, 0)',
+            ],
+            data: [3, 2, 5, 6, 4]
+        }]
+
+    };
+
+    const configC = {
+        type: 'bar',
+        data: dataC,
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'ESPORTES FAVORITOS'
+                }
+            }
+        }
+    }
+
+    const labelsD = [
+        'Profissional',
+        'Amador',
+        'Diversão'
+    ];
+
+
+    const dataD = {
+        labels: labelsD,
+        datasets: [{
+            label: 'Futebol',
+            backgroundColor: [
+                'rgb(0, 31, 63)',
+                'rgb(0, 71, 171)',
+                'rgb(173, 216, 230)'
+            ],
+            borderColor: [
+                'rgb(0, 0, 0)',
+                'rgb(0, 0, 0)',
+                'rgb(0, 0, 0)'
+            ],
+            data: [3, 2, 5]
+        }]
+
+    };
+
+    const configD = {
+        type: 'bar',
+        data: dataD,
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'NÍVEL DE COMPETIÇÃO'
+                }
+            }
+        }
+    }
+
+    const labelsE = [
+        'Baixo',
+        'Médio',
+        'Alto'
+    ];
+
+
+    const dataE = {
+        labels: labelsE,
+        datasets: [{
+            label: 'Futebol',
+            backgroundColor: [
+                'rgb(211, 211, 211)'
+            ],
+            borderColor: [
+                'rgb(0, 71, 171)'
+            ],
+            data: [3, 7, 5]
+        }]
+
+    };
+
+    const configE = {
+        type: 'line',
+        data: dataE,
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'IMPACTO DO ESPORTE NA VIDA PESSOAL'
+                }
+            }
+        }
+    }
+
+    const myChart1 = new Chart(
+        document.getElementById('myChart1'),
+        configA
+
+    )
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        configB
+
+    )
+    const myChart3 = new Chart(
+        document.getElementById('myChart3'),
+        configC
+
+    )
+    const myChart4 = new Chart(
+        document.getElementById('myChart4'),
+        configD
+
+    )
+    const myChart5 = new Chart(
+        document.getElementById('myChart5'),
+        configE
+
+    )
+</script>
