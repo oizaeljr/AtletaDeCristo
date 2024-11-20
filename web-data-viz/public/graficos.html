@@ -16,7 +16,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao()">
+<body onload="validarSessao(); cristao(); biblia(); esportesFavoritos(); esportesNivel(); esportesGrau(); posicao()">
     <header>
         <nav>
             <div class="container1">
@@ -52,7 +52,7 @@
                             <span>RANKING ATUAL</span>
                         </div>
                         <div class="container5_2">
-                            <span><span>5</span>º</span>
+                            <span><span id="ranking_atual">5</span>º</span>
                         </div>
                     </div>
                     <div class="container5">
@@ -108,8 +108,31 @@
 <script>
     span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
     fraseMotivacional.innerHTML = sessionStorage.FRASE;
+
+    var total_usuarios = sessionStorage.TOTAL_USUARIOS;
+
+    var total_cristao = sessionStorage.TOTAL_CRISTAO;
+    var total_naoCristao = total_usuarios - total_cristao
+
+    var total_leram = sessionStorage.TOTAL_LERAM;
+    var total_naoLeram = total_usuarios - total_leram;
+
+    var total_futebol = sessionStorage.TOTAL_FUTEBOL;
+    var total_volei = sessionStorage.TOTAL_VOLEI;
+    var total_basquete = sessionStorage.TOTAL_BASQUETE;
+    var total_tenis = sessionStorage.TOTAL_TENIS;
+    var total_golfe = sessionStorage.TOTAL_GOLFE;
+
+    var total_profissional = sessionStorage.TOTAL_PROFISSIONAL;
+    var total_amador = sessionStorage.TOTAL_AMADOR;
+    var total_diversao = sessionStorage.TOTAL_DIVERSAO;
+
+    var total_baixo = sessionStorage.TOTAL_BAIXO;
+    var total_medio = sessionStorage.TOTAL_MEDIO;
+    var total_alto = sessionStorage.TOTAL_ALTO;
+
 </script>
-<script src="./js/funcAnotacoes.js"></script>
+<script src="./js/funcGraficos.js"></script>
 <script>
     const labelsA = [
         'Cristão',
@@ -129,7 +152,7 @@
                 'rgb(0, 0, 0)',
                 'rgb(0, 0, 0)'
             ],
-            data: [3, 2]
+            data: [total_cristao, total_naoCristao]
         }]
 
     };
@@ -165,7 +188,7 @@
                 'rgb(0, 0, 0)',
                 'rgb(0, 0, 0)'
             ],
-            data: [3, 2]
+            data: [total_leram, total_naoLeram]
         }]
 
     };
@@ -210,7 +233,7 @@
                 'rgb(0, 0, 0)',
                 'rgb(0, 0, 0)',
             ],
-            data: [3, 2, 5, 6, 4]
+            data: [total_futebol, total_volei, total_basquete, total_tenis, total_golfe]
         }]
 
     };
@@ -249,7 +272,7 @@
                 'rgb(0, 0, 0)',
                 'rgb(0, 0, 0)'
             ],
-            data: [3, 2, 5]
+            data: [total_profissional, total_amador, total_diversao]
         }]
 
     };
@@ -284,7 +307,7 @@
             borderColor: [
                 'rgb(0, 71, 171)'
             ],
-            data: [3, 7, 5]
+            data: [total_baixo, total_medio, total_alto]
         }]
 
     };

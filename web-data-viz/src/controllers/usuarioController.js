@@ -101,7 +101,7 @@ function atualizar(req, res) {
     var cristaoAnos = req.body.cristaoAnosServer;
     var biblia = req.body.bibliaServer;
     var frase = req.body.fraseServer;
-    
+
     console.log(esporteFav)
 
     // Faça as validações dos valores
@@ -165,10 +165,106 @@ function pontuar(req, res) {
         );
 }
 
+function cristao(req, res) {
+    
+    usuarioModel.cristao().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os cristaos: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function biblia(req, res) {
+
+    usuarioModel.biblia().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os cristaos: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function esportesFavoritos(req, res) {
+
+    usuarioModel.esportesFavoritos().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os cristaos: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function esportesNivel(req, res) {
+
+    usuarioModel.esportesNivel().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os cristaos: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function esportesGrau(req, res) {
+
+    usuarioModel.esportesGrau().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os cristaos: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function posicao(req, res) {
+
+    usuarioModel.posicao().then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os cristaos: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
 
 module.exports = {
     autenticar,
     cadastrar,
     atualizar,
-    pontuar
+    pontuar,
+    cristao,
+    biblia,
+    esportesFavoritos,
+    esportesNivel,
+    esportesGrau,
+    posicao
 }
