@@ -23,7 +23,7 @@ pontosQuiz int
 CREATE TABLE objetivo (
 idObjetivo int primary key auto_increment,
 textoObjetivo varchar(45),
-stats varchar(45),
+statsObjetivo varchar(45),
 fkUsuario int,
 constraint fkUsuarioObjetivo foreign key (fkUsuario) references usuario (idUsuario)
 );
@@ -31,6 +31,7 @@ constraint fkUsuarioObjetivo foreign key (fkUsuario) references usuario (idUsuar
 CREATE TABLE tarefa (
 idTarefa int primary key auto_increment,
 textoTarefa varchar(45),
+statsTarefa varchar(45),
 fkObjetivo int,
 constraint fkObjetivoTarefa foreign key (fkObjetivo) references objetivo (idObjetivo)
 );
@@ -38,6 +39,14 @@ constraint fkObjetivoTarefa foreign key (fkObjetivo) references objetivo (idObje
 SELECT * FROM usuario;
 SELECT * FROM objetivo;
 
+SELECT count(case when idUsuario = 6 THEN 1 END) AS posicao FROM usuario ORDER BY pontosQuiz DESC;
 
+SELECT 
+    idUsuario,
+    RANK() OVER (ORDER BY pontosQuiz DESC) AS posicao
+FROM usuario;
 
+update usuario
+set pontosQuiz = 7
+where idUsuario = 3;
 
