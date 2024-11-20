@@ -1,10 +1,11 @@
+var tarefaVar = [];
 function adicionar() {
   // aguardar();
 
   //Recupere o valor da nova input pelo nome do id
   // Agora vá para o método fetch logo abaixo
   var objetivoVar = txt_titulo.value;
-  var tarefaVar = txt_tarefa.value;
+  tarefaVar = [];
   var idVar = sessionStorage.ID_USUARIO;
 
   // Verificando se há algum campo em branco
@@ -18,6 +19,10 @@ function adicionar() {
   } else {
     //   setInterval(sumirMensagem, 5000);
   }
+  for(var contador2 = 1; contador2 <= contador; contador2++){
+    tarefaVar.push(document.getElementById(`txt_tarefa${contador2}`).value);
+  }
+
 
   // Enviando o valor da nova input
   fetch(`/anotacoes/adicionar`, {
@@ -43,8 +48,8 @@ function adicionar() {
           console.log(json);
           console.log(JSON.stringify(json));
           txt_titulo.value = ''
-          txt_tarefa.value = ''
-
+          txt_tarefa1.value = ''
+          
           div_objetivosAndamento.innerHTML += `<div class="containerA18">
                                     <div class="containerA19">
                                         <div class="containerA20" >
@@ -88,6 +93,7 @@ function adicionar() {
                                     </div>
                                 </div>`
           alert('Objetivo cadastrado com sucesso!')
+          inserirTarefas()
           tableCampo.innerHTML = ` <tr>
                         <td><input type="text" placeholder="Título" id="txt_titulo"></td>
                         <td><input type="text" placeholder="Tarefa"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
@@ -102,6 +108,63 @@ function adicionar() {
       // finalizarAguardar();
     });
 
+  return false;
+}
+
+function inserirTarefas() {
+  // aguardar();
+
+  //Recupere o valor da nova input pelo nome do id
+  // Agora vá para o método fetch logo abaixo
+  var idObjetivoVar = sessionStorage.ID_OBJETIVO;
+  
+  // Verificando se há algum campo em branco
+  if (idObjetivoVar == undefined && tarefaVar == undefined) {
+    //   cardErro.style.display = "block";
+    //   mensagem_erro.innerHTML =
+    //     "(Mensagem de erro para todos os campos em branco)";
+
+    //   finalizarAguardar();
+    return false;
+  } else {
+    //   setInterval(sumirMensagem, 5000);
+  }
+  for(var contador3 = 1; contador3 <= contador; contador3++){
+      var tarefaVar = document.getElementById(`txt_tarefa${contador}`).value;
+  
+  // Enviando o valor da nova input
+  fetch(`/anotacoes/inserirTarefas`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      // crie um atributo que recebe o valor recuperado aqui
+      // Agora vá para o arquivo routes/usuario.js
+      tarefaServer: tarefaVar,
+      idObjetivoServer: idObjetivoVar
+    }),
+  })
+    .then(function (resposta) {
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+        //   cardErro.style.display = "block";
+
+        resposta.json().then(json => {
+          console.log(json);
+          console.log(JSON.stringify(json));
+        
+        })
+      } else {
+        throw "Houve um erro ao tentar realizar a inserção!";
+      }
+    })
+    .catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+      // finalizarAguardar();
+    });
+  }
   return false;
 }
 
@@ -177,10 +240,11 @@ function abrirAnotacoes(id) {
   }
 }
 
-
+var contador = 1;
 function adicionarTarefa() {
+  contador++
   tableCampo.innerHTML += ` <tr>
-                        <td><input type="text" placeholder="Tarefa"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
+                        <td><input type="text" id="txt_tarefa${contador}" placeholder="Tarefa"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
                     </tr>`
 }
 

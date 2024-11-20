@@ -12,5 +12,9 @@ router.get("/listar/:id", function (req, res) {
     anotacoesController.listar(req, res);
 })
 
+router.post("/inserirTarefas", function (req, res) {
+    anotacoesController.listar(req, res);
+})
+
 
 module.exports = router;

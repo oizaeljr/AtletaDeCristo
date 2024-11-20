@@ -19,6 +19,7 @@ function adicionar(req, res) {
                 function (resultado) {
                     console.log(resultado);
                     res.json({idInserido : resultado.insertId});
+                    sessionStorage.ID_OBJETIVO = json.idInserido;
                 }
             ).catch(
                 function (erro) {
@@ -32,6 +33,35 @@ function adicionar(req, res) {
             );
     }
 }
+
+function inserirTarefas(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var tarefa = req.body.tarefaServer;
+
+    // Faça as validações dos valores
+    if (tarefa == undefined) {
+        res.status(400).send("A tarefa está undefined!");
+    } else {
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        anotacoesModel.inserirTarefas(tarefa, idObjetivo)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 
 function listar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
@@ -56,5 +86,6 @@ function listar(req, res) {
 
 module.exports = {
     adicionar,
+    inserirTarefas,
     listar
 }
