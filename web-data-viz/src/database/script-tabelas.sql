@@ -1,6 +1,6 @@
-CREATE DATABASE AtletaCristo;
+CREATE DATABASE atletacristo;
 
-USE AtletaCristo;
+USE atletacristo;
 
 CREATE TABLE usuario (
 idUsuario int primary key auto_increment,
