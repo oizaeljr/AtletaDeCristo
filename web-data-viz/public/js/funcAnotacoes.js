@@ -1,10 +1,11 @@
 var tarefaVar = [];
+var idTitulo = 1;
 function adicionar() {
   // aguardar();
 
   //Recupere o valor da nova input pelo nome do id
   // Agora vá para o método fetch logo abaixo
-  var objetivoVar = txt_titulo.value;
+  var objetivoVar = document.getElementById(`txt_titulo${idTitulo}`).value;
   tarefaVar = [];
   var idVar = sessionStorage.ID_USUARIO;
 
@@ -19,7 +20,7 @@ function adicionar() {
   } else {
     //   setInterval(sumirMensagem, 5000);
   }
-  for(var contador2 = 1; contador2 <= contador; contador2++){
+  for (var contador2 = 1; contador2 <= contador; contador2++) {
     tarefaVar.push(document.getElementById(`txt_tarefa${contador2}`).value);
   }
 
@@ -47,56 +48,17 @@ function adicionar() {
         resposta.json().then(json => {
           console.log(json);
           console.log(JSON.stringify(json));
-          txt_titulo.value = ''
-          txt_tarefa1.value = ''
-          
-          div_objetivosAndamento.innerHTML += `<div class="containerA18">
-                                    <div class="containerA19">
-                                        <div class="containerA20" >
-                                            <img onclick="abrirAnotacoes(${json.idInserido})" src="./assets/imagens/setaDireita.png" id="img_abrirAnotacoes${json.idInserido}">
-                                            <span>${objetivoVar}</span>
-                                        </div>
-                                        <div class="containerA21"></div>
-                                        <div class="containerA22">
-                                            <div class="containerA23"></div>
-                                            <span>15%</span>
-                                        </div>
-                                        <div class="containerA24">
-                                            <div class="containerA25">
-                                                <img src="./assets/imagens/check.png">
-                                            </div>
-                                            <img src="./assets/imagens/lixeira.png" onclick="removerLinhaTitulo(this)">
-                                        </div>
-                                    </div>
-                                    <div class="containerA26">
-                                        <div class="containerA27">
-                                            <div class="containerA"></div>
-                                            <table id="table_tarefas${json.idInserido}" style="display: none;">
-                                                <tbody id="tbodyCampo">
-                                                    <tr>
-                                                        <td>
-                                                            <input type="text" placeholder="Tarefa" disabled value="${tarefaVar}">
-                                                            <div class="containerA28">
-                                                                <div class="containerA29">
-                                                                    <img src="./assets/imagens/check.png">
-                                                                </div>
-                                                                <img src="./assets/imagens/lixeira.png" onclick="removerLinhaTarefas(this)">
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="containerA31" id="div_addTarefa${json.idInserido}" style="display: none;">
-                                            <div class="containerA"></div>
-                                        </div>
-                                    </div>
-                                </div>`
+          // txt_titulo.value = ''
+          // txt_tarefa1.value = ''
+          sessionStorage.ID_OBJETIVO = json.idInserido;
+
           alert('Objetivo cadastrado com sucesso!')
           inserirTarefas()
+          idTitulo++
+          contador++
           tableCampo.innerHTML = ` <tr>
-                        <td><input type="text" placeholder="Título" id="txt_titulo"></td>
-                        <td><input type="text" placeholder="Tarefa"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
+                        <td><input type="text" placeholder="Título" id="txt_titulo${idTitulo}"></td>
+                        <td><input type="text" placeholder="Tarefa" id="txt_tarefa${contador}"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
                     </tr>`
         })
       } else {
@@ -117,7 +79,7 @@ function inserirTarefas() {
   //Recupere o valor da nova input pelo nome do id
   // Agora vá para o método fetch logo abaixo
   var idObjetivoVar = sessionStorage.ID_OBJETIVO;
-  
+
   // Verificando se há algum campo em branco
   if (idObjetivoVar == undefined && tarefaVar == undefined) {
     //   cardErro.style.display = "block";
@@ -129,52 +91,138 @@ function inserirTarefas() {
   } else {
     //   setInterval(sumirMensagem, 5000);
   }
-  for(var contador3 = 1; contador3 <= contador; contador3++){
-      var tarefaVar = document.getElementById(`txt_tarefa${contador}`).value;
-  
-  // Enviando o valor da nova input
-  fetch(`/anotacoes/inserirTarefas`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      // crie um atributo que recebe o valor recuperado aqui
-      // Agora vá para o arquivo routes/usuario.js
-      tarefaServer: tarefaVar,
-      idObjetivoServer: idObjetivoVar
-    }),
-  })
-    .then(function (resposta) {
-      console.log("resposta: ", resposta);
+  for (var contador3 = 1; contador3 <= contador; contador3++) {
+    console.log(contador)
+    var tarefaVar = document.getElementById(`txt_tarefa${contador3}`).value;
 
-      if (resposta.ok) {
-        //   cardErro.style.display = "block";
-
-        resposta.json().then(json => {
-          console.log(json);
-          console.log(JSON.stringify(json));
-        
-        })
-      } else {
-        throw "Houve um erro ao tentar realizar a inserção!";
-      }
+    // Enviando o valor da nova input
+    fetch(`/anotacoes/inserirTarefas`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        tarefaServer: tarefaVar,
+        idObjetivoServer: idObjetivoVar
+      }),
     })
-    .catch(function (resposta) {
-      console.log(`#ERRO: ${resposta}`);
-      // finalizarAguardar();
-    });
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          //   cardErro.style.display = "block";
+
+          resposta.json().then(json => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+          })
+        } else {
+          throw "Houve um erro ao tentar realizar a inserção!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+      });
   }
   return false;
 }
 
 function cancelarTarefa() {
+  idTitulo++
+  contador++
   tableCampo.innerHTML = ` <tr>
-                        <td><input type="text" placeholder="Título" id="txt_titulo"></td>
-                        <td><input type="text" placeholder="Tarefa"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
+                        <td><input type="text" placeholder="Título" id="txt_titulo${idTitulo}"></td>
+                        <td><input type="text" placeholder="Tarefa" id="txt_tarefa${contador}"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
                     </tr>`
 }
 
+function listar() {
+  var idObjetivo = sessionStorage.ID_OBJETIVO;
+  var idUsuario = sessionStorage.ID_USUARIO;
+  
+  fetch(`/anotacoes/listar/${idUsuario}/${idObjetivo}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json"
+    },
+
+  }).then(function (resposta) {
+    console.log("ESTOU NO THEN DO entrar()!")
+
+    if (resposta.ok) {
+      console.log(resposta);
+
+      resposta.json().then(json => {
+        console.log(json);
+        console.log(JSON.stringify(json));
+
+        for (var contador = 0; contador < json.length; contador++) {
+          div_objetivosAndamento.innerHTML += `<div class="containerA18">
+                <div class="containerA19">
+                    <div class="containerA20" >
+                        <img onclick="abrirAnotacoes(${json.idInserido})" src="./assets/imagens/setaDireita.png" id="img_abrirAnotacoes${json.idInserido}">
+                        <span>${objetivoVar}</span>
+                    </div>
+                    <div class="containerA21"></div>
+                    <div class="containerA22">
+                        <div class="containerA23"></div>
+                        <span>15%</span>
+                    </div>
+                    <div class="containerA24">
+                        <div class="containerA25">
+                            <img src="./assets/imagens/check.png">
+                        </div>
+                        <img src="./assets/imagens/lixeira.png" onclick="removerLinhaTitulo(this)">
+                    </div>
+                </div>
+                <div class="containerA26">
+                    <div class="containerA27">
+                        <div class="containerA"></div>
+                        <table id="table_tarefas${json.idInserido}" style="display: none;">
+                            <tbody id="tbodyCampo">
+                                <tr>
+                                    <td>
+                                        <input type="text" placeholder="Tarefa" disabled value="${tarefaVar}">
+                                        <div class="containerA28">
+                                            <div class="containerA29">
+                                                <img src="./assets/imagens/check.png">
+                                            </div>
+                                            <img src="./assets/imagens/lixeira.png" onclick="removerLinhaTarefas(this)">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="containerA31" id="div_addTarefa${json.idInserido}" style="display: none;">
+                        <div class="containerA"></div>
+                    </div>
+                </div>
+            </div>`
+        }
+
+      });
+
+    } else {
+
+      console.log("Houve um erro ao tentar realizar a listagem!");
+
+      resposta.text().then(texto => {
+        console.error(texto);
+        // finalizarAguardar(texto);
+      });
+    }
+
+  }).catch(function (erro) {
+    console.log(erro);
+  })
+
+  return false;
+}
 
 function andamento() {
   telaAndamento.style.display = 'block'
@@ -185,6 +233,7 @@ function andamento() {
   span_objetivo.style.borderBottom = 'none'
   span_concluido.style.borderBottom = 'none'
   span_lixeira.style.borderBottom = 'none'
+  listar()
 }
 function objetivo() {
   telaObjetivo.style.display = 'block';

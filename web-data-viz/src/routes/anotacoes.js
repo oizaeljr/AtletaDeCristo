@@ -8,13 +8,13 @@ router.post("/adicionar", function (req, res) {
     anotacoesController.adicionar(req, res);
 })
 
-router.get("/listar/:id", function (req, res) {
+router.get("/listar/:idUsuario/:idObjetivo", function (req, res) {
     anotacoesController.listar(req, res);
-})
-
+}) 
+ 
 router.post("/inserirTarefas", function (req, res) {
-    anotacoesController.listar(req, res);
+    anotacoesController.inserirTarefas(req, res);
 })
 
-
+ 
 module.exports = router;

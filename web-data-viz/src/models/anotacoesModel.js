@@ -25,12 +25,12 @@ function inserirTarefas(tarefa, idObjetivo) {
     return database.executar(instrucaoSql);
 }
 
-function listar(id) {
+function listar(idUsuario, idObjetivo) {
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucaoSql = `
-       SELECT * FROM objetivo WHERE fkUsuario = ${id};
+       SELECT t.idTarefa, t.textoTarefa, t.statsTarefa, t.fkObjetivo, o.textoObjetivo FROM tarefa as t JOIN objetivo as o ON t.fkObjetivo = o.idObjetivo WHERE t.statsTarefa = 'Em andamento' and t.fkObjetivo = ${idObjetivo} and o.fkUsuario = ${idUsuario};
     `;
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
