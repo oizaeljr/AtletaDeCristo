@@ -1165,9 +1165,138 @@ footer .container5 span {
     padding: 10px;
 }
 
-.telaSobreMim .containerS20 {
+.telaSobreMim .containerSSS4 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telaSobreMim .containerSSS4_1 {
+    width: 90%;
+    height: 60%;
+    border-radius: 20px;
+    background-color: #5d5d5d;
+    background-image: url('');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.telaSobreMim .containerSSS5 {
+    width: 50%;
+    height: 100%;
+}
+
+.telaSobreMim .containerSSS5_1 {
+    height: 12vh;
+}
+
+.telaSobreMim .containerSSS5_2 {
+    height: 50vh;
+}
+
+.telaSobreMim .containerSSS6 {
+    display: flex;
+    justify-content: end;
+    width: 35vw;
+}
+
+.telaSobreMim .containerSSS6 span {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.telaSobreMim .containerSSS7 {
+    height: 30vh;
+}
+
+.telaSobreMim .containerSSS7 span {
+    font-size: 20px;
+}
+
+.telaSobreMim .containerSSS8 {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.telaSobreMim .containerSSS8 span {
+    font-size: 20px;
+}
+
+.telaSobreMim .containerSS1 {
     width: 100%;
     height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.telaSobreMim .containerSS2 {
+    width: 80%;
+    height: 80%;
+    display: flex;
+}
+
+.telaSobreMim .containerSS3 {
+    width: 50%;
+    height: 100%;
+}
+
+.telaSobreMim .containerSS3_1 {
+    width: 100%;
+    height: 40%;
+}
+
+.telaSobreMim .containerSS3_2 {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.telaSobreMim .containerSS3_3 {
+    width: 75%;
+}
+
+.telaSobreMim .containerSS3_3 span {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.telaSobreMim .containerSS3_4 {
+    height: 100%;
+    width: 75%;
+}
+
+.telaSobreMim .containerSS3_4 span {
+    font-size: 20px;
+}
+
+.telaSobreMim .containerSS4 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.telaSobreMim .containerSS4_1 {
+    width: 70%;
+    height: 100%;
+    border-radius: 20px;
+    background-image: url('../assets/imagens/eu3.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.telaSobreMim .containerS20 {
+    width: 100%;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1179,7 +1308,7 @@ footer .container5 span {
 }
 
 .telaSobreMim .containerS22 {
-    height: 10vh;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
