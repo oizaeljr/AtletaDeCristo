@@ -64,7 +64,8 @@ function inserirTarefas(req, res) {
 
 
 function listar(req, res) {
-    anotacoesModel.listar(idUsuario, idObjetivo).then(function (resultado) {
+    var idUsuario = req.params.idUsuario;
+    anotacoesModel.listar(idUsuario).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {

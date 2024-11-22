@@ -8,7 +8,7 @@ router.post("/adicionar", function (req, res) {
     anotacoesController.adicionar(req, res);
 })
 
-router.get("/listar/:idUsuario/:idObjetivo", function (req, res) {
+router.get("/listar/:idUsuario", function (req, res) {
     anotacoesController.listar(req, res);
 }) 
  

@@ -180,7 +180,7 @@
                                 <span>Bíblia completa: <span id="lbl_bilbiaPorc">25%</span></span>
                             </div>
                             <div class="containerDados">
-                                <span>Ranking Quiz <span id="lbl_ranking">3º</span></span>
+                                <span>Ranking Quiz: <span id="lbl_ranking"></span></span>
                             </div>
                             <div class="containerDados">
                                 <span>Conta criada em: <span id="lbl_contaCriada">30/10/2024</span></span>
@@ -231,7 +231,7 @@
 
     var somenteDataNasc = sessionStorage.DT_NASC.split("T")[0];
     dataNasc.value = somenteDataNasc;
-    
+
     sel_esporteFav.value = sessionStorage.ESPORTE_FAV;
     sel_esporteNivel.value = sessionStorage.ESPORTE_NIVEL;
     sel_esporteAnos.value = sessionStorage.ESPORTE_ANOS;
@@ -239,8 +239,9 @@
     sel_cristao.value = sessionStorage.CRISTAO;
     txt_cristaoAnos.value = sessionStorage.CRISTAO_ANOS;
     sel_biblia.value = sessionStorage.BIBLIA;
-    txt_frase.value = sessionStorage.FRASE;
+    txt_frase.value = sessionStorage.FRASE
     fraseMotivacional.innerHTML = sessionStorage.FRASE;
+    lbl_ranking.innerHTML = `${sessionStorage.POSICAO}°` || 'Sem posição';
 
     var dataCompleta = new Date(sessionStorage.DT_CRIACAO);
     var somenteData = dataCompleta.toLocaleDateString("pt-BR");

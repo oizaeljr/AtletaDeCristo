@@ -219,6 +219,7 @@ function posicao() {
                 for(var contador = 0; contador < json.length; contador++){
                     if (json[contador].idUsuario == id) {
                         ranking_atual.innerHTML = json[contador].posicao;
+                        sessionStorage.POSICAO = json[contador].posicao;
                     }
                 }
 
