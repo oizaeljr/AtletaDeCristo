@@ -179,12 +179,11 @@ function listar() {
 
     if (resposta.ok) {
       console.log(resposta);
-
       resposta.json().then(json => {
         console.log(json);
         console.log(JSON.stringify(json));
         console.log(json.length)
-
+        
         lbl_quantAndamento.innerHTML = json[0].qtdEmAndamento;
         var qtdObjetivos = 0
         var primeiroObj = json[0].fkObjetivo;
@@ -195,8 +194,9 @@ function listar() {
           }
         }
         div_objetivosAndamento.innerHTML = '';
-        for (var contador = 0; contador < json.length-qtdObjetivos; contador++) {
-          alert('to aqui')
+        for (var contador = 0; contador < json[0].qtdEmAndamento; contador++) {
+          // alert('sessao ok')
+          // alert('to aqui')
           var opcao = json[contador]
           div_objetivosAndamento.innerHTML += `<div class="containerA18">
                 <div class="containerA19">
