@@ -1,6 +1,7 @@
 var tarefaVar = [];
 var idTitulo = 1;
 var contador = 1;
+var contadorX = 1;
 function adicionar() {
   // aguardar();
 
@@ -55,13 +56,9 @@ function adicionar() {
 
           alert('Objetivo cadastrado com sucesso!')
           idObjetivoVar = sessionStorage.ID_OBJETIVO
-          idTitulo++
-          contador++
+          alert('passou')
           inserirTarefas(`txt_titulo${idTitulo}`)
-          tableCampo.innerHTML = ` <tr>
-          <td><input type="text" placeholder="Título" id="txt_titulo${idTitulo}"></td>
-          <td><input type="text" placeholder="Tarefa" id="txt_tarefa${contador}"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
-          </tr>`
+          
         })
       } else {
         throw "Houve um erro ao tentar realizar o cadastro!";
@@ -93,10 +90,19 @@ function inserirTarefas(valor) {
   } else {
     //   setInterval(sumirMensagem, 5000);
   }
-  for (var contador3 = 1; contador3 <= contador; contador3++) {
+  if (clicou) {
+    limite = contador
+  } else {
+    limite = 1
+  }
+  for (var contador3 = 1; contador3 <= limite; contador3++) {
     console.log(contador3)
     alert(contador3)
-    var tarefaVar2 = document.getElementById(`txt_tarefa${contador3}`).value;
+    if (limite > 1) {
+      var tarefaVar2 = document.getElementById(`txt_tarefa${contador}`).value;
+    } else {
+      var tarefaVar2 = document.getElementById(`txt_tarefa${contadorX}`).value;
+    }
     console.log(`${tarefaVar2} eoakfdf`)
 
     // Enviando o valor da nova input
@@ -117,11 +123,17 @@ function inserirTarefas(valor) {
 
         if (resposta.ok) {
           //   cardErro.style.display = "block";
-
+          idTitulo++
+          contadorX++
+          tableCampo.innerHTML = ` <tr>
+          <td><input type="text" placeholder="Título" id="txt_titulo${idTitulo}"></td>
+          <td><input type="text" placeholder="Tarefa" id="txt_tarefa${contadorX}"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
+          </tr>`
           resposta.json().then(json => {
             console.log(json);
             console.log(JSON.stringify(json));
-
+            
+      
           })
         } else {
           throw "Houve um erro ao tentar realizar a inserção!";
@@ -180,7 +192,7 @@ function listar() {
           div_objetivosAndamento.innerHTML += `<div class="containerA18">
                 <div class="containerA19">
                     <div class="containerA20" >
-                        <img onclick="abrirAnotacoes(${opcao.idInserido})" src="./assets/imagens/setaDireita.png" id="img_abrirAnotacoes${opcao.idInserido}">
+                        <img onclick="abrirAnotacoes(${opcao.fkObjetivo})" src="./assets/imagens/setaDireita.png" id="img_abrirAnotacoes${opcao.fkObjetivo}">
                         <span>${opcao.textoObjetivo}</span>
                     </div>
                     <div class="containerA21"></div>
@@ -198,13 +210,13 @@ function listar() {
                 <div class="containerA26">
                     <div class="containerA27">
                         <div class="containerA"></div>
-                        <table id="table_tarefas${opcao.idInserido}" style="display: none;">
-                            <tbody id="tbodyCampo${opcao.idInserido}">
+                        <table id="table_tarefas${opcao.fkObjetivo}" style="display: none;">
+                            <tbody id="tbodyCampo${opcao.fkObjetivo}">
                                 
                             </tbody>
                         </table>
                     </div>
-                    <div class="containerA31" id="div_addTarefa${opcao.idInserido}" style="display: none;">
+                    <div class="containerA31" id="div_addTarefa${opcao.fkObjetivo}" style="display: none;">
                         <div class="containerA"></div>
                     </div>
                 </div>
@@ -244,7 +256,7 @@ function listar() {
         }
         for (var i = 0; i < json.length; i++) {
           contador++
-          document.getElementById(`tbodyCampo${json[i].idInserido}`).innerHTML += ` <tr>
+          document.getElementById(`tbodyCampo${json[i].fkObjetivo}`).innerHTML += ` <tr>
                         <td><input type="text" id="txt_tarefa${contador}" value="${json[i].textoTarefa}" placeholder="Tarefa" disabled><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
                         </tr>`
         }
@@ -332,9 +344,10 @@ function abrirAnotacoes(id) {
     img_abrirAnotacoes.src = './assets/imagens/setaDireita.png'
   }
 }
-
+var clicou = false
 function adicionarTarefa() {
   contador++
+  clicou = true
   tableCampo.innerHTML += ` <tr>
                         <td><input type="text" id="txt_tarefa${contador}" placeholder="Tarefa"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
                     </tr>`
