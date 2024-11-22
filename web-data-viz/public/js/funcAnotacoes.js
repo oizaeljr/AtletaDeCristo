@@ -58,7 +58,7 @@ function adicionar() {
           idObjetivoVar = sessionStorage.ID_OBJETIVO
           alert('passou')
           inserirTarefas(`txt_titulo${idTitulo}`)
-          
+
         })
       } else {
         throw "Houve um erro ao tentar realizar o cadastro!";
@@ -100,6 +100,7 @@ function inserirTarefas(valor) {
     alert(contador3)
     if (limite > 1) {
       var tarefaVar2 = document.getElementById(`txt_tarefa${contador}`).value;
+      contador--
     } else {
       var tarefaVar2 = document.getElementById(`txt_tarefa${contadorX}`).value;
     }
@@ -125,15 +126,23 @@ function inserirTarefas(valor) {
           //   cardErro.style.display = "block";
           idTitulo++
           contadorX++
-          tableCampo.innerHTML = ` <tr>
-          <td><input type="text" placeholder="Título" id="txt_titulo${idTitulo}"></td>
-          <td><input type="text" placeholder="Tarefa" id="txt_tarefa${contadorX}"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
-          </tr>`
+          if (limite > 1) {
+            tableCampo.innerHTML = ` <tr>
+              <td><input type="text" placeholder="Título" id="txt_titulo${idTitulo}"></td>
+              <td><input type="text" placeholder="Tarefa" id="txt_tarefa${contador}"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
+              </tr>`
+          } else {
+            tableCampo.innerHTML = ` <tr>
+              <td><input type="text" placeholder="Título" id="txt_titulo${idTitulo}"></td>
+              <td><input type="text" placeholder="Tarefa" id="txt_tarefa${contadorX}"><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
+              </tr>`
+          }
+
           resposta.json().then(json => {
             console.log(json);
             console.log(JSON.stringify(json));
-            
-      
+
+
           })
         } else {
           throw "Houve um erro ao tentar realizar a inserção!";
@@ -180,13 +189,13 @@ function listar() {
         var qtdObjetivos = 0
         var primeiroObj = json[0].fkObjetivo;
         for (var index = 0; index < json.length; index++) {
-          if (json[index].fkObjetivo != primeiroObj) {
+          if (json[index].fkObjetivo == primeiroObj) {
             qtdObjetivos++
             alert(qtdObjetivos)
           }
         }
         div_objetivosAndamento.innerHTML = '';
-        for (var contador = 0; contador < json.length; contador++) {
+        for (var contador = 0; contador < json.length-qtdObjetivos; contador++) {
           alert('to aqui')
           var opcao = json[contador]
           div_objetivosAndamento.innerHTML += `<div class="containerA18">
@@ -244,7 +253,7 @@ function listar() {
           //               <div class="containerA"></div>
           //               <table id="table_tarefas${json.idInserido}" style="display: none;">
           //                   <tbody id="tbodyCampo${json.idInserido}">
-                                
+
           //                   </tbody>
           //               </table>
           //           </div>
