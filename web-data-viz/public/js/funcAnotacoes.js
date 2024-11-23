@@ -56,7 +56,6 @@ function adicionar() {
 
           alert('Objetivo cadastrado com sucesso!')
           idObjetivoVar = sessionStorage.ID_OBJETIVO
-          alert('passou')
           inserirTarefas(`txt_titulo${idTitulo}`)
 
         })
@@ -97,7 +96,6 @@ function inserirTarefas(valor) {
   }
   for (var contador3 = 1; contador3 <= limite; contador3++) {
     console.log(contador3)
-    alert(contador3)
     if (limite > 1) {
       var tarefaVar2 = document.getElementById(`txt_tarefa${contador}`).value;
       contador--
@@ -190,13 +188,10 @@ function listar() {
         for (var index = 0; index < json.length; index++) {
           if (json[index].fkObjetivo == primeiroObj) {
             qtdObjetivos++
-            alert(qtdObjetivos)
           }
         }
         div_objetivosAndamento.innerHTML = '';
         for (var contador = 0; contador < json[0].qtdEmAndamento; contador++) {
-          // alert('sessao ok')
-          // alert('to aqui')
           var opcao = json[contador]
           div_objetivosAndamento.innerHTML += `<div class="containerA18">
                 <div class="containerA19">
@@ -230,43 +225,17 @@ function listar() {
                     </div>
                 </div>
             </div>`
-          // div_objetivosAndamento.innerHTML += `<div class="containerA18">
-          //       <div class="containerA19">
-          //           <div class="containerA20" >
-          //               <img onclick="abrirAnotacoes(${json.idInserido})" src="./assets/imagens/setaDireita.png" id="img_abrirAnotacoes${json.idInserido}">
-          //               <span>${json[contador].textoObjetivo}</span>
-          //           </div>
-          //           <div class="containerA21"></div>
-          //           <div class="containerA22">
-          //               <div class="containerA23"></div>
-          //               <span>15%</span>
-          //           </div>
-          //           <div class="containerA24">
-          //               <div class="containerA25">
-          //                   <img src="./assets/imagens/check.png">
-          //               </div>
-          //               <img src="./assets/imagens/lixeira.png" onclick="removerLinhaTitulo(this)">
-          //           </div>
-          //       </div>
-          //       <div class="containerA26">
-          //           <div class="containerA27">
-          //               <div class="containerA"></div>
-          //               <table id="table_tarefas${json.idInserido}" style="display: none;">
-          //                   <tbody id="tbodyCampo${json.idInserido}">
-
-          //                   </tbody>
-          //               </table>
-          //           </div>
-          //           <div class="containerA31" id="div_addTarefa${json.idInserido}" style="display: none;">
-          //               <div class="containerA"></div>
-          //           </div>
-          //       </div>
-          //   </div>`
         }
         for (var i = 0; i < json.length; i++) {
           contador++
           document.getElementById(`tbodyCampo${json[i].fkObjetivo}`).innerHTML += ` <tr>
-                        <td><input type="text" id="txt_tarefa${contador}" value="${json[i].textoTarefa}" placeholder="Tarefa" disabled><img src="./assets/imagens/lixeira.png" onclick="removerLinha(this)"></td>
+                        <td><input type="text" id="txt_tarefa${contador}" value="${json[i].textoTarefa}" placeholder="Tarefa" disabled>
+                        <div class="containerA28">
+                          <div class="containerA29">
+                            <img src="./assets/imagens/check.png">
+                          </div>
+                          <img src="./assets/imagens/lixeira.png" onclick="removerLinhaTarefas(this)">
+                        </div></td>
                         </tr>`
         }
 
@@ -278,7 +247,6 @@ function listar() {
 
       resposta.text().then(texto => {
         console.error(texto);
-        // finalizarAguardar(texto);
       });
     }
 
@@ -332,13 +300,13 @@ function lixeira() {
 }
 
 function abrirAnotacoes(id) {
-  console.log(id);
-  console.log(`table_tarefas${id}`);
-  console.log(document.getElementById(`table_tarefas${id}`));
-  console.log(`div_addTarefa${id}`);
-  console.log(document.getElementById(`div_addTarefa${id}`));
-  console.log(`img_abrirAnotacoes${id}`);
-  console.log(document.getElementById(`img_abrirAnotacoes${id}`));
+  // console.log(id);
+  // console.log(`table_tarefas${id}`);
+  // console.log(document.getElementById(`table_tarefas${id}`));
+  // console.log(`div_addTarefa${id}`);
+  // console.log(document.getElementById(`div_addTarefa${id}`));
+  // console.log(`img_abrirAnotacoes${id}`);
+  // console.log(document.getElementById(`img_abrirAnotacoes${id}`));
   const table_tarefas = document.getElementById(`table_tarefas${id}`)
   const div_addTarefa = document.getElementById(`div_addTarefa${id}`)
   const img_abrirAnotacoes = document.getElementById(`img_abrirAnotacoes${id}`)
