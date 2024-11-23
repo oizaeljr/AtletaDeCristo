@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iJr</title>
+    <script src="./js/sessao.js"></script>
+    <link rel="icon" href="../public/assets/imagens/cerebro.png" type="image/png">
+    <link rel="stylesheet" href="./css/styleLogado.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="validarSessao(); listar()">
+    <header>
+        <nav>
+            <div class="container1">
+                <a href="indexLogado.html">
+                    <img src="./assets/imagens/iJr.1.png">
+                </a>
+            </div>
+            <div class="container2">
+                <a href="sobreMim.html">Sobre mim</a>
+                <a href="tarefas.html">Anotações</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="biblia.html">Bíblia</a>
+            </div>
+            <div class="container3">
+                <span>Olá, <span id="span_usuario"></span></span>
+                <div class="containerOpcoes">
+                    <a href="perfil.html"><span>Perfil</span></a>
+                    <a href="graficos.html"><span>Dashboards</span></a>
+                    <a><span onclick="limparSessao()">Sair</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="telaTarefas">
+        <div class="container2">
+            <span id="fraseMotivacional">Foco, força e fé</span>
+        </div>
+        <div class="containerT">
+            <div class="container-icone">
+                <img src="./assets/imagens/icone.png" alt="icone" id="imgIcone">
+                <h1>Minha Lista de Tarefas</h1>
+            </div>
+            <input type="text" id="nova-task" placeholder="Adicione uma nova tarefa">
+            <button onclick="adicionaTask()" id="adiciona">Adicionar Tarefa</button>
+            <div class="selecao-filtro">
+                <select id="filtro" onchange="filtroTasks()">
+                    <option value="todas">Mostrar todas</option>
+                    <option value="completa">Mostrar concluídas</option>
+                    <option value="incompleta">Mostrar não concluídas </option>
+                </select>
+            </div>
+
+
+            <ul id="lista-task">
+                <!-- Tarefas serão adicionadas dinamicamente aqui -->
+            </ul>
+
+        </div>
+
+    </main>
+    <footer>
+        <div class="container1">
+            <div class="container1_1">
+                <div class="container2">
+                    <img src="./assets/imagens/iJr.2.png">
+                </div>
+                <div class="container3">
+                    <span>Um jovem sonhador que acredita</span>
+                    <span>que não há limites para fazer o</span>
+                    <span>que é certo.</span>
+                </div>
+                <div class="container4">
+                    <a href="https://www.instagram.com/oizaeljunior" target="_blank"><img
+                            src="./assets/imagens/instagram.png"></a>
+                    <a href="https://wa.me/5511966090323" target="_blank"><img src="./assets/imagens/whatsapp.png"></a>
+                    <a href="https://github.com/oizaeljr" target="_blank"><img src="./assets/imagens/github.png"></a>
+                    <a href="https://www.linkedin.com/in/oizaeljunior/" target="_blank"><img
+                            src="./assets/imagens/linkedin.png"></a>
+                </div>
+            </div>
+            <div class="linha"></div>
+            <div class="container5">
+                <span>© Copyright 2024, All Rights Reserved by Izael Junior</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+<script src="./js/funcTarefas.js"></script>

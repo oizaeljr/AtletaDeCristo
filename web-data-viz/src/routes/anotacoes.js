@@ -4,9 +4,6 @@ var router = express.Router();
 var anotacoesController = require("../controllers/anotacoesController");
 
 //Recebendo os dados do html e direcionando para a função cadastrar de usuarioController.js
-router.post("/adicionar", function (req, res) {
-    anotacoesController.adicionar(req, res);
-})
 
 router.get("/listar/:idUsuario", function (req, res) {
     anotacoesController.listar(req, res);
@@ -14,6 +11,14 @@ router.get("/listar/:idUsuario", function (req, res) {
  
 router.post("/inserirTarefas", function (req, res) {
     anotacoesController.inserirTarefas(req, res);
+})
+
+router.delete("/deletarTarefas/:idTarefa", function (req, res) {
+    anotacoesController.deletarTarefas(req, res);
+})
+
+router.put("/completarTarefas/:idTarefa", function (req, res) {
+    anotacoesController.completarTarefas(req, res);
 })
 
  
