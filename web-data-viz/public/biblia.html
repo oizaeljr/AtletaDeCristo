@@ -41,7 +41,493 @@
         </nav>
     </header>
     <main class="telaBiblia">
-        
+        <div class="container1">
+            <div class="container2">
+                <span id="fraseMotivacional">Foco, força e fé</span>
+            </div>
+            <div class="container3">
+                <div class="container3_1">
+                    <span onclick="abrirVersiculoDiario()" id="span_versiculoDiario">Versículo do Dia</span>
+                    <span onclick="abrirBibliaCompleta()" id="span_bibliaCompleta">Bíblia Completa</span>
+                </div>
+            </div>
+
+            <!-- INÍCIO TELA VERSÍCULO DIÁRIO -->
+            <div class="containerV1" id="telaVersiculoDiario" style="display: none;">
+                <span class="textoVersiculoDiario">Eu disse: Vigiarei a minha conduta e não pecarei em palavras; porei mordaça em minha boca enquanto os ímpios estiverem na minha presença.</span>
+                <span>Salmos 39:1</span>
+            </div>
+            <!-- FIM TELA VERSÍCULO DIÁRIO -->
+
+            <!-- INÍCIO TELA BÍBLIA COMPLETA -->
+            <div class="container1_1" id="telaBibliaCompleta">
+                <div class="container4">
+                    <span>Leitura completa:</span>
+                    <div class="container4_1">
+                        <div class="container4_2"></div>
+                        <span>15%</span>
+                    </div>
+                </div>
+                <div class="container5">
+                    <div class="container5_1">
+                        <div class="container5_2">
+                            <div class="container5_3">
+                                <span>Antigo Testamento</span>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="genesis()">Gênesis</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="exodo()">Êxodo</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="levitico()">Levítico</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="numero()">Números</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="deuteronomio()">Deuteronômio</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="josue()">Josué</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="juizes()">Juízes</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="rute()">Rute</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="samuel1()">1 Samuel</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="samuel2()">2 Samuel</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="reis1()">1 Reis</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="reis2()">2 Reis</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="cronicas1()">1 Crônicas</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="cronicas2()">2 Crônicas</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="esdras()">Esdras</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="neemias()">Neemias</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="ester()">Ester</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="jo()">Jó</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="salmos()">Salmos</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="proverbios()">Provérbios</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="eclesiastes()">Eclesiastes</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="canticos()">Cânticos</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="isaias()">Isaías</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="jeremias()">Jeremias</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="lamentacoes()">Lamentações</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="ezequiel()">Ezequiel</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="daniel()">Daniel</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="oseias()">Oséias</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="joel()">Joel</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="amos()">Amós</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="obadias()">Obadias</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="jonas()">Jonas</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="miqueias()">Miquéias</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="naum()">Naum</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="habacuque()">Habacuque</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="sofonias()">Sofonias</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="ageu()">Ageu</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="zacarias()">Zacarias</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="malaquias()">Malaquias</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6 semBorda">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container5_2">
+                            <div class="container5_3">
+                                <span>Novo Testamento</span>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="mateus()">Mateus</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="marcos()">Marcos</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="lucas()">Lucas</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="joao()">João</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="atos()">Atos</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="romanos()">Romanos</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="corintios1()">1 Coríntios</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="corintios2()">2 Coríntios</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="galatas()">Gálatas</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="efesios()">Efésios</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="filipenses()">Filipenses</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="colossenses()">Colossenses</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="tessalonicenses1()">1 Tessalonicenses</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="tessalonicenses2()">2 Tessalonicenses</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="timoteo1()">1 Timóteo</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="timoteo2()">2 Timóteo</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="tito()">Tito</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="filemom()">Filemom</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="hebreus()">Hebreus</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="tiago()">Tiago</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="pedro1()">1 Pedro</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="pedro2()">2 Pedro</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="joao1()">1 João</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="joao2()">2 João</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="joao3()">3 João</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="judas()">Judas</span>
+                                        <span>0%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container5_4">
+                                <div class="container5_5">
+                                    <div class="container5_6">
+                                        <span class="livro" onclick="apocalipse()">Apocalipse</span>
+                                        <span>0%</span>
+                                    </div>
+                                    <div class="container5_6 semBorda">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FIM TELA BÍBLIA COMPLETA -->
+
+            <!-- INÍCIO TELA CAPÍTULOS -->
+            <div class="container6" id="telaCapitulos" style="display: none;">
+                <div class="container7">
+                    <span class="spanVoltar" onclick="voltar()">Voltar</span>
+                    <span class="capitulosTitulo">Capítulos do livro de <span id="spanLivro">Gênesis</span></span>
+                </div>
+                <div class="container8" id="div_capitulos">
+                    <!-- <div class="container8_1" id="div_capitulos2">
+                        <div class="container8_2">
+                            <span class="titulo">Tessalonicenses 1</span>
+                            <span>✔</span>
+                        </div>
+                        <div class="container8_2">
+                            <span class="titulo">Tessalonicenses 1</span>
+                            <span>✔</span>
+                        </div>
+                        <div class="container8_2">
+                            <span class="titulo">Tessalonicenses 1</span>
+                            <span>✔</span>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <!-- FIM TELA CAPÍTULOS -->
+
+            <!-- INÍCIO TELA VERSÍCULOS -->
+            <div class="container6" id="telaVersiculos" style="display: none;">
+                <div class="container7">
+                    <span class="spanVoltar">Voltar</span>
+                    <span class="capitulosTitulo">Tessalonicenses 1</span>
+                </div>
+                <div class="container8">
+                    
+                </div>
+            </div>
+            <!-- FIM TELA VERSÍCULOS -->
+        </div>
     </main>
     <footer>
         <div class="container1">
@@ -72,3 +558,4 @@
 </body>
 
 </html>
+<script src="./js/funcBiblia.js"></script>

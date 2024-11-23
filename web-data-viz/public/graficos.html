@@ -218,7 +218,7 @@
     const dataC = {
         labels: labelsC,
         datasets: [{
-            label: 'Futebol',
+            label: 'Esportes',
             backgroundColor: [
                 'rgb(0, 0, 0)',
                 'rgb(0, 71, 171)',
@@ -243,13 +243,31 @@
         data: dataC,
         options: {
             plugins: {
+                legend: {
+                    display: true,
+                    labels: {
+                        boxWidth: 0, // Tamanho do quadrado
+                        padding: 0,  // Espaçamento interno
+                        color: '#000000', // Cor do texto
+                        generateLabels: (chart) => {
+                            const labels = Chart.defaults.plugins.legend.labels.generateLabels(chart);
+                            labels.forEach(label => {
+                                label.borderWidth = 0; // Espessura da borda
+                                label.borderColor = '#d3d3d3'; // Cor da borda
+                                label.fillStyle = '#FFFFFF'; // Cor do fundo do quadrado
+                            });
+                            return labels;
+                        }
+                    }
+                },
                 title: {
                     display: true,
                     text: 'ESPORTES FAVORITOS'
                 }
             }
         }
-    }
+    };
+
 
     const labelsD = [
         'Profissional',
@@ -261,7 +279,7 @@
     const dataD = {
         labels: labelsD,
         datasets: [{
-            label: 'Futebol',
+            label: 'Níveis',
             backgroundColor: [
                 'rgb(0, 31, 63)',
                 'rgb(0, 71, 171)',
@@ -282,6 +300,23 @@
         data: dataD,
         options: {
             plugins: {
+                legend: {
+                    display: true,
+                    labels: {
+                        boxWidth: 0, // Tamanho do quadrado
+                        padding: 0,  // Espaçamento interno
+                        color: '#000000', // Cor do texto
+                        generateLabels: (chart) => {
+                            const labels = Chart.defaults.plugins.legend.labels.generateLabels(chart);
+                            labels.forEach(label => {
+                                label.borderWidth = 0; // Espessura da borda
+                                label.borderColor = '#d3d3d3'; // Cor da borda
+                                label.fillStyle = '#FFFFFF'; // Cor do fundo do quadrado
+                            });
+                            return labels;
+                        }
+                    }
+                },
                 title: {
                     display: true,
                     text: 'NÍVEL DE COMPETIÇÃO'
