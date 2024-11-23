@@ -15,7 +15,7 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body onload="atualizar()">
     <header>
         <nav>
             <div class="container1">
@@ -232,16 +232,65 @@
     var somenteDataNasc = sessionStorage.DT_NASC.split("T")[0];
     dataNasc.value = somenteDataNasc;
 
-    sel_esporteFav.value = sessionStorage.ESPORTE_FAV;
-    sel_esporteNivel.value = sessionStorage.ESPORTE_NIVEL;
-    sel_esporteAnos.value = sessionStorage.ESPORTE_ANOS;
-    sel_esporteGrau.value = sessionStorage.ESPORTE_GRAU;
-    sel_cristao.value = sessionStorage.CRISTAO;
-    txt_cristaoAnos.value = sessionStorage.CRISTAO_ANOS;
-    sel_biblia.value = sessionStorage.BIBLIA;
-    txt_frase.value = sessionStorage.FRASE
-    fraseMotivacional.innerHTML = sessionStorage.FRASE;
-    lbl_ranking.innerHTML = `${sessionStorage.POSICAO}°` || 'Sem posição';
+    if (sessionStorage.ESPORTE_FAV == 'Futebol' || sessionStorage.ESPORTE_FAV == 'Vôlei' || sessionStorage.ESPORTE_FAV == 'Basquete' || sessionStorage.ESPORTE_FAV == 'Tênis' || sessionStorage.ESPORTE_FAV == 'Golfe') {
+        sel_esporteFav.value = sessionStorage.ESPORTE_FAV;
+    } else {
+        sel_esporteFav.value = '#';
+    }
+
+    if (sessionStorage.ESPORTE_NIVEL == 'Profissional' || sessionStorage.ESPORTE_NIVEL == 'Amador' || sessionStorage.ESPORTE_NIVEL == 'Diversão') {
+        sel_esporteNivel.value = sessionStorage.ESPORTE_NIVEL;
+    } else {
+        sel_esporteNivel.value = '#';
+    }
+
+    if (sessionStorage.ESPORTE_ANOS == 'menos de 1 ano' || sessionStorage.ESPORTE_ANOS == 'até 5 anos' || sessionStorage.ESPORTE_ANOS == 'mais de 5 anos') {
+        sel_esporteAnos.value = sessionStorage.ESPORTE_ANOS;
+    } else {
+        sel_esporteAnos.value = '#';
+    }
+    
+    if (sessionStorage.ESPORTE_GRAU == 'Baixo' || sessionStorage.ESPORTE_GRAU == 'Médio' || sessionStorage.ESPORTE_GRAU == 'Alto') {
+        sel_esporteGrau.value = sessionStorage.ESPORTE_GRAU;
+    } else {
+        sel_esporteGrau.value = '#';
+    }
+    
+    if (sessionStorage.CRISTAO == 'Sim' || sessionStorage.CRISTAO == 'Não') {
+        sel_cristao.value = sessionStorage.CRISTAO;
+    } else {
+        sel_cristao.value = '#';
+    }
+
+    if (sessionStorage.CRISTAO_ANOS >= 0) {
+        txt_cristaoAnos.value = sessionStorage.CRISTAO_ANOS;
+    } else {
+        txt_cristaoAnos.value = 0;
+    }
+    
+    if (sessionStorage.BIBLIA == 'Sim' || sessionStorage.BIBLIA == 'Não') {
+        sel_biblia.value = sessionStorage.BIBLIA;
+    } else {
+        sel_biblia.value = '#';
+    }
+    
+    if (sessionStorage.FRASE == 'null' || sessionStorage.FRASE == 'undefined' || sessionStorage.FRASE == '') {
+        txt_frase.value = 'Escreve sua frase motivacional'
+    } else {
+        txt_frase.value = sessionStorage.FRASE;
+    }
+
+    if (sessionStorage.FRASE == 'null' || sessionStorage.FRASE == 'undefined' || sessionStorage.FRASE == '') {
+        fraseMotivacional.innerHTML = 'Escreve sua frase motivacional no seu perfil';
+    } else {
+        fraseMotivacional.innerHTML = sessionStorage.FRASE;
+    }
+    
+    if (sessionStorage.POSICAO == 'null' || sessionStorage.POSICAO == 'undefined' || sessionStorage.POSICAO == '') {
+        lbl_ranking.innerHTML = 'Sem posição';
+    } else {
+        lbl_ranking.innerHTML = `${sessionStorage.POSICAO}°`;
+    }
 
     var dataCompleta = new Date(sessionStorage.DT_CRIACAO);
     var somenteData = dataCompleta.toLocaleDateString("pt-BR");

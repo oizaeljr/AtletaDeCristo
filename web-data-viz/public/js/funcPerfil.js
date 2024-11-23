@@ -48,11 +48,8 @@ function atualizar() {
 
         //   mensagem_erro.innerHTML =
         //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-        setTimeout(() => {
-          location.reload();
-        }, "2000");
-
+        alert('Cadastro atualizado com sucesso!')
+        fraseMotivacional.innerHTML = fraseVar;
         //   limparFormulario();
         //   finalizarAguardar();
       } else {
