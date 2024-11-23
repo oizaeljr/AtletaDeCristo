@@ -11,6 +11,7 @@ function abrirBibliaCompleta() {
 }
 
 function abrirVersiculoDiario() {
+    exibirVersiculo()
     span_versiculoDiario.style.borderBottom = '1px solid'
     span_bibliaCompleta.style.borderBottom = 'none'
     telaBibliaCompleta.style.display = 'none'
@@ -390,4 +391,46 @@ function voltar() {
         telaCapitulos.style.display = 'none'
         telaBibliaCompleta.style.display = 'block'
     }
+}
+
+
+function exibirVersiculo() {
+    // aguardar();
+
+
+    fetch("/versiculo/exibirVersiculo", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        },
+
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!")
+
+        if (resposta.ok) {
+            console.log(resposta);
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+                var aleatorio = parseInt(Math.random()*json.length+1)
+                span_textoVersiculoDiario.innerHTML = json[aleatorio].textoVersiculo;
+                span_livroVersiculoDiario.innerHTML = json[aleatorio].livro;
+
+            });
+
+        } else {
+
+            console.log("Houve um erro ao tentar realizar o login!");
+
+            resposta.text().then(texto => {
+                console.error(texto);
+                // finalizarAguardar(texto);
+            });
+        }
+
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+    return false;
 }
