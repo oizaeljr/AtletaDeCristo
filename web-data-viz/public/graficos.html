@@ -107,7 +107,12 @@
 </html>
 <script>
     span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    fraseMotivacional.innerHTML = sessionStorage.FRASE;
+    
+    if (sessionStorage.FRASE == 'null' || sessionStorage.FRASE == 'undefined' || sessionStorage.FRASE == '') {
+        fraseMotivacional.innerHTML = 'Escreve sua frase motivacional no seu perfil';
+    } else {
+        fraseMotivacional.innerHTML = sessionStorage.FRASE;
+    }
 
     var total_usuarios = sessionStorage.TOTAL_USUARIOS;
 

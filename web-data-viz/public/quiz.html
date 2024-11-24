@@ -229,7 +229,12 @@
 <script src="./js/funcQuiz.js"></script>
 <script>
     span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    fraseMotivacional.innerHTML = sessionStorage.FRASE;
+    
+    if (sessionStorage.FRASE == 'null' || sessionStorage.FRASE == 'undefined' || sessionStorage.FRASE == '') {
+        fraseMotivacional.innerHTML = 'Escreve sua frase motivacional no seu perfil';
+    } else {
+        fraseMotivacional.innerHTML = sessionStorage.FRASE;
+    }
 </script>
 
    

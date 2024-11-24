@@ -508,12 +508,13 @@ function sairQuiz() {
     telaQuizPerguntas.style.display = 'none';
     telaPontuacao.style.display = 'none'
     selecione.style.display = 'flex'
+    selecione.innerHTML = 'Selecione um quiz!'
     quantidade = 0
     acertos = 0
     erros = 0
     respondida = false
     iniciou = false
-    tela = ''
+    tela = '' 
     quizEsporte.style.borderBottom = 'none';
     quizBiblia.style.borderBottom = 'none';
     quizFutebol.style.borderBottom = 'none';

@@ -97,3 +97,10 @@
 
 </html>
 <script src="./js/funcTarefas.js"></script>
+<script>
+    if (sessionStorage.FRASE == 'null' || sessionStorage.FRASE == 'undefined' || sessionStorage.FRASE == '') {
+        fraseMotivacional.innerHTML = 'Escreve sua frase motivacional no seu perfil';
+    } else {
+        fraseMotivacional.innerHTML = sessionStorage.FRASE;
+    }
+</script>
