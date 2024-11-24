@@ -377,7 +377,7 @@ function abrirCapitulos() {
             if (capitulos > 0) {
                 capitulos--
             divLinha.innerHTML += `<div class="container8_2">
-                            <span class="titulo">${livro} ${i}</span>
+                            <span class="titulo" onclick="abrirVersiculos('${livro}', ${i})">${livro} ${i}</span>
                             <span>✔</span>
                         </div>`
                 i++
@@ -386,10 +386,24 @@ function abrirCapitulos() {
     }
 }
 
+function abrirVersiculos(livro, i) {
+    nomeLivro.innerHTML = `${livro} `
+    numCap.innerHTML = ` ${i}`    
+    tela = 'versiculo'
+    telaBibliaCompleta.style.display = 'none'
+    telaVersiculoDiario.style.display = 'none'
+    telaCapitulos.style.display = 'none'
+    telaVersiculos.style.display = 'flex'
+}
+
 function voltar() {
     if (tela == 'capitulo') {
         telaCapitulos.style.display = 'none'
         telaBibliaCompleta.style.display = 'block'
+    } else if (tela == 'versiculo') {
+        tela = 'capitulo'
+        telaVersiculos.style.display = 'none'
+        telaCapitulos.style.display = 'flex'
     }
 }
 

@@ -186,6 +186,10 @@ main .container8_2 {
     display: flex;
 }
 
+main .container8_2 span{
+    cursor: pointer;
+}
+
 main .container8_12 {
     width: 50%;
     height: 100%;
@@ -956,6 +960,69 @@ footer .container5 span {
 
 .telaBiblia .titulo {
     margin: 0 10px 0 0;
+}
+
+.telaBiblia .containerVV6 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.telaBiblia .containerVV7 {
+    width: 20vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.telaBiblia .containerVV9 {
+    width: 95%;
+    height: auto;
+    margin: 5px;
+}
+
+.telaBiblia .tituloVersiculos {
+    font-weight: bold;
+}
+
+.telaBiblia .numeroVersiculo {
+    font-style: italic;
+    margin: 0 5px 0 0;
+}
+
+.telaBiblia .containerVVB {
+    width: 35vw;
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.telaBiblia .btnCap {
+    background-color: #0047AB;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    width: 8vw;
+    height: 5vh;
+}
+
+.telaBiblia .btnCap:hover {
+    background-color: #ADD8E6;
+}
+
+.telaBiblia .btnLido {
+    background-color: #D3D3D3;
+    border-radius: 10px;
+    width: 17vw;
+    font-weight: bold;
+}
+
+.telaBiblia .btnLido:hover {
+    background-color: #5d5d5d;
 }
 /* FIM TELA BÍBLIA */
 

@@ -48,7 +48,7 @@ function listar(req, res) {
 function deletarTarefas(req, res) {
     var idTarefa = req.params.idTarefa;
 
-    avisoModel.deletarTarefas(idTarefa)
+    anotacoesModel.deletarTarefas(idTarefa)
         .then(
             function (resultado) {
                 res.json(resultado);
