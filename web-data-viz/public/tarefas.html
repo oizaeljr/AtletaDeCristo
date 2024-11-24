@@ -50,12 +50,24 @@
             </div>
             <input type="text" id="nova-task" placeholder="Adicione uma nova tarefa">
             <button onclick="inserirTarefas()" id="adiciona">Adicionar Tarefa</button>
-            <div class="selecao-filtro">
-                <select id="filtro" onchange="filtroTasks()">
-                    <option value="todas">Mostrar todas</option>
-                    <option value="completa">Mostrar concluídas</option>
-                    <option value="incompleta">Mostrar não concluídas </option>
-                </select>
+            <div class="containerTT1">
+                <div class="containerTT2">
+                    <div class="containerTT3">
+                        <div class="containerTT4 verde" id="div_tarefasConcluidas">7</div>
+                        <span>Concluídas</span>
+                    </div>
+                    <div class="containerTT3">
+                        <div class="containerTT4 branco" id="div_tarefasEmAndamento">1</div>
+                        <span>Em andamento</span>
+                    </div>
+                </div>
+                <div class="selecao-filtro">
+                    <select id="filtro" onchange="filtroTasks()">
+                        <option value="todas">Mostrar todas</option>
+                        <option value="completa">Mostrar concluídas</option>
+                        <option value="incompleta">Mostrar em andamento</option>
+                    </select>
+                </div>
             </div>
 
 

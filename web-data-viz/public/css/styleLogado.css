@@ -1118,4 +1118,47 @@ li {
     text-decoration: line-through;
     color: green;
 }
+
+.telaTarefas .containerTT1 {
+    width: 30vw;
+    display: flex;
+    justify-self: center;
+    justify-content: space-around;
+}
+
+.telaTarefas .containerTT2 {
+    width: 18vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+.telaTarefas .containerTT3 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.telaTarefas .containerTT3 span {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.telaTarefas .containerTT4 {
+    border: 1px solid;
+    width: 2vw;
+    height: 3vh;
+    border-radius: 5px;
+    margin: 0 5px 0 0;
+}
+
+.telaTarefas .verde {
+    background-color: green;
+    color: white;
+}
+
+.telaTarefas .branco {
+    background-color: white;
+}
 /* FIM DA TELA TAREFAS */

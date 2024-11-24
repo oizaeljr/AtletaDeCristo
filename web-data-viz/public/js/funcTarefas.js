@@ -92,6 +92,9 @@ function listar() {
         console.log(JSON.stringify(json));
         console.log(json.length)
 
+        var quantConcluidas = 0
+        var quantEmAndamento = 0
+
         for (var contador = 0; contador < json.length; contador++) {
           var idTarefa = json[contador].idTarefa;
           const novaTask = json[contador].textoTarefa;
@@ -136,13 +139,15 @@ function listar() {
 
           if (json[contador].statsTarefa == 'Concluída') {
             itemLista.classList.add('completa');
+            quantConcluidas++
           }
 
           const lista = document.getElementById('lista-task');
           lista.appendChild(itemLista);
-
-
         }
+        quantEmAndamento = json.length - quantConcluidas
+        div_tarefasConcluidas.innerHTML = quantConcluidas;
+        div_tarefasEmAndamento.innerHTML = quantEmAndamento;
       });
 
     } else {
@@ -171,7 +176,7 @@ function deletarTarefas(idTarefa) {
   }).then(function (resposta) {
 
     if (resposta.ok) {
-      window.alert(`Tarefa ${idTarefa} deletada com sucesso!`);
+      window.alert(`Tarefa deletada com sucesso!`);
       window.location.reload()
     } else if (resposta.status == 404) {
       window.alert("Deu 404!");
