@@ -44,9 +44,19 @@ function completarTarefas(idTarefa) {
     return database.executar(instrucaoSql);
 }
 
+function TarefasConcluidas(idUsuario) {
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucaoSql = `SELECT count(*) as quantidadeConcluidas FROM tarefa where statsTarefa = 'Concluída' and fkUsuario = ${idUsuario};`;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     inserirTarefas,
     listar,
     deletarTarefas,
-    completarTarefas
+    completarTarefas,
+    TarefasConcluidas
 };

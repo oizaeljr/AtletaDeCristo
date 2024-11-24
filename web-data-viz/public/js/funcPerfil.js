@@ -45,7 +45,6 @@ function atualizar() {
 
       if (resposta.ok) {
         //   cardErro.style.display = "block";
-
         //   mensagem_erro.innerHTML =
         //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
         fraseMotivacional.innerHTML = fraseVar;
@@ -59,6 +58,45 @@ function atualizar() {
       console.log(`#ERRO: ${resposta}`);
       // finalizarAguardar();
     });
+
+  return false;
+}
+
+function TarefasConcluidas() {
+  // aguardar();
+  var idUsuario = sessionStorage.ID_USUARIO;
+  fetch(`/anotacoes/TarefasConcluidas/${idUsuario}`, {
+      method: "GET",
+      headers: {
+          "Content-Type": "application/json"
+      },
+
+  }).then(function (resposta) {
+      console.log("ESTOU NO THEN DO entrar()!")
+
+      if (resposta.ok) {
+          console.log(resposta);
+
+          resposta.json().then(json => {
+              console.log(json);
+              console.log(JSON.stringify(json));
+              lbl_objetivos.innerHTML = json[0].quantidadeConcluidas;
+
+          });
+
+      } else {
+
+          console.log("Houve um erro ao tentar realizar a quantidade de concluidas");
+
+          resposta.text().then(texto => {
+              console.error(texto);
+              // finalizarAguardar(texto);
+          });
+      }
+
+  }).catch(function (erro) {
+      console.log(erro);
+  })
 
   return false;
 }

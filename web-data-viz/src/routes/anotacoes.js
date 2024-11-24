@@ -21,5 +21,9 @@ router.put("/completarTarefas/:idTarefa", function (req, res) {
     anotacoesController.completarTarefas(req, res);
 })
 
- 
+router.get("/TarefasConcluidas/:idUsuario", function (req, res) {
+    anotacoesController.TarefasConcluidas(req, res);
+})
+
+
 module.exports = router;
