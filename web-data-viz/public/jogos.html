@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iJr</title>
     <script src="./js/sessao.js"></script>
-    <link rel="icon" href="../public/assets/imagens/cerebro.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="./assets/imagens/cerebro.png" type="image/png">
     <link rel="stylesheet" href="./css/styleLogado.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +16,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao(); listar()">
+<body onload="validarSessao()">
     <header>
         <nav>
             <div class="container1">
@@ -25,8 +26,8 @@
             </div>
             <div class="container2">
                 <a href="sobreMim.html">Sobre mim</a>
-                <a href="tarefas.html" style="border-bottom: 1px solid;">Anotações</a>
-                <a href="jogos.html">Jogos</a>
+                <a href="tarefas.html">Anotações</a>
+                <a href="jogos.html" style="border-bottom: 1px solid;">Jogos</a>
                 <a href="biblia.html">Bíblia</a>
             </div>
             <div class="container3">
@@ -39,44 +40,16 @@
             </div>
         </nav>
     </header>
-    <main class="telaTarefas">
+    <main class="telaJogos">
         <div class="container2">
             <span id="fraseMotivacional">Foco, força e fé</span>
         </div>
-        <div class="containerT">
-            <div class="container-icone">
-                <img src="./assets/imagens/icone.png" alt="icone" id="imgIcone">
-                <h1>Minha Lista de Tarefas</h1>
+        <div class="containerJ1">
+            <div class="containerJ2">
+                <a href="termo.html"><div class="containerJ3"></div></a>
+                <a href="quiz.html"><div class="containerJ4"></div></a>
             </div>
-            <input type="text" id="nova-task" placeholder="Adicione uma nova tarefa">
-            <button onclick="inserirTarefas()" id="adiciona">Adicionar Tarefa</button>
-            <div class="containerTT1">
-                <div class="containerTT2">
-                    <div class="containerTT3">
-                        <div class="containerTT4 verde" id="div_tarefasConcluidas">7</div>
-                        <span>Concluídas</span>
-                    </div>
-                    <div class="containerTT3">
-                        <div class="containerTT4 branco" id="div_tarefasEmAndamento">1</div>
-                        <span>Em andamento</span>
-                    </div>
-                </div>
-                <div class="selecao-filtro">
-                    <select id="filtro" onchange="filtroTasks()">
-                        <option value="todas">Mostrar todas</option>
-                        <option value="completa">Mostrar concluídas</option>
-                        <option value="incompleta">Mostrar em andamento</option>
-                    </select>
-                </div>
-            </div>
-
-
-            <ul id="lista-task">
-                <!-- Tarefas serão adicionadas dinamicamente aqui -->
-            </ul>
-
-        </div>
-
+        </div>        
     </main>
     <footer>
         <div class="container1">
@@ -104,12 +77,13 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
-<script src="./js/funcTarefas.js"></script>
+<script src=""></script>
 <script>
+    span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
     if (sessionStorage.FRASE == 'null' || sessionStorage.FRASE == 'undefined' || sessionStorage.FRASE == '') {
         fraseMotivacional.innerHTML = 'Escreve sua frase motivacional no seu perfil';
     } else {
