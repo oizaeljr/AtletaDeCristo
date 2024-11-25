@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iJr</title>
+    <script src="./js/sessao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="./assets/imagens/cerebro.png" type="image/png">
+    <link rel="stylesheet" href="./css/styleLogado.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="validarSessao()">
+    <header>
+        <nav>
+            <div class="container1">
+                <a href="indexLogado.html">
+                    <img src="./assets/imagens/iJr.1.png">
+                </a>
+            </div>
+            <div class="container2">
+                <a href="sobreMim.html">Sobre mim</a>
+                <a href="tarefas.html">Anotações</a>
+                <a href="quiz.html" style="border-bottom: 1px solid;">Quiz</a>
+                <a href="biblia.html">Bíblia</a>
+            </div>
+            <div class="container3">
+                <span>Olá, <span id="span_usuario"></span></span>
+                <div class="containerOpcoes">
+                    <a href="perfil.html"><span>Perfil</span></a>
+                    <a href="graficos.html"><span>Dashboards</span></a>
+                    <a><span onclick="limparSessao()">Sair</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="telaTermo">
+        <div class="container2">
+            <span id="fraseMotivacional">Foco, força e fé</span>
+        </div>
+        <div class="containerTE">
+            <div class="containerTE1">
+                <div class="containerTE2">
+                    <div class="containerTE3">
+                        <span>TERMO</span>
+                    </div>
+                    <div class="containerTE4">
+                        <button onclick="abrirHelp()">?</button>
+                    </div>
+                </div>
+
+                <!-- INÍCIO TELA AJUDA -->
+                <div class="containerTE5" id="div_help" style="display: block;">
+                    <div class="containerTE6">
+                        <span>Descubra a palavra certa em 6 tentativas. Depois de cada tentativa, as peças mostram o quão perto você está da solução.</span>
+                    </div>
+                    <div class="containerTE7">
+                        <div class="caixa verde">T</div>
+                        <div class="caixa simples">U</div>
+                        <div class="caixa simples">R</div>
+                        <div class="caixa simples">M</div>
+                        <div class="caixa simples">A</div>
+                    </div>
+                    <div class="containerTE8">
+                        <span>A letra</span>
+                        <div class="caixa verde">T</div>
+                        <span>faz parte da palavra e está na posição correta.</span>
+                    </div>
+                    <div class="containerTE7">
+                            <div class="caixa simples">V</div>
+                            <div class="caixa simples">I</div>
+                            <div class="caixa possui">O</div>
+                            <div class="caixa simples">L</div>
+                            <div class="caixa simples">A</div>
+                    </div>
+                    <div class="containerTE8">
+                        <span>A letra</span>
+                        <div class="caixa possui">O</div>
+                        <span>faz parte da palavra mas em outra posição.</span>
+                    </div>
+                    <div class="containerTE7">
+                        <div class="caixa simples">P</div>
+                        <div class="caixa simples">U</div>
+                        <div class="caixa simples">L</div>
+                        <div class="caixa nenhum">G</div>
+                        <div class="caixa simples">A</div>
+                    </div>
+                    <div class="containerTE8">
+                        <span>A letra</span>
+                        <div class="caixa nenhum">G</div>
+                        <span>não faz parte da palavra.</span>
+                    </div>
+                    <div class="containerTE8">
+                        <span>Os acentos são preenchidos automaticamente, e não são considerados nas dicas.</span>
+                    </div>
+                    <div class="containerTE8">
+                        <span>As palavras podem possui letras repetidas.</span>
+                    </div>
+                    <div class="containerTE8">
+                        <span>Uma palavra nova aparece a cada dia..</span>
+                    </div>
+                    <div class="containerTE9">
+                        <button onclick="jogar()" id="btnJogar">Jogar</button>
+                    </div>
+                </div>
+                <!-- FIM TELA AJUDA -->
+
+                <!-- INÍCIO TELA JOGO -->
+                 <div class="containerTE10" id="divJogo" style="display: none;">
+                    <div class="containerTE11">
+                        <div class="linha">
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="A1" oninput="ordem('A1')">
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="A2" oninput="ordem('A2')">
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="A3" oninput="ordem('A3')">
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="A4" oninput="ordem('A4')">
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="A5">
+                            </div>
+                        </div>
+                        <div class="linha">
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="B1" oninput="ordem('B1')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="B2" oninput="ordem('B2')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="B3" oninput="ordem('B3')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="B4" oninput="ordem('B4')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="B5" disabled>
+                            </div>
+                        </div>
+                        <div class="linha">
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="C1" oninput="ordem('C1')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="C2" oninput="ordem('C2')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="C3" oninput="ordem('C3')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="C4" oninput="ordem('C4')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="C5" disabled>
+                            </div>
+                        </div>
+                        <div class="linha">
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="D1" oninput="ordem('D1')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="D2" oninput="ordem('D2')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="D3" oninput="ordem('D3')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="D4" oninput="ordem('D4')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="D5" disabled>
+                            </div>
+                        </div>
+                        <div class="linha">
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="E1" oninput="ordem('E1')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="E2" oninput="ordem('E2')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="E3" oninput="ordem('E3')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="E4" oninput="ordem('E4')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="E5" disabled>
+                            </div>
+                        </div>
+                        <div class="linha">
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="F1" oninput="ordem('F1')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="F2" oninput="ordem('F2')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="F3" oninput="ordem('F3')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="F4" oninput="ordem('F4')" disabled>
+                            </div>
+                            <div class="letra">
+                                <input type="text" maxlength="1" id="F5" disabled>
+                            </div>
+                        </div>
+                        <button onclick="verificar()" id="btnVerifica">Verificar</button>
+                    </div>
+                 </div>
+                <!-- FIM TELA JOGO -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container1">
+            <div class="container1_1">
+                <div class="container2">
+                    <img src="./assets/imagens/iJr.2.png">
+                </div>
+                <div class="container3">
+                    <span>Um jovem sonhador que acredita</span>
+                    <span>que não há limites para fazer o</span>
+                    <span>que é certo.</span>
+                </div>
+                <div class="container4">
+                    <a href="https://www.instagram.com/oizaeljunior" target="_blank"><img
+                            src="./assets/imagens/instagram.png"></a>
+                    <a href="https://wa.me/5511966090323" target="_blank"><img src="./assets/imagens/whatsapp.png"></a>
+                    <a href="https://github.com/oizaeljr" target="_blank"><img src="./assets/imagens/github.png"></a>
+                    <a href="https://www.linkedin.com/in/oizaeljunior/" target="_blank"><img
+                            src="./assets/imagens/linkedin.png"></a>
+                </div>
+            </div>
+            <div class="linha"></div>
+            <div class="container5">
+                <span>© Copyright 2024, All Rights Reserved by Izael Junior</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
+<script src="./js/funcTermo.js"></script>
+<script>
+    span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    if (sessionStorage.FRASE == 'null' || sessionStorage.FRASE == 'undefined' || sessionStorage.FRASE == '') {
+        fraseMotivacional.innerHTML = 'Escreve sua frase motivacional no seu perfil';
+    } else {
+        fraseMotivacional.innerHTML = sessionStorage.FRASE;
+    }
+</script>
