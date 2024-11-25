@@ -22,6 +22,8 @@ function voltar() {
 
 function jogar() {
     limpar()
+    btnVerifica.innerHTML = 'Verificar'
+    btnVerifica.onclick = verificar
     iniciou = true
     palavras = ['amigo', 'cores', 'viver', 'chave', 'borda', 'somar', 'leite', 'forca', 'livro', 'ponto', 'sabor', 'claro', 'tempo', 'atuar', 'brisa', 'frete', 'finta', 'verde', 'morte', 'tinta'];
     linha = 'primeira'
@@ -490,22 +492,22 @@ function perdeu() {
 }
 
 function limpar() {
-    // A1.style.backgroundColor = 'white'
-    // A2.style.backgroundColor = 'white'
-    // A3.style.backgroundColor = 'white'
-    // A4.style.backgroundColor = 'white'
-    // A5.style.backgroundColor = 'white'
+    A1.className = '';
+    A2.className = '';
+    A3.className = '';
+    A4.className = '';
+    A5.className = '';
     A1.value = ''
     A2.value = ''
     A3.value = ''
     A4.value = ''
     A5.value = ''
 
-    // B1.classList.add('simples')
-    // B2.classList.add('simples')
-    // B3.classList.add('simples')
-    // B4.classList.add('simples')
-    // B5.classList.add('simples')
+    B1.className = '';
+    B2.className = '';
+    B3.className = '';
+    B4.className = '';
+    B5.className = '';
     B1.disabled = true
     B2.disabled = true
     B3.disabled = true
@@ -517,11 +519,11 @@ function limpar() {
     B4.value = ''
     B5.value = ''
 
-    // C1.classList.add('simples')
-    // C2.classList.add('simples')
-    // C3.classList.add('simples')
-    // C4.classList.add('simples')
-    // C5.classList.add('simples')
+    C1.className = '';
+    C2.className = '';
+    C3.className = '';
+    C4.className = '';
+    C5.className = '';
     C1.disabled = true
     C2.disabled = true
     C3.disabled = true
@@ -533,11 +535,11 @@ function limpar() {
     C4.value = ''
     C5.value = ''
 
-    // D1.classList.add('simples')
-    // D2.classList.add('simples')
-    // D3.classList.add('simples')
-    // D4.classList.add('simples')
-    // D5.classList.add('simples')
+    D1.className = '';
+    D2.className = '';
+    D3.className = '';
+    D4.className = '';
+    D5.className = '';
     D1.disabled = true
     D2.disabled = true
     D3.disabled = true
@@ -549,11 +551,11 @@ function limpar() {
     D4.value = ''
     D5.value = ''
 
-    // E1.classList.add('simples')
-    // E2.classList.add('simples')
-    // E3.classList.add('simples')
-    // E4.classList.add('simples')
-    // E5.classList.add('simples')
+    E1.className = '';
+    E2.className = '';
+    E3.className = '';
+    E4.className = '';
+    E5.className = '';
     E1.disabled = true
     E2.disabled = true
     E3.disabled = true
@@ -565,11 +567,11 @@ function limpar() {
     E4.value = ''
     E5.value = ''
 
-    // F1.classList.add('simples')
-    // F2.classList.add('simples')
-    // F3.classList.add('simples')
-    // F4.classList.add('simples')
-    // F5.classList.add('simples')
+    F1.className = '';
+    F2.className = '';
+    F3.className = '';
+    F4.className = '';
+    F5.className = '';
     F1.disabled = true
     F2.disabled = true
     F3.disabled = true
