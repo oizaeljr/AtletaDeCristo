@@ -580,7 +580,6 @@ footer .container5 span {
 .telaQuiz .containerQG {
     display: flex;
     justify-content: center;
-    border: 1px solid;
 }
 
 .telaQuiz .containerQG1 {
@@ -588,7 +587,6 @@ footer .container5 span {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid red;
 }
 
 .telaQuiz .containerQG2 {
