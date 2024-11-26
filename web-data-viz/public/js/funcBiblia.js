@@ -429,7 +429,6 @@ function exibirVersiculo() {
                 var aleatorio = parseInt(Math.random()*json.length+1)
                 span_textoVersiculoDiario.innerHTML = json[aleatorio].textoVersiculo;
                 span_livroVersiculoDiario.innerHTML = json[aleatorio].livro;
-
             });
 
         } else {

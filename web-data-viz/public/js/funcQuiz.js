@@ -514,13 +514,8 @@ function sairQuiz() {
     erros = 0
     respondida = false
     iniciou = false
-    tela = '' 
-    quizEsporte.style.borderBottom = 'none';
-    quizBiblia.style.borderBottom = 'none';
-    quizFutebol.style.borderBottom = 'none';
-    quizMindset.style.borderBottom = 'none';
-    quizAleatorio.style.borderBottom = 'none';
-    quizRanking.style.borderBottom = 'none';
+    tela = ''
+    div_OpcoesJogos.style.display = 'flex'
 }
 
 function esportes() {
@@ -534,13 +529,8 @@ function esportes() {
     } else {
         telaQuizPerguntas.style.display = 'flex';
         telaRanking.style.display = 'none';
-        quizEsporte.style.borderBottom = '1px solid';
-        quizBiblia.style.borderBottom = 'none';
-        quizFutebol.style.borderBottom = 'none';
-        quizMindset.style.borderBottom = 'none';
-        quizAleatorio.style.borderBottom = 'none';
-        quizRanking.style.borderBottom = 'none';
-        selecione.style.display = 'none'
+        selecione.innerHTML = 'Quiz Esportes'
+        div_OpcoesJogos.style.display = 'none'
         tela = 'esporte'
         proximaPergunta()
     }
@@ -557,13 +547,8 @@ function cristao() {
     } else {
         telaQuizPerguntas.style.display = 'flex';
         telaRanking.style.display = 'none';
-        quizEsporte.style.borderBottom = 'none';
-        quizBiblia.style.borderBottom = '1px solid';
-        quizFutebol.style.borderBottom = 'none';
-        quizMindset.style.borderBottom = 'none';
-        quizAleatorio.style.borderBottom = 'none';
-        quizRanking.style.borderBottom = 'none';
-        selecione.style.display = 'none'
+        selecione.innerHTML = 'Quiz Cristão'
+        div_OpcoesJogos.style.display = 'none'
         tela = 'biblia'
         proximaPergunta()
     }
@@ -579,13 +564,8 @@ function futebol() {
     } else {
         telaQuizPerguntas.style.display = 'flex';
         telaRanking.style.display = 'none';
-        quizEsporte.style.borderBottom = 'none';
-        quizBiblia.style.borderBottom = 'none';
-        quizFutebol.style.borderBottom = '1px solid';
-        quizMindset.style.borderBottom = 'none';
-        quizAleatorio.style.borderBottom = 'none';
-        quizRanking.style.borderBottom = 'none';
-        selecione.style.display = 'none'
+        selecione.innerHTML = 'Quiz Futebol'
+        div_OpcoesJogos.style.display = 'none'
         tela = 'futebol'
         proximaPergunta()
     }
@@ -601,13 +581,8 @@ function mindset() {
     } else {
         telaQuizPerguntas.style.display = 'flex';
         telaRanking.style.display = 'none';
-        quizEsporte.style.borderBottom = 'none';
-        quizBiblia.style.borderBottom = 'none';
-        quizFutebol.style.borderBottom = 'none';
-        quizMindset.style.borderBottom = '1px solid';
-        quizAleatorio.style.borderBottom = 'none';
-        quizRanking.style.borderBottom = 'none';
-        selecione.style.display = 'none'
+        selecione.innerHTML = 'Quiz Minset'
+        div_OpcoesJogos.style.display = 'none'
         tela = 'mindset'
         proximaPergunta()
     }
@@ -623,13 +598,8 @@ function aleatorio() {
     } else {
         telaQuizPerguntas.style.display = 'flex';
         telaRanking.style.display = 'none';
-        quizEsporte.style.borderBottom = 'none';
-        quizBiblia.style.borderBottom = 'none';
-        quizFutebol.style.borderBottom = 'none';
-        quizMindset.style.borderBottom = 'none';
-        quizAleatorio.style.borderBottom = '1px solid';
-        quizRanking.style.borderBottom = 'none';
-        selecione.style.display = 'none'
+        selecione.innerHTML = 'Quiz Aleatório'
+        div_OpcoesJogos.style.display = 'none'
         tela = 'aleatorio'
         proximaPergunta()
     }
@@ -647,12 +617,7 @@ function ranking() {
         telaQuizPerguntas.style.display = 'none';
         telaRanking.style.display = 'flex';
         telaPontuacao.style.display = 'none';
-        quizEsporte.style.borderBottom = 'none';
-        quizBiblia.style.borderBottom = 'none';
-        quizFutebol.style.borderBottom = 'none';
-        quizMindset.style.borderBottom = 'none';
-        quizAleatorio.style.borderBottom = 'none';
-        quizRanking.style.borderBottom = '1px solid';
+        div_OpcoesJogos.style.display = 'none'
         selecione.style.display = 'block'
         tela = 'ranking'
         selecione.innerHTML = 'OS MELHORES ESTÃO AQUI!'

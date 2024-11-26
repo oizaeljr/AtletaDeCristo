@@ -457,26 +457,12 @@ footer .container5 span {
     flex-direction: column;
 }
 
-.telaQuiz .container8_1 {
-    width: 100%;
-    height: 20vh;
+.telaQuiz .containerQQQ {
+    width: 70vw;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.telaQuiz .containerQQ {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.telaQuiz .containerQQQ {
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
 }
 
 .telaQuiz .containerQQQ span {
@@ -486,10 +472,49 @@ footer .container5 span {
 }
 
 .telaQuiz .containerQQQQ {
-    height: 20vh;
+    height: 10vh;
     width: auto;
     display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+.telaQuiz .containerQO {
+    width: 60vw;
+    height: auto;
+}
+
+.telaQuiz .containerQO1 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.telaQuiz .containerQO2 {
+    width: 17vw;
+    height: 12vh;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 4px 4px 2px #5d5d5d;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.telaQuiz .containerQO2:hover {
+    transform: scale(1.1);
+}
+
+.telaQuiz .containerQO2 img {
+    width: 60px;
+    margin: 0 10px 0 0;
+}
+
+.telaQuiz .containerQO2 span {
+    font-size: 30px;
 }
 
 .telaQuiz .containerQQQQ span {
@@ -685,6 +710,8 @@ footer .container5 span {
     justify-content: center;
     align-items: center;
     width: 33%;
+    box-shadow: 2px 4px 4px 2px #5d5d5d;
+    border-radius: 10px;
 }
 
 .telaQuiz .containerQQ1 {
@@ -1368,7 +1395,6 @@ li {
 
 /* INÍCIO TELA JOGOS */
 .telaJogos .containerJ1 {
-    border: 1px solid red;
     width: 100%;
     height: 60vh;
     display: flex;

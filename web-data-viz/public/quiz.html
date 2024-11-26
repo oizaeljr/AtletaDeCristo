@@ -47,19 +47,39 @@
             </div>
             <div class="container3">
                 <div class="container8">
-                    <div class="container8_1">
-                        <div class="containerQQ">
-                            <div class="containerQQQ">
-                                <span onclick="esportes()" id="quizEsporte">Quiz esportes</span>
-                                <span onclick="cristao()" id="quizBiblia">Quiz Bíblia</span>
-                                <span onclick="futebol()" id="quizFutebol">Quiz futebol</span>
-                                <span onclick="mindset()" id="quizMindset">Quiz mindset</span>
-                                <span onclick="aleatorio()" id="quizAleatorio">Quiz aleatório</span>
-                                <span onclick="ranking()" id="quizRanking">Ranking</span>
+                    <div class="containerQQQQ">
+                        <span id="selecione">Selecione um quiz!</span>
+                    </div>
+                    <div class="containerQQQ" id="div_OpcoesJogos">
+                        <div class="containerQO">
+                            <div class="containerQO1">
+                                <div class="containerQO2" onclick="esportes()" id="quizEsporte">
+                                    <img src="./assets/imagens/basquete.png">
+                                    <span>Esportes</span>
+                                </div>
+                                <div class="containerQO2" onclick="cristao()" id="quizBiblia">
+                                    <img src="./assets/imagens/biblia.png">
+                                    <span>Bíblia</span>
+                                </div>
+                                <div class="containerQO2" onclick="futebol()" id="quizFutebol">
+                                    <img src="./assets/imagens/futebol.png">
+                                    <span>Futebol</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="containerQQQQ">
-                            <span id="selecione">Selecione um quiz!</span>
+                            <div class="containerQO1" >
+                                <div class="containerQO2" onclick="mindset()" id="quizMindset">
+                                    <img src="./assets/imagens/cerebro2.png">
+                                    <span>Mindset</span>
+                                </div>
+                                <div class="containerQO2" onclick="aleatorio()" id="quizAleatorio">
+                                    <img src="./assets/imagens/aleatorio.png">
+                                    <span>Aleatório</span>
+                                </div>
+                                <div class="containerQO2" onclick="ranking()" id="quizRanking">
+                                    <img src="./assets/imagens/ranking.png">
+                                    <span>Ranking</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -158,7 +178,7 @@
                                     </div>
                                 </div>
                                 <div class="containerQG2">
-                                    <canvas id="myChart" height: "2vh"; width: "2vw";></canvas>
+                                    <canvas id="myChart" height: "2vh" ; width: "2vw" ;></canvas>
                                 </div>
                             </div>
 
@@ -229,12 +249,10 @@
 <script src="./js/funcQuiz.js"></script>
 <script>
     span_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-    
+
     if (sessionStorage.FRASE == 'null' || sessionStorage.FRASE == 'undefined' || sessionStorage.FRASE == '') {
         fraseMotivacional.innerHTML = 'Escreve sua frase motivacional no seu perfil';
     } else {
         fraseMotivacional.innerHTML = sessionStorage.FRASE;
     }
 </script>
-
-   
