@@ -1,0 +1,11 @@
+Preto (#000000)
+
+Azul Marinho (#001F3F)
+
+Azul Cobalto (#0047AB)
+
+Azul Claro (#ADD8E6)
+
+Cinza Claro (#D3D3D3)
+
+Branco (#FFFFFF)
