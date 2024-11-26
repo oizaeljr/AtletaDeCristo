@@ -1,9 +1,7 @@
 var versiculoModel = require("../models/versiculoModel");
 
 function exibirVersiculo(req, res) {
-    versiculoModel.exibirVersiculo().then((resultadoAutenticar) => {
-        res.status(200).json(resultadoAutenticar);
-
+    
 
         versiculoModel.exibirVersiculo()
             .then(
@@ -21,8 +19,7 @@ function exibirVersiculo(req, res) {
                     return res.status(500).json(erro.sqlMessage);
                 }
             );
-    });
-} 
+    };
 
 module.exports = {
     exibirVersiculo

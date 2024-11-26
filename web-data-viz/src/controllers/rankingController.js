@@ -1,8 +1,6 @@
 var rankingModel = require("../models/rankingModel");
 
 function listar(req, res) {
-    rankingModel.listar().then((resultadoAutenticar) => {
-        res.status(200).json(resultadoAutenticar);
 
 
         rankingModel.listar()
@@ -21,8 +19,7 @@ function listar(req, res) {
                     return res.status(500).json(erro.sqlMessage);
                 }
             );
-    });
-}
+    }
 
 module.exports = {
     listar
