@@ -1174,14 +1174,15 @@ footer .container5 span {
 }
 
 .telaSobreMim .containerSSS4_1 {
-    width: 90%;
-    height: 60%;
+    width: 40vw;
+    height: 40vh;
     border-radius: 20px;
     background-color: #5d5d5d;
-    background-image: url('');
+    background-image: url('../assets/imagens/familia.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0 20px 0 0;
 }
 
 .telaSobreMim .containerSSS5 {

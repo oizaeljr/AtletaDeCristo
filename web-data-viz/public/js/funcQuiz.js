@@ -89,6 +89,7 @@ function proximaPergunta() {
         random = parseInt(Math.random() * perguntas.length + 1);
 
         span_pergunta.innerHTML = `${perguntas[random - 1]}`
+        span_NumPergunta.innerHTML = quantidade
         numPergunta = random;
         if (tela == 'esporte') {
             if (random == 1) {
